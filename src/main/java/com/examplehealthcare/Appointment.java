@@ -11,6 +11,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
+//navigates appointments with an id key, doctor(an or nurse), patient , time, and date
 
 @Entity
 @Table(name = "Appointments")

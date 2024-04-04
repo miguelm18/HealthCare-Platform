@@ -28,7 +28,7 @@ public class Patient {
     @Column(nullable = false)
     private String name;
 
-    @Column(nullable = false)
+    @Column
     private Date dob;
 
     @Column(nullable = false)
@@ -37,7 +37,7 @@ public class Patient {
     @Column(nullable = false, unique = true)
     private String email;
 
-    @Column
+    @Column(nullable = false)
     private String emergencyContact;
 
     @OneToMany(mappedBy = "patient", cascade = CascadeType.ALL)
