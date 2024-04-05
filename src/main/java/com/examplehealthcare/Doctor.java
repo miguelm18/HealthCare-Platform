@@ -29,6 +29,8 @@ public class Doctor {
     private String imageUrl; 
     @Column(name = "name", nullable = false)
     private String name;
+    @Column(nullable = false)
+    private String gender;
     @Column(name = "specialty", nullable = false)
     private String specialty;
     @Column(name = "phone", nullable = false)
@@ -55,9 +57,10 @@ public class Doctor {
 
     }
 
-    public Doctor(String name, String specialty, String phone, String email, Boolean activeStatus)
+    public Doctor(String name, String gender, String specialty, String phone, String email, Boolean activeStatus)
     {
         this.name = name;
+        this.gender = gender;
         this.specialty = specialty;
         this.phone = phone;
         this.email = email;
@@ -85,6 +88,14 @@ public class Doctor {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
     public String getSpecialty() {
@@ -149,6 +160,7 @@ public class Doctor {
         return "Doctor [id=" + id + ", name=" + name + ", specialty=" + specialty + ", phone=" + phone + ", email="
                 + email + ", activeStatus=" + activeStatus + "]";
     }
+
 
     }
 

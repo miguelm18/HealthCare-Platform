@@ -28,6 +28,8 @@ public class Nurse {
     private String imageUrl; 
     @Column(name = "name", nullable = false)
     private String name;
+    @Column(name="gender", nullable = false)
+    private String gender;
     @Column(name = "specialty", nullable = false)
     private String specialty;
     @Column(name = "phone", nullable = false)
@@ -54,9 +56,10 @@ public class Nurse {
     {
     }
 
-    public Nurse(String name, String specialty, String phone, String email, Boolean activeStatus)
+    public Nurse(String name, String gender, String specialty, String phone, String email, Boolean activeStatus)
     {
         this.name = name;
+        this.gender = gender;
         this.specialty = specialty;
         this.phone = phone;
         this.email = email;
@@ -84,6 +87,14 @@ public class Nurse {
 
     public void setName(String name) {
         this.name = name;
+    }
+    
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
     public String getSpecialty() {

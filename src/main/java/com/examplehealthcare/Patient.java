@@ -28,6 +28,8 @@ public class Patient {
     @Column(nullable = false)
     private String name;
 
+    @Column(name = "gender", nullable = false)
+    private String gender;
     @Column
     private Date dob;
 
@@ -53,10 +55,11 @@ public class Patient {
 
     }
 
-    public Patient(String imageUrl, String name, Date dob, String phone, String email, String emergencyContact,
+    public Patient(String imageUrl, String name, String gender, Date dob, String phone, String email, String emergencyContact,
             List<Appointment> appointment, List<HealthHistory> healthHistory) {
         this.imageUrl = imageUrl;
         this.name = name;
+        this.gender = gender;
         this.dob = dob;
         this.phone = phone;
         this.email = email;
@@ -87,6 +90,14 @@ public class Patient {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
     public Date getDob() {
@@ -137,7 +148,7 @@ public class Patient {
         this.healthHistory = healthHistory;
     }
 
-   
+    
 
 
 

@@ -17,6 +17,9 @@ public class Admin {
     @Column(nullable = false)
     private String name;
 
+    @Column(nullable = false)
+    private String gender;
+
     @Column(nullable = false, unique = true)
     private String email;
 
@@ -31,9 +34,10 @@ public Admin()
 
 }
 
-public Admin(String name, String email, String password, String title)
+public Admin(String name, String gender, String email, String password, String title)
 {
     this.name = name;
+    this.gender = gender;
     this.email = email;
     setPassword(password);
     this.title = title;
@@ -53,6 +57,14 @@ public String getName() {
 
 public void setName(String name) {
     this.name = name;
+}
+
+public String getGender() {
+    return gender;
+}
+
+public void setGender(String gender) {
+    this.gender = gender;
 }
 
 public String getEmail() {
@@ -78,5 +90,6 @@ public String getTitle() {
 public void setTitle(String title) {
     this.title = title;
 }
+
     
 }
