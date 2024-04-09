@@ -22,7 +22,7 @@ import jakarta.persistence.Table;
 public class Nurse {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
+    private Long id;
 
     @Column(name = "image_url", nullable = true)
     private String imageUrl; 
@@ -66,11 +66,11 @@ public class Nurse {
         this.activeStatus = activeStatus;
     }
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
     public String getImageUrl() {

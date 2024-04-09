@@ -39,6 +39,9 @@ public class Patient {
     @OneToMany(mappedBy = "patient", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<HealthHistory> healthHistory;
 
+    @OneToMany(mappedBy = "patient", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<Diagnosis> diagnoses;
+
 
 
     public Patient()
@@ -47,13 +50,14 @@ public class Patient {
     }
 
     public Patient(PatientInfo patientInfo, String phone, String email, String emergencyContact,
-            List<Appointment> appointment, List<HealthHistory> healthHistory) {
+            List<Appointment> appointment, List<HealthHistory> healthHistory, List<Diagnosis> diagnoses) {
         this.patientInfo = patientInfo;
         this.phone = phone;
         this.email = email;
         this.emergencyContact = emergencyContact;
         this.appointment = appointment;
         this.healthHistory = healthHistory;
+        this.diagnoses = diagnoses;
     }
 
     public Long getPatientId() {
@@ -112,11 +116,21 @@ public class Patient {
         this.healthHistory = healthHistory;
     }
 
+    public List<Diagnosis> getDiagnoses() {
+        return diagnoses;
+    }
+
+    public void setDiagnoses(List<Diagnosis> diagnoses) {
+        this.diagnoses = diagnoses;
+    }
+    
     @Override
     public String toString() {
         return "Patient [patientId=" + patientId + ", patientInfo=" + patientInfo + ", phone=" + phone + ", email="
                 + email + ", emergencyContact=" + emergencyContact + ", appointment=" + appointment + ", healthHistory="
                 + healthHistory + "]";
     }
+
+
     
 }

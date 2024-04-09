@@ -4,9 +4,12 @@ import java.util.Date;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
@@ -18,6 +21,10 @@ import jakarta.persistence.TemporalType;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "patient_id", nullable = false)
+    private Patient patient;
 
     @Column(name = "patient_id")
     private Long patientId; // Consider using @ManyToOne for direct entity mapping
@@ -53,6 +60,15 @@ import jakarta.persistence.TemporalType;
     public void setPatientId(Long patientId) {
         this.patientId = patientId;
     }
+
+    public Patient getPatient() {
+        return patient;
+    }
+
+    public void setPatient(Patient patient) {
+        this.patient = patient;
+    }
+
 
     public String getDiagnosisCode() {
         return diagnosisCode;
@@ -94,7 +110,6 @@ import jakarta.persistence.TemporalType;
         this.isCurrent = isCurrent;
     }
 
-    
 }
 
 
