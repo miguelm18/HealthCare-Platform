@@ -1,10 +1,9 @@
 package com.examplehealthcare.model;
 
-import java.util.Date;
 import java.util.List;
-
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
+import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
@@ -22,16 +21,8 @@ public class Patient {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long patientId;
 
-    @Column(name = "image_url", nullable = true)
-    private String imageUrl; 
-
-    @Column(nullable = false)
-    private String name;
-
-    @Column(name = "gender", nullable = false)
-    private String gender;
-    @Column
-    private Date dob;
+    @Embedded
+    private PatientInfo patientInfo;
 
     @Column(nullable = false)
     private String phone;
@@ -55,12 +46,9 @@ public class Patient {
 
     }
 
-    public Patient(String imageUrl, String name, String gender, Date dob, String phone, String email, String emergencyContact,
+    public Patient(PatientInfo patientInfo, String phone, String email, String emergencyContact,
             List<Appointment> appointment, List<HealthHistory> healthHistory) {
-        this.imageUrl = imageUrl;
-        this.name = name;
-        this.gender = gender;
-        this.dob = dob;
+        this.patientInfo = patientInfo;
         this.phone = phone;
         this.email = email;
         this.emergencyContact = emergencyContact;
@@ -76,36 +64,12 @@ public class Patient {
         this.patientId = patientId;
     }
 
-    public String getImageUrl() {
-        return imageUrl;
+    public PatientInfo getPatientInfo() {
+        return patientInfo;
     }
 
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public Date getDob() {
-        return dob;
-    }
-
-    public void setDob(Date dob) {
-        this.dob = dob;
+    public void setPatientInfo(PatientInfo patientInfo) {
+        this.patientInfo = patientInfo;
     }
 
     public String getPhone() {
@@ -148,10 +112,11 @@ public class Patient {
         this.healthHistory = healthHistory;
     }
 
-    
-
-
-
-
+    @Override
+    public String toString() {
+        return "Patient [patientId=" + patientId + ", patientInfo=" + patientInfo + ", phone=" + phone + ", email="
+                + email + ", emergencyContact=" + emergencyContact + ", appointment=" + appointment + ", healthHistory="
+                + healthHistory + "]";
+    }
     
 }

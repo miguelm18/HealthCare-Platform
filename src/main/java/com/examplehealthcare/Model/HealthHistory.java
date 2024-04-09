@@ -22,6 +22,12 @@ public class HealthHistory {
     @JoinColumn(name = "patient_id", nullable = false)
     private Patient patient;
 
+    @Column(name = "Blood Group")
+    private String bloodGroup;
+
+    @Column(name = "RH Factor")
+    private String rhFactor;
+
     @Column(nullable = false)
     private String familyHistory;
 
@@ -29,18 +35,20 @@ public class HealthHistory {
     private String illness;
 
     @Column(nullable = false)
-    private String decription;
+    private String description;
     
     public HealthHistory()
     {
 
     }
 
-    public HealthHistory(Patient patient, String familyHistory, String illness, String decription) {
+    public HealthHistory(Patient patient, String bloodGroup, String rhFactor, String familyHistory, String illness, String decription) {
         this.patient = patient;
+        this.bloodGroup = bloodGroup;
+        this.rhFactor = rhFactor;
         this.familyHistory = familyHistory;
         this.illness = illness;
-        this.decription = decription;
+        this.description = decription;
     }
 
     public Long getId() {
@@ -76,11 +84,11 @@ public class HealthHistory {
     }
 
     public String getDecription() {
-        return decription;
+        return description;
     }
 
     public void setDecription(String decription) {
-        this.decription = decription;
+        this.description = decription;
     }
 
     
