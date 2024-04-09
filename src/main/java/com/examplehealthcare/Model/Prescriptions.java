@@ -1,4 +1,4 @@
-package com.examplehealthcare.Model;
+package com.examplehealthcare.model;
 
 import java.util.Date;
 

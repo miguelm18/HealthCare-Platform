@@ -1,4 +1,4 @@
-package com.examplehealthcare.Model;
+package com.examplehealthcare.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -23,7 +23,7 @@ public class HealthHistory {
     private Patient patient;
 
     @Column(nullable = false)
-    private String family_history;
+    private String familyHistory;
 
     @Column(nullable = false)
     private String illness;
@@ -36,9 +36,9 @@ public class HealthHistory {
 
     }
 
-    public HealthHistory(Patient patient, String family_history, String illness, String decription) {
+    public HealthHistory(Patient patient, String familyHistory, String illness, String decription) {
         this.patient = patient;
-        this.family_history = family_history;
+        this.familyHistory = familyHistory;
         this.illness = illness;
         this.decription = decription;
     }
@@ -59,12 +59,12 @@ public class HealthHistory {
         this.patient = patient;
     }
 
-    public String getFamily_history() {
-        return family_history;
+    public String getFamilyHistory() {
+        return familyHistory;
     }
 
-    public void setFamily_history(String family_history) {
-        this.family_history = family_history;
+    public void setFamilyHistory(String familyHistory) {
+        this.familyHistory = familyHistory;
     }
 
     public String getIllness() {

@@ -1,4 +1,4 @@
-package com.examplehealthcare.Service;
+package com.examplehealthcare.service;
 
 public class DoctorService {
     

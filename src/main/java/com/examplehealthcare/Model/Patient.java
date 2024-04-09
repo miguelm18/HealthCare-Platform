@@ -1,4 +1,4 @@
-package com.examplehealthcare.Model;
+package com.examplehealthcare.model;
 
 import java.util.Date;
 import java.util.List;
@@ -20,7 +20,7 @@ import jakarta.persistence.Table;
 public class Patient {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long patient_id;
+    private Long patientId;
 
     @Column(name = "image_url", nullable = true)
     private String imageUrl; 
@@ -68,12 +68,12 @@ public class Patient {
         this.healthHistory = healthHistory;
     }
 
-    public Long getPatient_id() {
-        return patient_id;
+    public Long getPatientId() {
+        return patientId;
     }
 
-    public void setPatient_id(Long patient_id) {
-        this.patient_id = patient_id;
+    public void setPatientId(Long patientId) {
+        this.patientId = patientId;
     }
 
     public String getImageUrl() {

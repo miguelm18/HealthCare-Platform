@@ -1,4 +1,4 @@
-package com.examplehealthcare.Model;
+package com.examplehealthcare.model;
 
 import java.sql.Date;
 
@@ -18,7 +18,7 @@ import jakarta.persistence.Table;
 public class Appointment {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long appointment_id;
+    private Long appointmentId;
 
     @ManyToOne
     @JoinColumn(name = "doctor_id", nullable = false)
@@ -31,7 +31,7 @@ public class Appointment {
     @Column(nullable = false)
     private Date doa;
     @Column(nullable = false)
-    private String appointment_time;
+    private String appointmentTime;
     @Column(nullable = false)
     private Boolean status;
 
@@ -40,20 +40,20 @@ public class Appointment {
 
     }
 
-    public Appointment(Doctor doctor, Patient patient, Date doa, String appointment_time, Boolean status) {
+    public Appointment(Doctor doctor, Patient patient, Date doa, String appointmentTime, Boolean status) {
         this.doctor = doctor;
         this.patient = patient;
         this.doa = doa;
-        this.appointment_time = appointment_time;
+        this.appointmentTime = appointmentTime;
         this.status = status;
     }
 
-    public Long getAppointment_id() {
-        return appointment_id;
+    public Long getAppointmentId() {
+        return appointmentId;
     }
 
-    public void setAppointment_id(Long appointment_id) {
-        this.appointment_id = appointment_id;
+    public void setAppointmentId(Long appointmentId) {
+        this.appointmentId = appointmentId;
     }
 
     public Doctor getDoctor() {
@@ -86,13 +86,13 @@ public class Appointment {
     }
 
 
-    public String getAppointment_time() {
-        return appointment_time;
+    public String getAppointmentTime() {
+        return appointmentTime;
     }
 
 
-    public void setAppointment_time(String appointment_time) {
-        this.appointment_time = appointment_time;
+    public void setAppointmentTime(String appointmentTime) {
+        this.appointmentTime = appointmentTime;
     }
 
 

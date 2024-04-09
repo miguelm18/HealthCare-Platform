@@ -1,4 +1,4 @@
-package com.examplehealthcare.Repository;
+package com.examplehealthcare.repository;
 
 public class DoctorRepository {
     
