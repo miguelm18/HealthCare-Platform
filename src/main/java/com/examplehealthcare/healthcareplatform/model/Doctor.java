@@ -1,4 +1,4 @@
-package com.examplehealthcare.model;
+package com.examplehealthcare.healthcareplatform.model;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -14,6 +14,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.PrePersist;
 import jakarta.persistence.Table;
 
 @Entity
@@ -47,6 +48,11 @@ public class Doctor {
     @CreatedDate
     @Column(name = "created_at", nullable = false, updatable = false)
     private LocalDateTime createdAt;
+
+    @PrePersist
+    protected void onCreate() {
+        createdAt = LocalDateTime.now();
+    }
 
     @LastModifiedDate
     @Column(name = "updated_at")

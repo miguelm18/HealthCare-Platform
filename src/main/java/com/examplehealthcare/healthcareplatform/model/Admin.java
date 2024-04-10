@@ -1,4 +1,4 @@
-package com.examplehealthcare.model;
+package com.examplehealthcare.healthcareplatform.model;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 

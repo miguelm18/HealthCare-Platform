@@ -1,4 +1,4 @@
-package com.examplehealthcare.model;
+package com.examplehealthcare.healthcareplatform.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

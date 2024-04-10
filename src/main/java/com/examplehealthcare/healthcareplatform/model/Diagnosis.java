@@ -1,4 +1,4 @@
-package com.examplehealthcare.model;
+package com.examplehealthcare.healthcareplatform.model;
 
 import java.util.Date;
 
@@ -26,7 +26,7 @@ import jakarta.persistence.TemporalType;
     @JoinColumn(name = "patient_id", nullable = false)
     private Patient patient;
 
-    @Column(name = "patient_id")
+    @Column(name = "patient_id,  insertable = false, updatable = false")
     private Long patientId; // Consider using @ManyToOne for direct entity mapping
 
     @Column(name = "diagnosis_code")

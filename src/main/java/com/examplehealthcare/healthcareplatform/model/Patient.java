@@ -1,4 +1,4 @@
-package com.examplehealthcare.model;
+package com.examplehealthcare.healthcareplatform.model;
 
 import java.util.List;
 import jakarta.persistence.CascadeType;

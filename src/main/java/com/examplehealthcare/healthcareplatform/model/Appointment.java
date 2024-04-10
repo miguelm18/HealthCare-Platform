@@ -1,4 +1,4 @@
-package com.examplehealthcare.model;
+package com.examplehealthcare.healthcareplatform.model;
 
 import java.sql.Date;
 
@@ -28,6 +28,10 @@ public class Appointment {
     @JoinColumn(name = "patient_id", nullable = false)
     private Patient patient;
 
+    @ManyToOne
+    @JoinColumn(name = "nurse_id")
+    private Nurse nurse;
+
     @Column(nullable = false)
     private Date doa;
     @Column(nullable = false)
@@ -35,14 +39,16 @@ public class Appointment {
     @Column(nullable = false)
     private Boolean status;
 
+
     public Appointment()
     {
 
     }
 
-    public Appointment(Doctor doctor, Patient patient, Date doa, String appointmentTime, Boolean status) {
+    public Appointment(Doctor doctor, Patient patient, Nurse nurse, Date doa, String appointmentTime, Boolean status) {
         this.doctor = doctor;
         this.patient = patient;
+        this.nurse = nurse;
         this.doa = doa;
         this.appointmentTime = appointmentTime;
         this.status = status;
