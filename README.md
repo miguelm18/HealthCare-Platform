@@ -13,3 +13,8 @@ export DATABASE_PASSWORD='Mamolin@18!dev'
 4. Click on the play button in the top right hand corner 
 
 The application should have ran properly 
+
+How to Activate Application.Properties Profile and Run Correctly
+
+ export SPRING_PROFILES_ACTIVE=prod
+ export DATABASE_USERNAME='root' export DATABASE_PASSWORD='Mamolin@18!dev'
