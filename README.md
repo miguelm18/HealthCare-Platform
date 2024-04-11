@@ -2,12 +2,16 @@
 Welcome to the HEALTHCARE-PLATFORM...
 The following steps must be completed in order to have the web application working properly:
 
+Make sure you have the most up to date project 
+        "git pull origin main"  no quotations
+
 
 1. NAVIGATE TO YOUR TERMINAL 
-    Type "git --version" to see if you have git installed 
+    Type "git --version" to see if you have git installed no quotations
 
 2. Navigate To my repository and copy the clone url 
-    Go to terminal and type "git clone https://github.com/miguelm18/HealthCare-Platform.git"
+    Go to terminal and type "git clone https://github.com/miguelm18/HealthCare-Platform.git" no quotations
+    then type "git init" no quotations
 3. Add The Extensions From The Picture 
 
 4. COPY AND PASTE THE FOLLOWING LINES ONTO THE TERMINAL TO ENTER Your Identity and be able to commit under your name 
@@ -15,12 +19,12 @@ Copy it exactly like that, it is one complete line
 replace "Your Name" with your actual name / replace your_email@example.com with your email/github email
 do not include quotations
 
-git config --global user.name "Your Name"
-git config --global user.email "your_email@example.com"
+        git config --global user.name "Your Name"
+        git config --global user.email "your_email@example.com"
 
 
 5. Activate the production prfile to run the app - to acutally run 
-         export SPRING_PROFILES_ACTIVE=prod  copy and paste exactly to terminal 
+         "export SPRING_PROFILES_ACTIVE=prod"  copy and paste exactly to terminal no quotations
 
      if you are testing stuff activate the dev profile - for testing 
 
@@ -42,3 +46,11 @@ How to Activate Application.Properties Profile and Run Correctly
 
  export SPRING_PROFILES_ACTIVE=prod
  export DATABASE_USERNAME='root' export DATABASE_PASSWORD='Mamolin@18!dev'
+
+
+ 11. When You have coded something make sure to create a branch first or else stuff will mess up
+        Commit to your own branch not origin main!
+
+        To have the latest updated project Type this into your terminal
+        "git pull origin main"  
+ I
