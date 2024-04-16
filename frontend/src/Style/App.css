@@ -1,0 +1,77 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+/* src/index.css */
+.sidebar {
+  width: 150px; /* Set the width of the sidebar */
+  height: 100vh; /* Full height of the viewport */
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #ffffff; /* Light grey background */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Add shadow to the right side */
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  padding: 1rem; /* Add padding around the sidebar */
+  overflow-y: auto; /* Enable scrolling if content is taller than the screen */
+  align-items: center; /* Center items horizontally */
+}
+
+/* Add this new class for the links within your sidebar */
+.sidebar-link {
+  color:rgb(87, 223, 241);
+  width: 100%; /* Full width to the parent container */
+  text-align: center; /* Center the text */
+  padding: 10px 0; /* Add padding top and bottom */
+  margin-bottom: 10px; /* Add space after each link */
+  /* Other styles as necessary */
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem; /* Adjust the padding as needed */
+}
+
+.sidebar-logo {
+  max-width: 100%;
+  height: auto; /* This will ensure the logo maintains aspect ratio */
+  border-radius: 50%; /* this is what makes it a circle */
+  object-fit: cover; 
+}
+
+.header {
+  background: #f3f3f3;
+  padding: 1px;
+  text-align: center;
+}
+
+.content {
+  margin-left: 200px;
+  padding: 20px;
+}
