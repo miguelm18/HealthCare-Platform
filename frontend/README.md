@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# To Run Application Follow The Steps After Navigating To Frontend SRC And Opening A Terminal***
+
 ## Available Scripts
 
 In the project directory, you can run:
