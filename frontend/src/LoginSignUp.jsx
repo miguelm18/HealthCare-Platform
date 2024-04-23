@@ -10,6 +10,7 @@ import './LoginSignUp.css';
 import email_icon from './Assets/email.png';
 import password_icon from './Assets/password.png';
 import user_icon from './Assets/person.png';
+import healthcare_icon from './Assets/HealthCareLogo1.jpg'
 
 // Defining functional component LoginSignUp
 const LoginSignUp = () => {
@@ -33,49 +34,55 @@ const LoginSignUp = () => {
 
   // Rendering JSX content
   return (
-    <div className='container'>
-      {/* Header section */}
-      <div className="header">
-        {/* Displaying current choice */}
-        <div className="text">{choice}</div>
-        {/* Underline below choice */}
-        <div className="underline"></div>
+    <>
+      <div className='HealthCare'>
+        <img src={healthcare_icon} height={200} width={200} alt="" />
       </div>
-      {/* Input fields section */}
-      <div className="inputs">
-        {/* Conditional rendering based on choice */}
-        {choice === "Login" ? <div></div> : <div className="input">
-          {/* Icon for first and last name */}
-          <img src={user_icon} alt="" />
-          {/* Input field for first and last name */}
-          <input type="text" placeholder="First and Last Name" />
-        </div>}
-        {/* Email input field */}
-        <div className="input">
-          <img src={email_icon} alt="" />
-          <input type="email" placeholder="Email Address" value={email} onChange={(e) => setEmail(e.target.value)} />
+
+      <div className='container'>
+        {/* Header section */}
+        <div className="header">
+          {/* Displaying current choice */}
+          <div className="text">{choice}</div>
+          {/* Underline below choice */}
+          <div className="underline"></div>
         </div>
-        {/* Password input field */}
-        <div className="input">
-          <img src={password_icon} alt="" />
-          <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
+        {/* Input fields section */}
+        <div className="inputs">
+          {/* Conditional rendering based on choice */}
+          {choice === "Login" ? <div></div> : <div className="input">
+            {/* Icon for first and last name */}
+            <img src={user_icon} alt="" />
+            {/* Input field for first and last name */}
+            <input type="text" placeholder="First and Last Name" />
+          </div>}
+          {/* Email input field */}
+          <div className="input">
+            <img src={email_icon} alt="" />
+            <input type="email" placeholder="Email Address" value={email} onChange={(e) => setEmail(e.target.value)} />
+          </div>
+          {/* Password input field */}
+          <div className="input">
+            <img src={password_icon} alt="" />
+            <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
+          </div>
+        </div>
+        {/* Conditional rendering for forgot password section */}
+        {choice === "Sign Up" ? <div></div> : <div className="forgot-password">Forgot Your Password? <span>Click Here!</span></div>}
+        {/* Container for all buttons */}
+        <div className="button-container">
+          {/* Container for submit and login button */}
+          <div className="signandlog-container">
+            {/* Sign Up button */}
+            <div className={choice === "Login" ? "signandlog gray" : "signandlog"} onClick={() => { setChoice("Sign Up") }}>Sign Up</div>
+            {/* Login button */}
+            <div className={choice === "Sign Up" ? "signandlog gray" : "signandlog"} onClick={() => { setChoice("Login") }}>Login</div>
+          </div>
+          {/* Submit button */}
+          <div className="signandlog gray" onClick={handleSubmit}>Submit</div>
         </div>
       </div>
-      {/* Conditional rendering for forgot password section */}
-      {choice === "Sign Up" ? <div></div> : <div className="forgot-password">Forgot Your Password? <span>Click Here!</span></div>}
-      {/* Container for all buttons */}
-      <div className="button-container">
-        {/* Container for submit and login button */}
-        <div className="signandlog-container">
-          {/* Sign Up button */}
-          <div className={choice === "Login" ? "signandlog gray" : "signandlog"} onClick={() => { setChoice("Sign Up") }}>Sign Up</div>
-          {/* Login button */}
-          <div className={choice === "Sign Up" ? "signandlog gray" : "signandlog"} onClick={() => { setChoice("Login") }}>Login</div>
-        </div>
-        {/* Submit button */}
-        <div className="signandlog gray" onClick={handleSubmit}>Submit</div>
-      </div>
-    </div>
+    </>
   );
 };
 

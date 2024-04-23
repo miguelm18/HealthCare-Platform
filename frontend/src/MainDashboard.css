@@ -1,0 +1,11 @@
+/* MainDashboard.css */
+
+/* Adjust margin to create space for the sidebar */
+.main-dashboard {
+  margin-left: 200px; /* Adjust the value according to your sidebar width */
+}
+
+/* Example styles for the content */
+.main-dashboard h1 {
+  color: #333;
+}
