@@ -1,19 +1,17 @@
 import React from 'react';
 import Header from './Layout/Header';
 import Sidebar from './Layout/Sidebar';
-import SearchBar from './SearchBar';
 
-function PatientSearch() {
+function Patient1() {
   return (
     <div className="main-dashboard">
       <Header />
       <Sidebar />
       {/* Add your settings content here */}
-      <h1>Patient Search</h1>
-      <p>This is the page where you search for patients.</p>
-      <SearchBar />
+      <h1>Patient Page 1</h1>
+      <p>This is the content of patient page 1.</p>
     </div>
   );
 }
 
-export default PatientSearch;
+export default Patient1;
