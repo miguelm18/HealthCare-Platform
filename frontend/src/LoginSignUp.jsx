@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 // Importing styles from external CSS file
 import './LoginSignUp.css';
@@ -68,7 +69,7 @@ const LoginSignUp = () => {
           </div>
         </div>
         {/* Conditional rendering for forgot password section */}
-        {choice === "Sign Up" ? <div></div> : <div className="forgot-password">Forgot Your Password? <span>Click Here!</span></div>}
+        {choice === "Sign Up" ? <div></div> : <div className="forgot-password">Forgot Your Password? <span><Link to="/Forgot">Click Here!</Link></span></div>}
         {/* Container for all buttons */}
         <div className="button-container">
           {/* Container for submit and login button */}
@@ -79,7 +80,7 @@ const LoginSignUp = () => {
             <div className={choice === "Sign Up" ? "signandlog gray" : "signandlog"} onClick={() => { setChoice("Login") }}>Login</div>
           </div>
           {/* Submit button */}
-          <div className="signandlog gray" onClick={handleSubmit}>Submit</div>
+          <div className="signandlog color" onClick={handleSubmit}>Submit</div>
         </div>
       </div>
     </>
