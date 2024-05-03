@@ -9,7 +9,7 @@ import logo from '../Assets/HealthCareLogo1.jpg'; // Adjust the path if necessar
 function Sidebar() {
     const links = [
         { path: '/dashboard', title: 'Dashboard' },
-        { path: '/patients', title: 'Patient Search' },
+        //{ path: '/patients', title: 'Patient Search' },
         { path: '/settings', title: 'Settings' },
         // ... you can add more links here
     ];
