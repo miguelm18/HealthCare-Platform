@@ -59,7 +59,11 @@ function MainDashboard() {
                 <td><Link to="." onClick={() => handleLinkClick(patient)}>{patient.name}</Link></td>
                 <td>{patient.age}</td>
                 <td>{patient.gender}</td>
-                <td>{patient.condition}</td>
+                <td>
+                  {patient.condition.map((condition, conditionIndex) => (
+                    <span key={conditionIndex}>{condition}{conditionIndex !== patient.condition.length - 1 && ', '}</span>
+                  ))}
+                </td>
               </tr>
             ))}
           </tbody>

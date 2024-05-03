@@ -32,6 +32,7 @@
   box-shadow: 0px 0px 0px #ddd;
   display:flex;
   align-items: center;
+  margin-bottom: 10px; /* Add vertical margin between input boxes */
 }
 
 input {

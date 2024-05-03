@@ -4,7 +4,8 @@
 //FOR TESTING PURPOSES ONLY
 //FOR TESTING PURPOSES ONLY
 
-const patients = [
+//old array
+/*const patients = [
   { id: 1, name: 'John Doe', age: 30, gender: 'Male', condition: 'Fever' },
   { id: 2, name: 'Jane Smith', age: 25, gender: 'Female', condition: 'Headache' },
   { id: 3, name: 'Michael Johnson', age: 45, gender: 'Male', condition: 'Back Pain' },
@@ -56,6 +57,20 @@ const patients = [
   { id: 49, name: 'Lucas Long', age: 56, gender: 'Male', condition: 'Heart Disease' },
   { id: 50, name: 'Amelia Fox', age: 28, gender: 'Female', condition: 'Stomach Ulcer' },
   // Add more patient objects as needed
+];*/
+
+const patients = [
+  { id: 1, name: 'John Doe', age: 30, gender: 'Male', condition: ['Fever', 'Cold', 'Cough'] },
+  { id: 2, name: 'Jane Smith', age: 25, gender: 'Female', condition: ['Headache', 'Fever', 'Sore Throat'] },
+  { id: 3, name: 'Michael Johnson', age: 45, gender: 'Male', condition: ['Back Pain', 'Muscle Strain', 'Sprain'] },
+  { id: 4, name: 'Amelia Brown', age: 35, gender: 'Female', condition: ['Migraine', 'Headache', 'Tension'] },
+  { id: 5, name: 'David Wilson', age: 28, gender: 'Male', condition: ['Allergy', 'Hay Fever', 'Skin Rash'] },
+  { id: 6, name: 'Sarah Davis', age: 50, gender: 'Female', condition: ['Arthritis', 'Joint Pain', 'Inflammation'] },
+  { id: 7, name: 'Robert Martinez', age: 65, gender: 'Male', condition: ['High Blood Pressure', 'Hypertension', 'Cardiovascular Disease'] },
+  { id: 8, name: 'Jennifer Taylor', age: 40, gender: 'Female', condition: ['Asthma', 'Bronchitis', 'Respiratory Infection'] },
+  { id: 9, name: 'William Anderson', age: 55, gender: 'Male', condition: ['Diabetes', 'Type 2 Diabetes', 'Insulin Resistance'] },
+  { id: 10, name: 'Alex Adams', age: 22, gender: 'Male', condition: ['Anxiety', 'Depression', 'Stress'] },
 ];
+
 export default patients;
 
