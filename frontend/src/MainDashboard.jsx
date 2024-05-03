@@ -4,11 +4,14 @@ import Sidebar from './Layout/Sidebar';
 import './MainDashboard.css'; // Import the CSS file for MainDashboard
 import SearchingBar from './SearchingBar';
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import Patient1 from './Patient1';
 
 function MainDashboard() {
 
   const [patientName, setPatientName] = useState("blank");
   const [filteredPatients, setFilteredPatients] = useState([]);
+  const [showPatient1, setShowPatient1] = useState(false); // State to control rendering of Patient1
+  const [selectedPatientName, setSelectedPatientName] = useState("blank"); // State to store selected patient name
 
   const parentName = (value) => {
     setPatientName(value);
@@ -16,6 +19,13 @@ function MainDashboard() {
 
   const parentTable = (value2) => {
     setFilteredPatients(value2);
+  };
+
+  function handleLinkClick(patientName) {
+    setSelectedPatientName(patientName);
+    setPatientName("e");
+    setShowPatient1(true);
+    setFilteredPatients([]);
   };
 
   return (
@@ -46,7 +56,7 @@ function MainDashboard() {
           <tbody>
             {filteredPatients.map((patient, index) => (
               <tr key={index}>
-                <td><Link to="/patient1">{patient.name}</Link></td>
+                <td><Link to="." onClick={() => handleLinkClick(patient.name)}>{patient.name}</Link></td>
                 <td>{patient.age}</td>
                 <td>{patient.gender}</td>
                 <td>{patient.condition}</td>
@@ -55,6 +65,10 @@ function MainDashboard() {
           </tbody>
         </table>
       )}
+
+      {/*render patient information pages here*/}
+      {showPatient1 && <Patient1 selectedPatientName={selectedPatientName} />}
+
     </div>
   );
 }
