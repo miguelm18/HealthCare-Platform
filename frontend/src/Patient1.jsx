@@ -5,6 +5,8 @@ function Patient1({ selectedPatient }) {
   const [newAge, setNewAge] = useState('');
   const [conditionIndex, setConditionIndex] = useState('');
   const [newCondition, setNewCondition] = useState('');
+  const [additionalCondition, setAdditionalCondition] = useState(''); // New state variable for the additional condition
+  const [deleteIndex, setDeleteIndex] = useState(''); // New state variable for the index to delete
 
   function handleConditionUpdate() {
     if (newAge.trim() !== '') {
@@ -18,6 +20,19 @@ function Patient1({ selectedPatient }) {
         selectedPatient.condition[index - 1] = newCondition;
         setConditionIndex('');
         setNewCondition('');
+      }
+    }
+
+    if (additionalCondition.trim() !== '') { // Check if additional condition is not empty
+      selectedPatient.condition.push(additionalCondition); // Add the new condition to the array
+      setAdditionalCondition(''); // Clear the input box
+    }
+
+    if (deleteIndex.trim() !== '') { // Check if delete index is not empty
+      const indexToDelete = parseInt(deleteIndex);
+      if (!isNaN(indexToDelete) && indexToDelete >= 1 && indexToDelete <= selectedPatient.condition.length) {
+        selectedPatient.condition.splice(indexToDelete - 1, 1); // Remove the condition at the specified index
+        setDeleteIndex('');
       }
     }
   }
@@ -57,7 +72,7 @@ function Patient1({ selectedPatient }) {
                 type="text"
                 value={newAge}
                 onChange={handleAgeChange}
-                placeholder={!newAge ? 'Enter new age' : ''}
+                placeholder={!newAge ? 'Change age, enter its value here' : ''}
               />
             </div>
             <div className="input-text">
@@ -65,7 +80,7 @@ function Patient1({ selectedPatient }) {
                 type="text"
                 value={conditionIndex}
                 onChange={(e) => setConditionIndex(e.target.value)}
-                placeholder={!conditionIndex ? 'Enter condition number' : ''}
+                placeholder={!conditionIndex ? 'Change condition, enter its id here' : ''}
               />
             </div>
             <div className="input-text">
@@ -73,7 +88,23 @@ function Patient1({ selectedPatient }) {
                 type="text"
                 value={newCondition}
                 onChange={(e) => setNewCondition(e.target.value)}
-                placeholder={!newCondition ? 'Enter new condition' : ''}
+                placeholder={!newCondition ? 'Change condition, enter its value here' : ''}
+              />
+            </div>
+            <div className="input-text"> {/* New input box for additional condition */}
+              <input
+                type="text"
+                value={additionalCondition}
+                onChange={(e) => setAdditionalCondition(e.target.value)}
+                placeholder={!additionalCondition ? 'Add new condition, enter its value here' : ''}
+              />
+            </div>
+            <div className="input-text"> {/* New input box for delete index */}
+              <input
+                type="text"
+                value={deleteIndex}
+                onChange={(e) => setDeleteIndex(e.target.value)}
+                placeholder={!deleteIndex ? 'Delete condition, enter its id here' : ''}
               />
             </div>
           </div>
