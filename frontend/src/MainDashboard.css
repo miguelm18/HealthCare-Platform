@@ -50,3 +50,8 @@ outline: none;
 #search-icon {
 color: rgb(65, 105, 225);
 }
+
+/*adjust this if you want the patient page to be further to the right*/
+.patient-page-left-margin {
+  margin-left: 0px;
+}

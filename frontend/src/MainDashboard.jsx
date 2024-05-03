@@ -11,7 +11,7 @@ function MainDashboard() {
   const [patientName, setPatientName] = useState("blank");
   const [filteredPatients, setFilteredPatients] = useState([]);
   const [showPatient1, setShowPatient1] = useState(false); // State to control rendering of Patient1
-  const [selectedPatientName, setSelectedPatientName] = useState("blank"); // State to store selected patient name
+  const [selectedPatient, setSelectedPatient] = useState(null); // State to store selected patient name
 
   const parentName = (value) => {
     setPatientName(value);
@@ -21,9 +21,9 @@ function MainDashboard() {
     setFilteredPatients(value2);
   };
 
-  function handleLinkClick(patientName) {
-    setSelectedPatientName(patientName);
-    setPatientName("e");
+  function handleLinkClick(patient) {
+    setSelectedPatient(patient);
+    setPatientName("test");
     setShowPatient1(true);
     setFilteredPatients([]);
   };
@@ -56,7 +56,7 @@ function MainDashboard() {
           <tbody>
             {filteredPatients.map((patient, index) => (
               <tr key={index}>
-                <td><Link to="." onClick={() => handleLinkClick(patient.name)}>{patient.name}</Link></td>
+                <td><Link to="." onClick={() => handleLinkClick(patient)}>{patient.name}</Link></td>
                 <td>{patient.age}</td>
                 <td>{patient.gender}</td>
                 <td>{patient.condition}</td>
@@ -67,7 +67,7 @@ function MainDashboard() {
       )}
 
       {/*render patient information pages here*/}
-      {showPatient1 && <Patient1 selectedPatientName={selectedPatientName} />}
+      {showPatient1 && <Patient1 selectedPatient={selectedPatient} />}
 
     </div>
   );
