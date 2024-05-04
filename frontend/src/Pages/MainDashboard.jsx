@@ -42,7 +42,7 @@ function MainDashboard() {
               <th>Name</th>
               <th>Age</th>
               <th>Gender</th>
-              <th>Condition</th>
+              <th>Current Illnesses</th>
             </tr>
           </thead>
           <tbody>
@@ -52,8 +52,8 @@ function MainDashboard() {
                 <td>{`${patient.age.years} years, ${patient.age.months} months, ${patient.age.days} days`}</td>
                 <td>{patient.gender}</td>
                 <td>
-                  {patient.condition.map((condition, conditionIndex) => (
-                    <span key={conditionIndex}>{condition}{conditionIndex !== patient.condition.length - 1 && ', '}</span>
+                  {patient.currentIllnesses.map((illness, illnessIndex) => (
+                    <span key={illnessIndex}>{illness}{illnessIndex !== patient.currentIllnesses.length - 1 && ', '}</span>
                   ))}
                 </td>
               </tr>

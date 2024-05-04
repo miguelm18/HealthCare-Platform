@@ -22,7 +22,7 @@ function SearchingBar({ parentTable }) {
   };
 
   return (
-    <div className="input-text">
+    <div className="input-text-searchbar">
       <FaSearch id="search-icon" />
       <input placeholder="Search" value={storedName} onChange={handleInputChange} />
     </div>

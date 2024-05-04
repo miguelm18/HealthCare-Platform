@@ -5,37 +5,35 @@ function PatientPages({ selectedPatient }) {
   const [currentPage, setCurrentPage] = useState(1);
   const [conditionIndex, setConditionIndex] = useState('');
   const [newCondition, setNewCondition] = useState('');
-  const [additionalCondition, setAdditionalCondition] = useState(''); // New state variable for the additional condition
-  const [deleteIndex, setDeleteIndex] = useState(''); // New state variable for the index to delete
+  const [additionalCondition, setAdditionalCondition] = useState('');
+  const [deleteIndex, setDeleteIndex] = useState('');
   const [newYear, setNewYear] = useState('');
   const [newMonth, setNewMonth] = useState('');
   const [newDay, setNewDay] = useState('');
 
   function handleChange() {
-    // Update conditions
     if (conditionIndex.trim() !== '' && newCondition.trim() !== '') {
       const index = parseInt(conditionIndex);
-      if (!isNaN(index) && index >= 1 && index <= selectedPatient.condition.length) {
-        selectedPatient.condition[index - 1] = newCondition;
+      if (!isNaN(index) && index >= 1 && index <= selectedPatient.currentIllnesses.length) {
+        selectedPatient.currentIllnesses[index - 1] = newCondition;
         setConditionIndex('');
         setNewCondition('');
       }
     }
 
     if (additionalCondition.trim() !== '') {
-      selectedPatient.condition.push(additionalCondition);
+      selectedPatient.currentIllnesses.push(additionalCondition);
       setAdditionalCondition('');
     }
 
     if (deleteIndex.trim() !== '') {
       const indexToDelete = parseInt(deleteIndex);
-      if (!isNaN(indexToDelete) && indexToDelete >= 1 && indexToDelete <= selectedPatient.condition.length) {
-        selectedPatient.condition.splice(indexToDelete - 1, 1);
+      if (!isNaN(indexToDelete) && indexToDelete >= 1 && indexToDelete <= selectedPatient.currentIllnesses.length) {
+        selectedPatient.currentIllnesses.splice(indexToDelete - 1, 1);
         setDeleteIndex('');
       }
     }
 
-    // Update age
     if (newYear.trim() !== '') {
       const year = parseInt(newYear);
       if (!isNaN(year)) {
@@ -83,9 +81,9 @@ function PatientPages({ selectedPatient }) {
           <p>Name: {selectedPatient.name}</p>
           <p>Age: {selectedPatient.age.years} years, {selectedPatient.age.months} months, {selectedPatient.age.days} days</p>
           <p>Gender: {selectedPatient.gender}</p>
-          <p>Condition:</p>
+          <p>Current Illnesses:</p>
           <ol>
-            {selectedPatient.condition.map((condition, index) => (
+            {selectedPatient.currentIllnesses.map((condition, index) => (
               <li key={index}>{condition}</li>
             ))}
           </ol>
@@ -95,7 +93,7 @@ function PatientPages({ selectedPatient }) {
                 type="text"
                 value={newYear}
                 onChange={(e) => setNewYear(e.target.value)}
-                placeholder={!newYear ? 'Change years' : ''}
+                placeholder={!newYear ? 'Change age (years), enter its value here' : ''}
               />
             </div>
             <div className="input-text">
@@ -103,7 +101,7 @@ function PatientPages({ selectedPatient }) {
                 type="text"
                 value={newMonth}
                 onChange={(e) => setNewMonth(e.target.value)}
-                placeholder={!newMonth ? 'Change months' : ''}
+                placeholder={!newMonth ? 'Change age (months), enter its value here' : ''}
               />
             </div>
             <div className="input-text">
@@ -111,7 +109,7 @@ function PatientPages({ selectedPatient }) {
                 type="text"
                 value={newDay}
                 onChange={(e) => setNewDay(e.target.value)}
-                placeholder={!newDay ? 'Change days' : ''}
+                placeholder={!newDay ? 'Change age (days), enter its value here' : ''}
               />
             </div>
             <div className="input-text">
@@ -119,7 +117,7 @@ function PatientPages({ selectedPatient }) {
                 type="text"
                 value={conditionIndex}
                 onChange={(e) => setConditionIndex(e.target.value)}
-                placeholder={!conditionIndex ? 'Change condition, enter its id here' : ''}
+                placeholder={!conditionIndex ? 'Change a current illness, enter its id here' : ''}
               />
             </div>
             <div className="input-text">
@@ -127,23 +125,23 @@ function PatientPages({ selectedPatient }) {
                 type="text"
                 value={newCondition}
                 onChange={(e) => setNewCondition(e.target.value)}
-                placeholder={!newCondition ? 'Change condition, enter its value here' : ''}
+                placeholder={!newCondition ? 'Change a current illness, enter its value here' : ''}
               />
             </div>
-            <div className="input-text"> {/* New input box for additional condition */}
+            <div className="input-text">
               <input
                 type="text"
                 value={additionalCondition}
                 onChange={(e) => setAdditionalCondition(e.target.value)}
-                placeholder={!additionalCondition ? 'Add new condition, enter its value here' : ''}
+                placeholder={!additionalCondition ? 'Add a new current illness, enter its value here' : ''}
               />
             </div>
-            <div className="input-text"> {/* New input box for delete index */}
+            <div className="input-text">
               <input
                 type="text"
                 value={deleteIndex}
                 onChange={(e) => setDeleteIndex(e.target.value)}
-                placeholder={!deleteIndex ? 'Delete condition, enter its id here' : ''}
+                placeholder={!deleteIndex ? 'Delete a current illness, enter its id here' : ''}
               />
             </div>
           </div>
