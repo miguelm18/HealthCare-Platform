@@ -6,12 +6,14 @@ import '../Style/AddPatient.css';
 import patients from '../MockData'; // Import the patients array from MockData.js
 
 function AddPatient() {
-  const [name, setName] = useState('');
+  const [addName, setAddName] = useState('');
+  const [deleteName, setDeleteName] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleAddSubmit = (e) => {
     e.preventDefault();
     const newPatient = {
-      name,
+      name: addName,
       firstName: '',
       middleName: '',
       lastName: '',
@@ -40,8 +42,22 @@ function AddPatient() {
     };
     patients.push(newPatient); // Update the patients array directly
     // Reset the name field only
-    setName('');
+    setAddName('');
     alert('Patient added successfully');
+  };
+
+  const handleDeleteSubmit = (e) => {
+    e.preventDefault();
+    const index = patients.findIndex((patient) => patient.name === deleteName);
+    if (index !== -1) {
+      patients.splice(index, 1);
+      alert('Patient deleted successfully');
+    } else {
+      setErrorMessage('Patient not found');
+    }
+    // Reset the name field and error message
+    setDeleteName('');
+    setErrorMessage('');
   };
 
   return (
@@ -49,17 +65,33 @@ function AddPatient() {
       <Header />
       <Sidebar />
       <h1>Add a Patient</h1>
-      <form onSubmit={handleSubmit}>
-        {/* Input field for patient's name */}
+      <form onSubmit={handleAddSubmit}>
+        {/* Input field for adding patient's name */}
         <input
           type="text"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
+          value={addName}
+          onChange={(e) => setAddName(e.target.value)}
           placeholder="Name"
           required
+          className="input-text"
         />
-        {/* Submit button */}
+        {/* Submit button for adding patient */}
         <button type="submit">Add Patient</button>
+      </form>
+      <h1>Delete a Patient</h1>
+      <form onSubmit={handleDeleteSubmit}>
+        {/* Input field for deleting patient's name */}
+        <input
+          type="text"
+          value={deleteName}
+          onChange={(e) => setDeleteName(e.target.value)}
+          placeholder="Name to Delete"
+          required
+          className="input-text"
+        />
+        {/* Submit button for deleting patient */}
+        <button type="submit">Delete Patient</button>
+        {errorMessage && <p>{errorMessage}</p>}
       </form>
     </div>
   );
