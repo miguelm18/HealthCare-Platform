@@ -23,6 +23,8 @@ function PatientPages({ selectedPatient }) {
   const [newEmailAddress, setNewEmailAddress] = useState('');
   const [newEmergencyContactName, setNewEmergencyContactName] = useState('');
   const [newEmergencyContactPhoneNumber, setNewEmergencyContactPhoneNumber] = useState('');
+  const [newFamilyMember, addNewFamilyMember] = useState('');
+  const [deleteFamilyMemberIndex, deleteFamilyMember] = useState('');
 
   //Page 2
   const [additionalCondition, setAdditionalCondition] = useState('');
@@ -58,7 +60,6 @@ function PatientPages({ selectedPatient }) {
     if (newMaritalStatus.trim() !== '') {
       selectedPatient.maritalStatus = newMaritalStatus;
     }
-
     if (newYear.trim() !== '') {
       const year = parseInt(newYear);
       if (!isNaN(year)) {
@@ -94,6 +95,17 @@ function PatientPages({ selectedPatient }) {
     }
     if (newEmergencyContactPhoneNumber.trim() !== '') {
       selectedPatient.emergencyContactPhoneNumber = newEmergencyContactPhoneNumber;
+    }
+    if (newFamilyMember.trim() !== '') {
+      selectedPatient.family.push(newFamilyMember);
+      addNewFamilyMember('');
+    }
+    if (deleteFamilyMemberIndex.trim() !== '') {
+      const indexToDelete = parseInt(deleteFamilyMemberIndex);
+      if (!isNaN(indexToDelete) && indexToDelete >= 1 && indexToDelete <= selectedPatient.family.length) {
+        selectedPatient.family.splice(indexToDelete - 1, 1);
+        deleteFamilyMember('');
+      }
     }
     // Reset the input fields
     setNewPatientID('');
@@ -313,6 +325,22 @@ function PatientPages({ selectedPatient }) {
                     value={newEmergencyContactPhoneNumber}
                     onChange={(e) => setNewEmergencyContactPhoneNumber(e.target.value)}
                     placeholder={!newEmergencyContactPhoneNumber ? 'New Emergency Contact Phone Number' : ''}
+                  />
+                </div>
+                <div className="input-text">
+                  <input
+                    type="text"
+                    value={newFamilyMember}
+                    onChange={(e) => addNewFamilyMember(e.target.value)}
+                    placeholder={!newFamilyMember ? 'Add a Family Member' : ''}
+                  />
+                </div>
+                <div className="input-text">
+                  <input
+                    type="text"
+                    value={deleteFamilyMemberIndex}
+                    onChange={(e) => deleteFamilyMember(e.target.value)}
+                    placeholder={!deleteFamilyMemberIndex ? 'Delete a family member, enter their id' : ''}
                   />
                 </div>
                 <button type="submit">Update All</button>
