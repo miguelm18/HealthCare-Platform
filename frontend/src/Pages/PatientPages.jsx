@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../Style/PatientPages.css';
 
 function PatientPages({ selectedPatient }) {
   const [currentPage, setCurrentPage] = useState(1);
@@ -57,6 +58,13 @@ function PatientPages({ selectedPatient }) {
         <div>
           <h1>Patient Page 1</h1>
           <p>This is the content of patient page 1.</p>
+          <div className="image-container">
+            <img
+              src={selectedPatient.id}
+              alt="Patient"
+              className="small-image"
+            />
+          </div>
           <p>Name: {selectedPatient.name}</p>
           <p>Age: {selectedPatient.age}</p>
           <p>Gender: {selectedPatient.gender}</p>
