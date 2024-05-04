@@ -7,3 +7,7 @@
 .image-container {
   text-align: left; /* Center the image */
 }
+
+.large-image {
+  width: 400px;
+}

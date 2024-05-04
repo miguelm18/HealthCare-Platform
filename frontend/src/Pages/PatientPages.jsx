@@ -69,8 +69,8 @@ function PatientPages({ selectedPatient }) {
     <div className="patient-page-left-margin">
       {currentPage === 1 && (
         <div>
-          <h1>Patient Page 1</h1>
-          <p>This is the content of patient page 1.</p>
+          <h1>General Patient Information</h1>
+          <button onClick={nextPage}>Next Page</button>
           <div className="image-container">
             <img
               src={selectedPatient.id}
@@ -78,13 +78,26 @@ function PatientPages({ selectedPatient }) {
               className="small-image"
             />
           </div>
-          <p>Name: {selectedPatient.name}</p>
+          <p>First Name: {selectedPatient.firstName}</p>
+          <p>Middle Name: {selectedPatient.middleName}</p>
+          <p>Last Name: {selectedPatient.lastName}</p>
+          <p>Date of Birth: {selectedPatient.dateOfBirth}</p>
+          <p>Blood Group: {selectedPatient.bloodGroup}</p>
+          <p>RH Factor: {selectedPatient.rhFactor}</p>
+          <p>Marital Status: {selectedPatient.maritalStatus}</p>
           <p>Age: {selectedPatient.age.years} years, {selectedPatient.age.months} months, {selectedPatient.age.days} days</p>
           <p>Gender: {selectedPatient.gender}</p>
-          <p>Current Illnesses:</p>
+          <p>Contact Info</p>
+          <p>Phone Residence: {selectedPatient.phoneResidence}</p>
+          <p>Mobile Phone: {selectedPatient.mobilePhone}</p>
+          <p>Email Address: {selectedPatient.emailAddress}</p>
+          <p>Emergency Contact</p>
+          <p>Emergency Contact Name: {selectedPatient.emergencyContactName}</p>
+          <p>Emergency Contact Phone Number: {selectedPatient.emergencyContactPhoneNumber}</p>
+          <p>Family:</p>
           <ol>
-            {selectedPatient.currentIllnesses.map((condition, index) => (
-              <li key={index}>{condition}</li>
+            {selectedPatient.family.map((family, index) => (
+              <li key={index}>{family}</li>
             ))}
           </ol>
           <div>
@@ -151,38 +164,24 @@ function PatientPages({ selectedPatient }) {
       )}
       {currentPage === 2 && (
         <div>
-          <h1>Patient Page 2</h1>
-          <p>This is the content of patient page 2.</p>
-          <p>Name: {selectedPatient.name}</p>
+          <h1>Health Conditions</h1>
           <button onClick={prevPage}>Previous Page</button>
           <button onClick={nextPage}>Next Page</button>
-        </div>
-      )}
-      {currentPage === 3 && (
-        <div>
-          <h1>Patient Page 3</h1>
-          <p>This is the content of patient page 3.</p>
-          <p>Age: {selectedPatient.age.years} years, {selectedPatient.age.months} months, {selectedPatient.age.days} days</p>
-          <button onClick={prevPage}>Previous Page</button>
-          <button onClick={nextPage}>Next Page</button>
-        </div>
-      )}
-      {currentPage === 4 && (
-        <div>
-          <h1>Patient Page 4</h1>
-          <p>This is the content of patient page 4.</p>
-          <p>Gender: {selectedPatient.gender}</p>
-          <button onClick={prevPage}>Previous Page</button>
-          <button onClick={nextPage}>Next Page</button>
-        </div>
-      )}
-      {currentPage === 5 && (
-        <div>
-          <h1>Patient Page 5</h1>
-          <p>This is the content of patient page 5.</p>
-          <p>Condition:</p>
+          <p>Current Illnesses:</p>
           <ol>
-            {selectedPatient.condition.map((condition, index) => (
+            {selectedPatient.currentIllnesses.map((condition, index) => (
+              <li key={index}>{condition}</li>
+            ))}
+          </ol>
+          <p>Previous Illnesses:</p>
+          <ol>
+            {selectedPatient.previousIllnesses.map((condition, index) => (
+              <li key={index}>{condition}</li>
+            ))}
+          </ol>
+          <p>Specific Allergies:</p>
+          <ol>
+            {selectedPatient.specificAllergies.map((condition, index) => (
               <li key={index}>{condition}</li>
             ))}
           </ol>
@@ -190,10 +189,98 @@ function PatientPages({ selectedPatient }) {
           <button onClick={nextPage}>Next Page</button>
         </div>
       )}
+      {currentPage === 3 && (
+        <div>
+          <h1>Medications</h1>
+          <button onClick={prevPage}>Previous Page</button>
+          <button onClick={nextPage}>Next Page</button>
+          <p>Current Medications:</p>
+          <ol>
+            {selectedPatient.currentMedications.map((condition, index) => (
+              <li key={index}>{condition}</li>
+            ))}
+          </ol>
+          <p>Past Medications:</p>
+          <ol>
+            {selectedPatient.pastMedications.map((condition, index) => (
+              <li key={index}>{condition}</li>
+            ))}
+          </ol>
+          <button onClick={prevPage}>Previous Page</button>
+          <button onClick={nextPage}>Next Page</button>
+        </div>
+      )}
+      {currentPage === 4 && (
+        <div>
+          <h1>Patient Page 4 Empty For Now</h1>
+          <button onClick={prevPage}>Previous Page</button>
+          <button onClick={nextPage}>Next Page</button>
+
+          <button onClick={prevPage}>Previous Page</button>
+          <button onClick={nextPage}>Next Page</button>
+        </div>
+      )}
+      {currentPage === 5 && (
+        <div>
+          <h1>Lab Reports</h1>
+          <button onClick={prevPage}>Previous Page</button>
+          <button onClick={nextPage}>Next Page</button>
+          <ul>
+            {selectedPatient.labReports.map((report, index) => (
+              <li key={index}>
+                <p>Lab Report:</p>
+                <p>{report.report}</p> {/* Render the report text */}
+                <p>Lab Report Photos:</p>
+                <div className="image-container"> {/* Render photo */}
+                  <img src={report.photo} alt="Lab Report" className="large-image" />
+                </div>
+                <p>Radiology Videos:</p>
+                <div> {/* Render radiology video */}
+                  <iframe width="560" height="315"
+                    src={report.radiologyVideo} title="radiology video">
+                  </iframe>
+                </div>
+                <p>MRI Tracing Images:</p>
+                <div className="image-container"> {/* Render MRI tracing images */}
+                  <img src={report.mriTracingImages} alt="MRI Tracing Images" className="large-image" />
+                </div>
+              </li>
+            ))}
+          </ul>
+          <button onClick={prevPage}>Previous Page</button>
+          <button onClick={nextPage}>Next Page</button>
+        </div>
+      )}
       {currentPage === 6 && (
         <div>
-          <h1>Patient Page 6</h1>
-          <p>This is the content of patient page 6.</p>
+          <h1>Appointments</h1>
+          <button onClick={prevPage}>Previous Page</button>
+          <p>Appointment Times:</p>
+          <ol>
+            {selectedPatient.appointmentTimes.map((condition, index) => (
+              <li key={index}>{condition}</li>
+            ))}
+          </ol>
+          <p>Doctor Visits:</p>
+          <ol>
+            {selectedPatient.doctorVisits.map((condition, index) => (
+              <li key={index}>{condition}</li>
+            ))}
+          </ol>
+          <p>X-Rays:</p>
+          <div>
+            {selectedPatient.xRays.map((xRay, index) => (
+              <div key={index} className="image-container">
+                <img src={xRay} alt={`X-Ray ${index}`} className="large-image" />
+              </div>
+            ))}
+          </div>
+          <p>Vaccinations:</p>
+          <ol>
+            {selectedPatient.vaccinations.map((condition, index) => (
+              <li key={index}>{condition}</li>
+            ))}
+          </ol>
           <p>Name: {selectedPatient.name}</p>
           <button onClick={prevPage}>Previous Page</button>
         </div>
