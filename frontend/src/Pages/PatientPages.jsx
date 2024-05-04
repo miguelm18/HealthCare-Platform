@@ -34,6 +34,12 @@ function PatientPages({ selectedPatient }) {
   const [additionalSpecificAllergies, addAdditionalSpecificAllergies] = useState('');
   const [deleteSpecificAllergiesIndex, deleteSpecificAllergies] = useState('');
 
+  //Page 3
+  const [additionalCurrentMedication, addAdditionalCurrentMedication] = useState('');
+  const [deleteCurrentMedicationIndex, deleteCurrentMedication] = useState('');
+  const [additionalPastMedication, addAdditionalPastMedication] = useState('');
+  const [deletePastMedicationIndex, deletePastMedication] = useState('');
+
   function handleChange() {
 
     //Page 1
@@ -127,7 +133,7 @@ function PatientPages({ selectedPatient }) {
     setNewEmergencyContactName('');
     setNewEmergencyContactPhoneNumber('');
 
-    //Page 1
+    //Page 2
     if (additionalCondition.trim() !== '') {
       selectedPatient.currentIllnesses.push(additionalCondition);
       setAdditionalCondition('');
@@ -164,6 +170,32 @@ function PatientPages({ selectedPatient }) {
         deleteSpecificAllergies('');
       }
     }
+
+    //Page 3
+    if (additionalCurrentMedication.trim() !== '') {
+      selectedPatient.currentMedications.push(additionalCurrentMedication);
+      addAdditionalCurrentMedication('');
+    }
+    if (deleteCurrentMedicationIndex.trim() !== '') {
+      const indexToDelete4 = parseInt(deleteCurrentMedicationIndex);
+      if (!isNaN(indexToDelete4) && indexToDelete4 >= 1 && indexToDelete4 <= selectedPatient.currentMedications.length) {
+        selectedPatient.currentMedications.splice(indexToDelete4 - 1, 1);
+        deleteCurrentMedication('');
+      }
+    }
+
+    if (additionalPastMedication.trim() !== '') {
+      selectedPatient.pastMedications.push(additionalPastMedication);
+      addAdditionalPastMedication('');
+    }
+    if (deletePastMedicationIndex.trim() !== '') {
+      const indexToDelete5 = parseInt(deletePastMedicationIndex);
+      if (!isNaN(indexToDelete5) && indexToDelete5 >= 1 && indexToDelete5 <= selectedPatient.pastMedications.length) {
+        selectedPatient.pastMedications.splice(indexToDelete5 - 1, 1);
+        deletePastMedication('');
+      }
+    }
+
 
   }
 
@@ -475,6 +507,44 @@ function PatientPages({ selectedPatient }) {
               <li key={index}>{condition}</li>
             ))}
           </ol>
+          <form onSubmit={(e) => {
+            e.preventDefault(); // Prevent default form submission
+            handleChange(); // Call handleChange function
+          }}>
+            <div className="input-text">
+              <input
+                type="text"
+                value={additionalCurrentMedication}
+                onChange={(e) => addAdditionalCurrentMedication(e.target.value)}
+                placeholder={!additionalCurrentMedication ? 'Add a current medication' : ''}
+              />
+            </div>
+            <div className="input-text">
+              <input
+                type="text"
+                value={deleteCurrentMedicationIndex}
+                onChange={(e) => deleteCurrentMedication(e.target.value)}
+                placeholder={!deleteCurrentMedicationIndex ? 'Delete a current medication, enter its id here' : ''}
+              />
+            </div>
+            <div className="input-text">
+              <input
+                type="text"
+                value={additionalPastMedication}
+                onChange={(e) => addAdditionalPastMedication(e.target.value)}
+                placeholder={!additionalPastMedication ? 'Add a past medication' : ''}
+              />
+            </div>
+            <div className="input-text">
+              <input
+                type="text"
+                value={deletePastMedicationIndex}
+                onChange={(e) => deletePastMedication(e.target.value)}
+                placeholder={!deletePastMedicationIndex ? 'Delete a past medication, enter its id here' : ''}
+              />
+            </div>
+            <button type="submit">Update All</button>
+          </form>
           <button onClick={prevPage}>Previous Page</button>
           <button onClick={nextPage}>Next Page</button>
         </div>
