@@ -40,24 +40,12 @@ function MainDashboard() {
           <thead>
             <tr>
               <th>Name</th>
-              <th>Appointment Times</th>
-              <th>Current Medications</th>
             </tr>
           </thead>
           <tbody>
             {filteredPatients.map((patient, index) => (
               <tr key={index}>
                 <td><Link to="." onClick={() => handleLinkClick(patient)}>{patient.name}</Link></td>
-                <td>
-                  {patient.appointmentTimes.map((time, timeIndex) => (
-                    <div key={timeIndex}>{time}</div>
-                  ))}
-                </td>
-                <td>
-                  {patient.currentMedications.map((medication, medicationIndex) => (
-                    <div key={medicationIndex}>{medication}</div>
-                  ))}
-                </td>
               </tr>
             ))}
           </tbody>
