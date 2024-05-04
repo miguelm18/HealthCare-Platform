@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Header from './Layout/Header';
 import Sidebar from './Layout/Sidebar';
-import './MainDashboard.css'; // Import the CSS file for MainDashboard
+import './Style/MainDashboard.css'; // Import the CSS file for MainDashboard
 import SearchingBar from './SearchingBar';
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import Patient1 from './Patient1';

@@ -58,7 +58,7 @@ function Patient1({ selectedPatient }) {
           <h1>Patient Page 1</h1>
           <p>This is the content of patient page 1.</p>
           <p>Name: {selectedPatient.name}</p>
-          <p>Age: {selectedPatient.age}</p>
+          <p>Age: {selectedPatient.age.years}</p>
           <p>Gender: {selectedPatient.gender}</p>
           <p>Condition:</p>
           <ol>
