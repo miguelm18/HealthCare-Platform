@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import PatientPages from './PatientPages';
 
 function MainDashboard() {
-
   const [filteredPatients, setFilteredPatients] = useState([]);
   const [showPatient1, setShowPatient1] = useState(false); // State to control rendering of Patient1
   const [selectedPatient, setSelectedPatient] = useState(null); // State to store selected patient name
@@ -32,10 +31,10 @@ function MainDashboard() {
       <div className="search-bar-container">
         <SearchingBar parentTable={parentTable} />
       </div>
-      <p>implement notifications somewhere on this page</p>
-      <p>implement the calendar thingy somewhere on this page</p>
-      <br></br>
-      <br></br>
+      <p>Implement notifications somewhere on this page</p>
+      <p>Implement the calendar thingy somewhere on this page</p>
+      <br />
+      <br />
       {filteredPatients.length > 0 && (
         <table>
           <thead>
@@ -50,7 +49,7 @@ function MainDashboard() {
             {filteredPatients.map((patient, index) => (
               <tr key={index}>
                 <td><Link to="." onClick={() => handleLinkClick(patient)}>{patient.name}</Link></td>
-                <td>{patient.age}</td>
+                <td>{`${patient.age.years} years, ${patient.age.months} months, ${patient.age.days} days`}</td>
                 <td>{patient.gender}</td>
                 <td>
                   {patient.condition.map((condition, conditionIndex) => (
@@ -63,12 +62,10 @@ function MainDashboard() {
         </table>
       )}
 
-      {/*render patient information pages here*/}
+      {/* Render patient information pages here */}
       {showPatient1 && <PatientPages selectedPatient={selectedPatient} />}
-
     </div>
   );
 }
 
 export default MainDashboard;
-

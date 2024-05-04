@@ -3,18 +3,16 @@ import '../Style/PatientPages.css';
 
 function PatientPages({ selectedPatient }) {
   const [currentPage, setCurrentPage] = useState(1);
-  const [newAge, setNewAge] = useState('');
   const [conditionIndex, setConditionIndex] = useState('');
   const [newCondition, setNewCondition] = useState('');
   const [additionalCondition, setAdditionalCondition] = useState(''); // New state variable for the additional condition
   const [deleteIndex, setDeleteIndex] = useState(''); // New state variable for the index to delete
+  const [newYear, setNewYear] = useState('');
+  const [newMonth, setNewMonth] = useState('');
+  const [newDay, setNewDay] = useState('');
 
-  function handleConditionUpdate() {
-    if (newAge.trim() !== '') {
-      selectedPatient.age = parseInt(newAge);
-      setNewAge('');
-    }
-
+  function handleChange() {
+    // Update conditions
     if (conditionIndex.trim() !== '' && newCondition.trim() !== '') {
       const index = parseInt(conditionIndex);
       if (!isNaN(index) && index >= 1 && index <= selectedPatient.condition.length) {
@@ -24,24 +22,41 @@ function PatientPages({ selectedPatient }) {
       }
     }
 
-    if (additionalCondition.trim() !== '') { // Check if additional condition is not empty
-      selectedPatient.condition.push(additionalCondition); // Add the new condition to the array
-      setAdditionalCondition(''); // Clear the input box
+    if (additionalCondition.trim() !== '') {
+      selectedPatient.condition.push(additionalCondition);
+      setAdditionalCondition('');
     }
 
-    if (deleteIndex.trim() !== '') { // Check if delete index is not empty
+    if (deleteIndex.trim() !== '') {
       const indexToDelete = parseInt(deleteIndex);
       if (!isNaN(indexToDelete) && indexToDelete >= 1 && indexToDelete <= selectedPatient.condition.length) {
-        selectedPatient.condition.splice(indexToDelete - 1, 1); // Remove the condition at the specified index
+        selectedPatient.condition.splice(indexToDelete - 1, 1);
         setDeleteIndex('');
       }
     }
-  }
 
-  function handleAgeChange(e) {
-    // Filter out non-numeric characters
-    const value = e.target.value.replace(/\D/, '');
-    setNewAge(value);
+    // Update age
+    if (newYear.trim() !== '') {
+      const year = parseInt(newYear);
+      if (!isNaN(year)) {
+        selectedPatient.age.years = year;
+        setNewYear('');
+      }
+    }
+    if (newMonth.trim() !== '') {
+      const month = parseInt(newMonth);
+      if (!isNaN(month)) {
+        selectedPatient.age.months = month;
+        setNewMonth('');
+      }
+    }
+    if (newDay.trim() !== '') {
+      const day = parseInt(newDay);
+      if (!isNaN(day)) {
+        selectedPatient.age.days = day;
+        setNewDay('');
+      }
+    }
   }
 
   function nextPage() {
@@ -66,7 +81,7 @@ function PatientPages({ selectedPatient }) {
             />
           </div>
           <p>Name: {selectedPatient.name}</p>
-          <p>Age: {selectedPatient.age}</p>
+          <p>Age: {selectedPatient.age.years} years, {selectedPatient.age.months} months, {selectedPatient.age.days} days</p>
           <p>Gender: {selectedPatient.gender}</p>
           <p>Condition:</p>
           <ol>
@@ -78,9 +93,25 @@ function PatientPages({ selectedPatient }) {
             <div className="input-text">
               <input
                 type="text"
-                value={newAge}
-                onChange={handleAgeChange}
-                placeholder={!newAge ? 'Change age, enter its value here' : ''}
+                value={newYear}
+                onChange={(e) => setNewYear(e.target.value)}
+                placeholder={!newYear ? 'Change years' : ''}
+              />
+            </div>
+            <div className="input-text">
+              <input
+                type="text"
+                value={newMonth}
+                onChange={(e) => setNewMonth(e.target.value)}
+                placeholder={!newMonth ? 'Change months' : ''}
+              />
+            </div>
+            <div className="input-text">
+              <input
+                type="text"
+                value={newDay}
+                onChange={(e) => setNewDay(e.target.value)}
+                placeholder={!newDay ? 'Change days' : ''}
               />
             </div>
             <div className="input-text">
@@ -116,7 +147,7 @@ function PatientPages({ selectedPatient }) {
               />
             </div>
           </div>
-          <button onClick={handleConditionUpdate}>Update All</button>
+          <button onClick={handleChange}>Update All</button>
           <button onClick={nextPage}>Next Page</button>
         </div>
       )}
@@ -133,7 +164,7 @@ function PatientPages({ selectedPatient }) {
         <div>
           <h1>Patient Page 3</h1>
           <p>This is the content of patient page 3.</p>
-          <p>Age: {selectedPatient.age}</p>
+          <p>Age: {selectedPatient.age.years} years, {selectedPatient.age.months} months, {selectedPatient.age.days} days</p>
           <button onClick={prevPage}>Previous Page</button>
           <button onClick={nextPage}>Next Page</button>
         </div>
