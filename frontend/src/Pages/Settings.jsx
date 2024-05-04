@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Header from './Layout/Header';
-import Sidebar from './Layout/Sidebar';
+import Header from '../Layout/Header';
+import Sidebar from '../Layout/Sidebar';
 
 function Settings() {
   const [backgroundColor, setBackgroundColor] = useState('white');

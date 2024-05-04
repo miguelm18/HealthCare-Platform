@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function Patient1({ selectedPatient }) {
+function PatientPages({ selectedPatient }) {
   const [currentPage, setCurrentPage] = useState(1);
   const [newAge, setNewAge] = useState('');
   const [conditionIndex, setConditionIndex] = useState('');
@@ -58,7 +58,7 @@ function Patient1({ selectedPatient }) {
           <h1>Patient Page 1</h1>
           <p>This is the content of patient page 1.</p>
           <p>Name: {selectedPatient.name}</p>
-          <p>Age: {selectedPatient.age.years}</p>
+          <p>Age: {selectedPatient.age}</p>
           <p>Gender: {selectedPatient.gender}</p>
           <p>Condition:</p>
           <ol>
@@ -165,4 +165,4 @@ function Patient1({ selectedPatient }) {
   );
 }
 
-export default Patient1;
+export default PatientPages;

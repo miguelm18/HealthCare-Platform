@@ -4,11 +4,11 @@ import React, { useState } from 'react';
 //import { useNavigate } from 'react-router-dom';
 
 // Importing styles from external CSS file
-import './LoginSignUp.css';
+import '../Style/LoginSignUp.css';
 
 // Importing image assets
-import email_icon from './Assets/email.png';
-import healthcare_icon from './Assets/HealthCareLogo1.jpg'
+import email_icon from '../Assets/email.png';
+import healthcare_icon from '../Assets/HealthCareLogo1.jpg'
 
 
 

@@ -1,21 +1,16 @@
 import React, { useState } from 'react';
-import Header from './Layout/Header';
-import Sidebar from './Layout/Sidebar';
-import './Style/MainDashboard.css'; // Import the CSS file for MainDashboard
-import SearchingBar from './SearchingBar';
+import Header from '../Layout/Header';
+import Sidebar from '../Layout/Sidebar';
+import '../Style/MainDashboard.css'; // Import the CSS file for MainDashboard
+import SearchingBar from '../Layout/SearchingBar';
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
-import Patient1 from './Patient1';
+import PatientPages from './PatientPages';
 
 function MainDashboard() {
 
-  const [patientName, setPatientName] = useState("blank");
   const [filteredPatients, setFilteredPatients] = useState([]);
   const [showPatient1, setShowPatient1] = useState(false); // State to control rendering of Patient1
   const [selectedPatient, setSelectedPatient] = useState(null); // State to store selected patient name
-
-  const parentName = (value) => {
-    setPatientName(value);
-  };
 
   const parentTable = (value2) => {
     setFilteredPatients(value2);
@@ -23,7 +18,6 @@ function MainDashboard() {
 
   function handleLinkClick(patient) {
     setSelectedPatient(patient);
-    setPatientName("test");
     setShowPatient1(true);
     setFilteredPatients([]);
   };
@@ -36,11 +30,10 @@ function MainDashboard() {
       <h1>MainDashboard</h1>
       <p>This is the content of the MainDashboard.</p>
       <div className="search-bar-container">
-        <SearchingBar parentName={parentName} parentTable={parentTable} />
+        <SearchingBar parentTable={parentTable} />
       </div>
       <p>implement notifications somewhere on this page</p>
       <p>implement the calendar thingy somewhere on this page</p>
-      <p>Patient Name Searched: {patientName}</p>
       <br></br>
       <br></br>
       {filteredPatients.length > 0 && (
@@ -71,7 +64,7 @@ function MainDashboard() {
       )}
 
       {/*render patient information pages here*/}
-      {showPatient1 && <Patient1 selectedPatient={selectedPatient} />}
+      {showPatient1 && <PatientPages selectedPatient={selectedPatient} />}
 
     </div>
   );
