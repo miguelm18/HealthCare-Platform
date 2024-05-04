@@ -13,6 +13,7 @@ function PatientPages({ selectedPatient }) {
   const [newFirstName, setNewFirstName] = useState(''); // Added state variable for new first name
   const [newMiddleName, setNewMiddleName] = useState(''); // Added state variable for new middle name
   const [newLastName, setNewLastName] = useState(''); // Added state variable for new last name
+  const [newDateOfBirth, setNewDateOfBirth] = useState(''); // Added state variable for new last name
 
   function handleChange() {
 
@@ -26,11 +27,15 @@ function PatientPages({ selectedPatient }) {
     if (newLastName.trim() !== '') {
       selectedPatient.lastName = newLastName;
     }
+    if (newDateOfBirth.trim() !== '') {
+      selectedPatient.dateOfBirth = newDateOfBirth;
+    }
 
     // Reset the input fields
     setNewFirstName('');
     setNewMiddleName('');
     setNewLastName('');
+    setNewDateOfBirth('');
 
     if (conditionIndex.trim() !== '' && newCondition.trim() !== '') {
       const index = parseInt(conditionIndex);
@@ -205,6 +210,14 @@ function PatientPages({ selectedPatient }) {
                     value={newLastName}
                     onChange={(e) => setNewLastName(e.target.value)}
                     placeholder={!newLastName ? 'New Last Name' : ''}
+                  />
+                </div>
+                <div className="input-text">
+                  <input
+                    type="text"
+                    value={newDateOfBirth}
+                    onChange={(e) => setNewDateOfBirth(e.target.value)}
+                    placeholder={!newDateOfBirth ? 'New Date of Birth' : ''}
                   />
                 </div>
                 <button type="submit">Change Values</button>
