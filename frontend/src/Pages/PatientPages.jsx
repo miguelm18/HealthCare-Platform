@@ -10,8 +10,28 @@ function PatientPages({ selectedPatient }) {
   const [newYear, setNewYear] = useState('');
   const [newMonth, setNewMonth] = useState('');
   const [newDay, setNewDay] = useState('');
+  const [newFirstName, setNewFirstName] = useState(''); // Added state variable for new first name
+  const [newMiddleName, setNewMiddleName] = useState(''); // Added state variable for new middle name
+  const [newLastName, setNewLastName] = useState(''); // Added state variable for new last name
 
   function handleChange() {
+
+    // Update patient's values based on the new values
+    if (newFirstName.trim() !== '') {
+      selectedPatient.firstName = newFirstName;
+    }
+    if (newMiddleName.trim() !== '') {
+      selectedPatient.middleName = newMiddleName;
+    }
+    if (newLastName.trim() !== '') {
+      selectedPatient.lastName = newLastName;
+    }
+
+    // Reset the input fields
+    setNewFirstName('');
+    setNewMiddleName('');
+    setNewLastName('');
+
     if (conditionIndex.trim() !== '' && newCondition.trim() !== '') {
       const index = parseInt(conditionIndex);
       if (!isNaN(index) && index >= 1 && index <= selectedPatient.currentIllnesses.length) {
@@ -156,6 +176,39 @@ function PatientPages({ selectedPatient }) {
                 onChange={(e) => setDeleteIndex(e.target.value)}
                 placeholder={!deleteIndex ? 'Delete a current illness, enter its id here' : ''}
               />
+            </div>
+            <div>
+              {/* Form for changing patient's values for page 1 */}
+              <form onSubmit={(e) => {
+                e.preventDefault(); // Prevent default form submission
+                handleChange(); // Call handleChange function
+              }}>
+                <div className="input-text">
+                  <input
+                    type="text"
+                    value={newFirstName}
+                    onChange={(e) => setNewFirstName(e.target.value)}
+                    placeholder={!newFirstName ? 'New First Name' : ''}
+                  />
+                </div>
+                <div className="input-text">
+                  <input
+                    type="text"
+                    value={newMiddleName}
+                    onChange={(e) => setNewMiddleName(e.target.value)}
+                    placeholder={!newMiddleName ? 'New Middle Name' : ''}
+                  />
+                </div>
+                <div className="input-text">
+                  <input
+                    type="text"
+                    value={newLastName}
+                    onChange={(e) => setNewLastName(e.target.value)}
+                    placeholder={!newLastName ? 'New Last Name' : ''}
+                  />
+                </div>
+                <button type="submit">Change Values</button>
+              </form>
             </div>
           </div>
           <button onClick={handleChange}>Update All</button>
