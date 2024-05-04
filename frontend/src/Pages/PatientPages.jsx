@@ -2,22 +2,38 @@ import React, { useState } from 'react';
 import '../Style/PatientPages.css';
 
 function PatientPages({ selectedPatient }) {
+  //All Pages
   const [currentPage, setCurrentPage] = useState(1);
-  const [conditionIndex, setConditionIndex] = useState('');
-  const [newCondition, setNewCondition] = useState('');
-  const [additionalCondition, setAdditionalCondition] = useState('');
-  const [deleteIndex, setDeleteIndex] = useState('');
+
+  //Page 1
+  const [newPatientID, setNewPatientID] = useState('');
+  const [newFirstName, setNewFirstName] = useState('');
+  const [newMiddleName, setNewMiddleName] = useState('');
+  const [newLastName, setNewLastName] = useState('');
+  const [newGender, setNewGender] = useState('');
+  const [newDateOfBirth, setNewDateOfBirth] = useState('');
+  const [newBloodGroup, setNewBloodGroup] = useState('');
+  const [newRHFactor, setNewRHFactor] = useState('');
+  const [newMaritalStatus, setNewMaritalStatus] = useState('');
   const [newYear, setNewYear] = useState('');
   const [newMonth, setNewMonth] = useState('');
   const [newDay, setNewDay] = useState('');
-  const [newFirstName, setNewFirstName] = useState(''); // Added state variable for new first name
-  const [newMiddleName, setNewMiddleName] = useState(''); // Added state variable for new middle name
-  const [newLastName, setNewLastName] = useState(''); // Added state variable for new last name
-  const [newDateOfBirth, setNewDateOfBirth] = useState(''); // Added state variable for new last name
+  const [newPhoneResidence, setNewPhoneResidence] = useState('');
+  const [newMobilePhone, setNewMobilePhone] = useState('');
+  const [newEmailAddress, setNewEmailAddress] = useState('');
+  const [newEmergencyContactName, setNewEmergencyContactName] = useState('');
+  const [newEmergencyContactPhoneNumber, setNewEmergencyContactPhoneNumber] = useState('');
+
+  //Page 2
+  const [additionalCondition, setAdditionalCondition] = useState('');
+  const [deleteIndex, setDeleteIndex] = useState('');
 
   function handleChange() {
 
-    // Update patient's values based on the new values
+    //Page 1
+    if (newPatientID.trim() !== '') {
+      selectedPatient.id = newPatientID;
+    }
     if (newFirstName.trim() !== '') {
       selectedPatient.firstName = newFirstName;
     }
@@ -27,36 +43,20 @@ function PatientPages({ selectedPatient }) {
     if (newLastName.trim() !== '') {
       selectedPatient.lastName = newLastName;
     }
+    if (newGender.trim() !== '') {
+      selectedPatient.gender = newGender;
+    }
     if (newDateOfBirth.trim() !== '') {
       selectedPatient.dateOfBirth = newDateOfBirth;
     }
-
-    // Reset the input fields
-    setNewFirstName('');
-    setNewMiddleName('');
-    setNewLastName('');
-    setNewDateOfBirth('');
-
-    if (conditionIndex.trim() !== '' && newCondition.trim() !== '') {
-      const index = parseInt(conditionIndex);
-      if (!isNaN(index) && index >= 1 && index <= selectedPatient.currentIllnesses.length) {
-        selectedPatient.currentIllnesses[index - 1] = newCondition;
-        setConditionIndex('');
-        setNewCondition('');
-      }
+    if (newBloodGroup.trim() !== '') {
+      selectedPatient.bloodGroup = newBloodGroup;
     }
-
-    if (additionalCondition.trim() !== '') {
-      selectedPatient.currentIllnesses.push(additionalCondition);
-      setAdditionalCondition('');
+    if (newRHFactor.trim() !== '') {
+      selectedPatient.rhFactor = newRHFactor;
     }
-
-    if (deleteIndex.trim() !== '') {
-      const indexToDelete = parseInt(deleteIndex);
-      if (!isNaN(indexToDelete) && indexToDelete >= 1 && indexToDelete <= selectedPatient.currentIllnesses.length) {
-        selectedPatient.currentIllnesses.splice(indexToDelete - 1, 1);
-        setDeleteIndex('');
-      }
+    if (newMaritalStatus.trim() !== '') {
+      selectedPatient.maritalStatus = newMaritalStatus;
     }
 
     if (newYear.trim() !== '') {
@@ -80,8 +80,55 @@ function PatientPages({ selectedPatient }) {
         setNewDay('');
       }
     }
+    if (newPhoneResidence.trim() !== '') {
+      selectedPatient.phoneResidence = newPhoneResidence;
+    }
+    if (newMobilePhone.trim() !== '') {
+      selectedPatient.mobilePhone = newMobilePhone;
+    }
+    if (newEmailAddress.trim() !== '') {
+      selectedPatient.emailAddress = newEmailAddress;
+    }
+    if (newEmergencyContactName.trim() !== '') {
+      selectedPatient.emergencyContactName = newEmergencyContactName;
+    }
+    if (newEmergencyContactPhoneNumber.trim() !== '') {
+      selectedPatient.emergencyContactPhoneNumber = newEmergencyContactPhoneNumber;
+    }
+    // Reset the input fields
+    setNewPatientID('');
+    setNewFirstName('');
+    setNewMiddleName('');
+    setNewLastName('');
+    setNewGender('');
+    setNewDateOfBirth('');
+    setNewBloodGroup('');
+    setNewRHFactor('');
+    setNewMaritalStatus('');
+    setNewPhoneResidence('');
+    setNewMobilePhone('');
+    setNewEmailAddress('');
+    setNewEmergencyContactName('');
+    setNewEmergencyContactPhoneNumber('');
+
+    //Page 1
+    if (additionalCondition.trim() !== '') {
+      selectedPatient.currentIllnesses.push(additionalCondition);
+      setAdditionalCondition('');
+    }
+
+    if (deleteIndex.trim() !== '') {
+      const indexToDelete = parseInt(deleteIndex);
+      if (!isNaN(indexToDelete) && indexToDelete >= 1 && indexToDelete <= selectedPatient.currentIllnesses.length) {
+        selectedPatient.currentIllnesses.splice(indexToDelete - 1, 1);
+        setDeleteIndex('');
+      }
+    }
   }
 
+
+
+  //All Pages
   function nextPage() {
     setCurrentPage(currentPage + 1);
   }
@@ -126,68 +173,20 @@ function PatientPages({ selectedPatient }) {
             ))}
           </ol>
           <div>
-            <div className="input-text">
-              <input
-                type="text"
-                value={newYear}
-                onChange={(e) => setNewYear(e.target.value)}
-                placeholder={!newYear ? 'Change age (years), enter its value here' : ''}
-              />
-            </div>
-            <div className="input-text">
-              <input
-                type="text"
-                value={newMonth}
-                onChange={(e) => setNewMonth(e.target.value)}
-                placeholder={!newMonth ? 'Change age (months), enter its value here' : ''}
-              />
-            </div>
-            <div className="input-text">
-              <input
-                type="text"
-                value={newDay}
-                onChange={(e) => setNewDay(e.target.value)}
-                placeholder={!newDay ? 'Change age (days), enter its value here' : ''}
-              />
-            </div>
-            <div className="input-text">
-              <input
-                type="text"
-                value={conditionIndex}
-                onChange={(e) => setConditionIndex(e.target.value)}
-                placeholder={!conditionIndex ? 'Change a current illness, enter its id here' : ''}
-              />
-            </div>
-            <div className="input-text">
-              <input
-                type="text"
-                value={newCondition}
-                onChange={(e) => setNewCondition(e.target.value)}
-                placeholder={!newCondition ? 'Change a current illness, enter its value here' : ''}
-              />
-            </div>
-            <div className="input-text">
-              <input
-                type="text"
-                value={additionalCondition}
-                onChange={(e) => setAdditionalCondition(e.target.value)}
-                placeholder={!additionalCondition ? 'Add a new current illness, enter its value here' : ''}
-              />
-            </div>
-            <div className="input-text">
-              <input
-                type="text"
-                value={deleteIndex}
-                onChange={(e) => setDeleteIndex(e.target.value)}
-                placeholder={!deleteIndex ? 'Delete a current illness, enter its id here' : ''}
-              />
-            </div>
             <div>
               {/* Form for changing patient's values for page 1 */}
               <form onSubmit={(e) => {
                 e.preventDefault(); // Prevent default form submission
                 handleChange(); // Call handleChange function
               }}>
+                <div className="input-text">
+                  <input
+                    type="text"
+                    value={newPatientID}
+                    onChange={(e) => setNewPatientID(e.target.value)}
+                    placeholder={!newPatientID ? 'New Patient ID' : ''}
+                  />
+                </div>
                 <div className="input-text">
                   <input
                     type="text"
@@ -215,16 +214,111 @@ function PatientPages({ selectedPatient }) {
                 <div className="input-text">
                   <input
                     type="text"
+                    value={newGender}
+                    onChange={(e) => setNewGender(e.target.value)}
+                    placeholder={!newGender ? 'New Gender' : ''}
+                  />
+                </div>
+                <div className="input-text">
+                  <input
+                    type="text"
                     value={newDateOfBirth}
                     onChange={(e) => setNewDateOfBirth(e.target.value)}
                     placeholder={!newDateOfBirth ? 'New Date of Birth' : ''}
                   />
                 </div>
-                <button type="submit">Change Values</button>
+                <div className="input-text">
+                  <input
+                    type="text"
+                    value={newBloodGroup}
+                    onChange={(e) => setNewBloodGroup(e.target.value)}
+                    placeholder={!newBloodGroup ? 'New Blood Group' : ''}
+                  />
+                </div>
+                <div className="input-text">
+                  <input
+                    type="text"
+                    value={newRHFactor}
+                    onChange={(e) => setNewRHFactor(e.target.value)}
+                    placeholder={!newRHFactor ? 'New RH Factor' : ''}
+                  />
+                </div>
+                <div className="input-text">
+                  <input
+                    type="text"
+                    value={newMaritalStatus}
+                    onChange={(e) => setNewMaritalStatus(e.target.value)}
+                    placeholder={!newMaritalStatus ? 'New Marital Status' : ''}
+                  />
+                </div>
+                <div className="input-text">
+                  <input
+                    type="text"
+                    value={newYear}
+                    onChange={(e) => setNewYear(e.target.value)}
+                    placeholder={!newYear ? 'New age (years)' : ''}
+                  />
+                </div>
+                <div className="input-text">
+                  <input
+                    type="text"
+                    value={newMonth}
+                    onChange={(e) => setNewMonth(e.target.value)}
+                    placeholder={!newMonth ? 'New age (months)' : ''}
+                  />
+                </div>
+                <div className="input-text">
+                  <input
+                    type="text"
+                    value={newDay}
+                    onChange={(e) => setNewDay(e.target.value)}
+                    placeholder={!newDay ? 'New age (days)' : ''}
+                  />
+                </div>
+                <div className="input-text">
+                  <input
+                    type="text"
+                    value={newPhoneResidence}
+                    onChange={(e) => setNewPhoneResidence(e.target.value)}
+                    placeholder={!newPhoneResidence ? 'New Phone Number (Residence)' : ''}
+                  />
+                </div>
+                <div className="input-text">
+                  <input
+                    type="text"
+                    value={newMobilePhone}
+                    onChange={(e) => setNewMobilePhone(e.target.value)}
+                    placeholder={!newMobilePhone ? 'New Phone Number (Mobile)' : ''}
+                  />
+                </div>
+                <div className="input-text">
+                  <input
+                    type="text"
+                    value={newEmailAddress}
+                    onChange={(e) => setNewEmailAddress(e.target.value)}
+                    placeholder={!newEmailAddress ? 'New Email Address' : ''}
+                  />
+                </div>
+                <div className="input-text">
+                  <input
+                    type="text"
+                    value={newEmergencyContactName}
+                    onChange={(e) => setNewEmergencyContactName(e.target.value)}
+                    placeholder={!newEmergencyContactName ? 'New Emergency Contact Name' : ''}
+                  />
+                </div>
+                <div className="input-text">
+                  <input
+                    type="text"
+                    value={newEmergencyContactPhoneNumber}
+                    onChange={(e) => setNewEmergencyContactPhoneNumber(e.target.value)}
+                    placeholder={!newEmergencyContactPhoneNumber ? 'New Emergency Contact Phone Number' : ''}
+                  />
+                </div>
+                <button type="submit">Update All</button>
               </form>
             </div>
           </div>
-          <button onClick={handleChange}>Update All</button>
           <button onClick={nextPage}>Next Page</button>
         </div>
       )}
@@ -251,6 +345,28 @@ function PatientPages({ selectedPatient }) {
               <li key={index}>{condition}</li>
             ))}
           </ol>
+          <form onSubmit={(e) => {
+            e.preventDefault(); // Prevent default form submission
+            handleChange(); // Call handleChange function
+          }}>
+            <div className="input-text">
+              <input
+                type="text"
+                value={additionalCondition}
+                onChange={(e) => setAdditionalCondition(e.target.value)}
+                placeholder={!additionalCondition ? 'Add a new current illness, enter its value here' : ''}
+              />
+            </div>
+            <div className="input-text">
+              <input
+                type="text"
+                value={deleteIndex}
+                onChange={(e) => setDeleteIndex(e.target.value)}
+                placeholder={!deleteIndex ? 'Delete a current illness, enter its id here' : ''}
+              />
+            </div>
+            <button type="submit">Update All</button>
+          </form>
           <button onClick={prevPage}>Previous Page</button>
           <button onClick={nextPage}>Next Page</button>
         </div>
