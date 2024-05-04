@@ -3,7 +3,7 @@ import LoginSignUp from './LoginSignUp';
 import MainDashboard from './MainDashboard';
 import Settings from './Settings';
 import ForgotPassword from './ForgotPassword'; // Change as needed
-import AddPatient from './AddPatient';
+import AddDeletePatient from './AddDeletePatient';
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         <Route path="/Forgot" element={<ForgotPassword />} />
         <Route path="/dashboard" element={<MainDashboard />} />
         <Route path="/settings" element={<Settings />} />
-        <Route path="/AddPatient" element={<AddPatient />} />
+        <Route path="/AddDeletePatient" element={<AddDeletePatient />} />
       </Routes>
     </BrowserRouter>
   );

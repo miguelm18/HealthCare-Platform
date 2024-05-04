@@ -5,7 +5,7 @@ import '../Style/MainDashboard.css';
 import '../Style/AddPatient.css';
 import patients from '../MockData'; // Import the patients array from MockData.js
 
-function AddPatient() {
+function AddDeletePatient() {
   const [addName, setAddName] = useState('');
   const [deleteName, setDeleteName] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
@@ -97,4 +97,4 @@ function AddPatient() {
   );
 }
 
-export default AddPatient;
+export default AddDeletePatient;
