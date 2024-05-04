@@ -29,6 +29,10 @@ function PatientPages({ selectedPatient }) {
   //Page 2
   const [additionalCondition, setAdditionalCondition] = useState('');
   const [deleteIndex, setDeleteIndex] = useState('');
+  const [additionalPreviousIllness, addAdditionalPreviousIllness] = useState('');
+  const [deletePreviousIllnessIndex, deletePreviousIllness] = useState('');
+  const [additionalSpecificAllergies, addAdditionalSpecificAllergies] = useState('');
+  const [deleteSpecificAllergiesIndex, deleteSpecificAllergies] = useState('');
 
   function handleChange() {
 
@@ -136,9 +140,32 @@ function PatientPages({ selectedPatient }) {
         setDeleteIndex('');
       }
     }
+
+    if (additionalPreviousIllness.trim() !== '') {
+      selectedPatient.previousIllnesses.push(additionalPreviousIllness);
+      addAdditionalPreviousIllness('');
+    }
+    if (deletePreviousIllnessIndex.trim() !== '') {
+      const indexToDelete2 = parseInt(deletePreviousIllnessIndex);
+      if (!isNaN(indexToDelete2) && indexToDelete2 >= 1 && indexToDelete2 <= selectedPatient.previousIllnesses.length) {
+        selectedPatient.previousIllnesses.splice(indexToDelete2 - 1, 1);
+        deletePreviousIllness('');
+      }
+    }
+
+    if (additionalSpecificAllergies.trim() !== '') {
+      selectedPatient.specificAllergies.push(additionalSpecificAllergies);
+      addAdditionalSpecificAllergies('');
+    }
+    if (deleteSpecificAllergiesIndex.trim() !== '') {
+      const indexToDelete3 = parseInt(deleteSpecificAllergiesIndex);
+      if (!isNaN(indexToDelete3) && indexToDelete3 >= 1 && indexToDelete3 <= selectedPatient.specificAllergies.length) {
+        selectedPatient.specificAllergies.splice(indexToDelete3 - 1, 1);
+        deleteSpecificAllergies('');
+      }
+    }
+
   }
-
-
 
   //All Pages
   function nextPage() {
@@ -391,6 +418,38 @@ function PatientPages({ selectedPatient }) {
                 value={deleteIndex}
                 onChange={(e) => setDeleteIndex(e.target.value)}
                 placeholder={!deleteIndex ? 'Delete a current illness, enter its id here' : ''}
+              />
+            </div>
+            <div className="input-text">
+              <input
+                type="text"
+                value={additionalPreviousIllness}
+                onChange={(e) => addAdditionalPreviousIllness(e.target.value)}
+                placeholder={!additionalPreviousIllness ? 'Add a new previous illness, enter its value here' : ''}
+              />
+            </div>
+            <div className="input-text">
+              <input
+                type="text"
+                value={deletePreviousIllnessIndex}
+                onChange={(e) => deletePreviousIllness(e.target.value)}
+                placeholder={!deletePreviousIllnessIndex ? 'Delete a previous illness, enter its id here' : ''}
+              />
+            </div>
+            <div className="input-text">
+              <input
+                type="text"
+                value={additionalSpecificAllergies}
+                onChange={(e) => addAdditionalSpecificAllergies(e.target.value)}
+                placeholder={!additionalSpecificAllergies ? 'Add a new allergy, enter its value here' : ''}
+              />
+            </div>
+            <div className="input-text">
+              <input
+                type="text"
+                value={deleteSpecificAllergiesIndex}
+                onChange={(e) => deleteSpecificAllergies(e.target.value)}
+                placeholder={!deleteSpecificAllergiesIndex ? 'Delete an allergy, enter its id here' : ''}
               />
             </div>
             <button type="submit">Update All</button>
