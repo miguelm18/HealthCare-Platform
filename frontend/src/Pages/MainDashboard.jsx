@@ -5,6 +5,7 @@ import '../Style/MainDashboard.css'; // Import the CSS file for MainDashboard
 import SearchingBar from '../Layout/SearchingBar';
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import PatientPages from './PatientPages';
+import notifications from '../MockNotifications'; // Import notifications array
 
 /**
  * Component representing the main dashboard.
@@ -14,6 +15,7 @@ function MainDashboard() {
   const [filteredPatients, setFilteredPatients] = useState([]); // State for filtered patients
   const [showPatient1, setShowPatient1] = useState(false); // State to control rendering of Patient1
   const [selectedPatient, setSelectedPatient] = useState(null); // State to store selected patient name
+  const [notificationsState, setNotifications] = useState(notifications); // State for notifications
 
   // Function to update filtered patients
   const parentTable = (value2) => {
@@ -27,6 +29,10 @@ function MainDashboard() {
     setFilteredPatients([]);
   };
 
+  function deleteAllNotifications() {
+    setNotifications(notificationsState.splice(0, notifications.length));
+  }
+
   // JSX for rendering the component
   return (
     <div className="main-dashboard">
@@ -35,14 +41,22 @@ function MainDashboard() {
       {/* Render the sidebar component */}
       <Sidebar />
       {/* Add your dashboard content here */}
-      <h1>MainDashboard</h1>
-      <p>This is the content of the MainDashboard.</p>
+      <h1>Dashboard</h1>
+      <p>Welcome to the Health Care Platform</p>
       <div className="search-bar-container">
         {/* Render the searching bar */}
         <SearchingBar parentTable={parentTable} />
       </div>
       {/* Placeholder for notifications */}
-      <p>Implement notifications somewhere on this page</p>
+      <h2>Notifications</h2>
+      <ul>
+        {notifications.map((notification, index) => (
+          <li key={index}>
+            {notification.description}: {notification.whatHappened}
+          </li>
+        ))}
+      </ul>
+      <button onClick={deleteAllNotifications}>Clear Notifications</button>
       {/* Placeholder for calendar */}
       <p>Implement the calendar thingy somewhere on this page</p>
       <br />
