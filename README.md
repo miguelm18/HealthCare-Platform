@@ -56,10 +56,10 @@ How to run the project's frontend with React
 
 Setting up the project in React for the first time:
 
-1. NAVIGATE TO YOUR TERMINAL
+1. NAVIGATE TO YOUR TERMINAL  
    Type "git --version" to see if you have git installed no quotations
 
-2. Navigate To my repository and copy the clone url
+2. Navigate To my repository and copy the clone url  
    Go to terminal and type "git clone https://github.com/miguelm18/HealthCare-Platform.git" no quotations
    then type "git init" no quotations
 
@@ -67,28 +67,28 @@ Setting up the project in React for the first time:
 
 You should have the project downloaded onto your computer now
 
-4. Navigate to the frontend folder of your project in your terminal
-   You should already be at the src directory
+4. Navigate to the frontend folder of your project in your terminal  
+   You should already be at the src directory  
    Type "cd frontend" to navigate into the frontend folder in the src directory
 
-5. install the packages needed to make the fronend work
-   You should still be at the frontend directory
+5. install the packages needed to make the fronend work  
+   You should still be at the frontend directory  
    Type "npm install react-router-dom" into the terminal
 
 Starting the project in React after the first 5 steps are completed:
 
 1. run the project
-   Navigate to the frontend folder of your project in your terminal, type "cd frontend" if you aren't at the frontend folder yet
+   Navigate to the frontend folder of your project in your terminal, type "cd frontend" if you aren't at the frontend folder yet  
    Type "npm start" into the terminal
 
 2. Your project should appear in your web browser now
 
 How to stop the project:
 
-1.  Make sure you have navigated to your frontend folder
+1.  Make sure you have navigated to your frontend folder  
     Run the command "Ctrl + C" in your node terminal, not the powershell terminal
 
-2.  The terminal should say "Terminate batch job (Y/N)?"
+2.  The terminal should say "Terminate batch job (Y/N)?"  
     Type "Y" and press enter
 
 3.  Close the project's tab in your web browser
