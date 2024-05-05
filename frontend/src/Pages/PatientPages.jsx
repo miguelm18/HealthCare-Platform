@@ -40,6 +40,15 @@ function PatientPages({ selectedPatient }) {
   const [additionalPastMedication, addAdditionalPastMedication] = useState('');
   const [deletePastMedicationIndex, deletePastMedication] = useState('');
 
+  //Page 4
+  const [newLabReport, setNewLabReport] = useState({
+    report: '',
+    photo: '',
+    radiologyVideo: '',
+    mriTracingImages: ''
+  });
+  const [deleteLabReportIndex, deleteLabReport] = useState('');
+
   function handleChange() {
 
     //Page 1
@@ -199,6 +208,28 @@ function PatientPages({ selectedPatient }) {
 
   }
 
+  //Page 4
+
+  const handleManageLabReport = () => {
+    if (newLabReport.report.trim() !== '' && newLabReport.photo.trim() !== '' && newLabReport.radiologyVideo.trim() !== '' && newLabReport.mriTracingImages.trim() !== '') {
+      selectedPatient.labReports.push({ ...newLabReport });
+      setNewLabReport({
+        report: '',
+        photo: '',
+        radiologyVideo: '',
+        mriTracingImages: ''
+      });
+    }
+
+    if (deleteLabReportIndex.trim() !== '') {
+      const indexToDelete6 = parseInt(deleteLabReportIndex);
+      if (!isNaN(indexToDelete6) && indexToDelete6 >= 1 && indexToDelete6 <= selectedPatient.labReports.length) {
+        selectedPatient.labReports.splice(indexToDelete6 - 1, 1);
+        deleteLabReport('');
+      }
+    }
+  };
+
   //All Pages
   function nextPage() {
     setCurrentPage(currentPage + 1);
@@ -255,7 +286,7 @@ function PatientPages({ selectedPatient }) {
                     type="text"
                     value={newPatientID}
                     onChange={(e) => setNewPatientID(e.target.value)}
-                    placeholder={!newPatientID ? 'New Patient ID' : ''}
+                    placeholder={!newPatientID ? 'New Patient ID Picture URL' : ''}
                   />
                 </div>
                 <div className="input-text">
@@ -554,7 +585,7 @@ function PatientPages({ selectedPatient }) {
           <h1>Patient Page 4 Empty For Now</h1>
           <button onClick={prevPage}>Previous Page</button>
           <button onClick={nextPage}>Next Page</button>
-
+          {/*enter code here*/}
           <button onClick={prevPage}>Previous Page</button>
           <button onClick={nextPage}>Next Page</button>
         </div>
@@ -586,6 +617,56 @@ function PatientPages({ selectedPatient }) {
               </li>
             ))}
           </ul>
+          <form onSubmit={(e) => {
+            e.preventDefault(); // Prevent default form submission
+            handleManageLabReport(); // Call handleChange function
+          }}>
+            <div className="input-text">
+              <input
+                type="text"
+                name="report"
+                value={newLabReport.report}
+                onChange={(e) => setNewLabReport({ ...newLabReport, report: e.target.value })}
+                placeholder="New Lab Report (Text)"
+              />
+            </div>
+            <div className="input-text">
+              <input
+                type="text"
+                name="photo"
+                value={newLabReport.photo}
+                onChange={(e) => setNewLabReport({ ...newLabReport, photo: e.target.value })}
+                placeholder="Lab Report Photo URL"
+              />
+            </div>
+            <div className="input-text">
+              <input
+                type="text"
+                name="radiologyVideo"
+                value={newLabReport.radiologyVideo}
+                onChange={(e) => setNewLabReport({ ...newLabReport, radiologyVideo: e.target.value })}
+                placeholder="Radiology Video URL"
+              />
+            </div>
+            <div className="input-text">
+              <input
+                type="text"
+                name="mriTracingImages"
+                value={newLabReport.mriTracingImages}
+                onChange={(e) => setNewLabReport({ ...newLabReport, mriTracingImages: e.target.value })}
+                placeholder="MRI Tracing Images URL"
+              />
+            </div>
+            <div className="input-text">
+              <input
+                type="text"
+                value={deleteLabReportIndex}
+                onChange={(e) => deleteLabReport(e.target.value)}
+                placeholder={!deleteLabReportIndex ? 'Delete a lab report, enter its id here' : ''}
+              />
+            </div>
+            <button type="submit">Update All</button>
+          </form>
           <button onClick={prevPage}>Previous Page</button>
           <button onClick={nextPage}>Next Page</button>
         </div>
