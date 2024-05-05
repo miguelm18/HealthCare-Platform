@@ -40,7 +40,7 @@ function PatientPages({ selectedPatient }) {
   const [additionalPastMedication, addAdditionalPastMedication] = useState('');
   const [deletePastMedicationIndex, deletePastMedication] = useState('');
 
-  //Page 4
+  //Page 5
   const [newLabReport, setNewLabReport] = useState({
     report: '',
     photo: '',
@@ -48,6 +48,14 @@ function PatientPages({ selectedPatient }) {
     mriTracingImages: ''
   });
   const [deleteLabReportIndex, deleteLabReport] = useState('');
+
+  //Page 6
+  const [additionalXray, addAdditionalXray] = useState('');
+  const [deleteXrayIndex, deleteXray] = useState('');
+  const [additionalDoctorVisits, addAdditionalDoctorVisits] = useState('');
+  const [deleteDoctorVisitsIndex, deleteDoctorVisits] = useState('');
+  const [additionalVaccinations, addAdditionalVaccinations] = useState('');
+  const [deleteVaccinationsIndex, deleteVaccinations] = useState('');
 
   function handleChange() {
 
@@ -205,10 +213,46 @@ function PatientPages({ selectedPatient }) {
       }
     }
 
+    //Page 6
+    if (additionalXray.trim() !== '') {
+      selectedPatient.xRays.push(additionalXray);
+      addAdditionalXray('');
+    }
+    if (deleteXrayIndex.trim() !== '') {
+      const indexToDelete7 = parseInt(deleteXrayIndex);
+      if (!isNaN(indexToDelete7) && indexToDelete7 >= 1 && indexToDelete7 <= selectedPatient.xRays.length) {
+        selectedPatient.xRays.splice(indexToDelete7 - 1, 1);
+        deleteXray('');
+      }
+    }
+    if (additionalDoctorVisits.trim() !== '') {
+      selectedPatient.doctorVisits.push(additionalDoctorVisits);
+      addAdditionalDoctorVisits('');
+    }
+
+    if (deleteDoctorVisitsIndex.trim() !== '') {
+      const indexToDelete8 = parseInt(deleteDoctorVisitsIndex);
+      if (!isNaN(indexToDelete8) && indexToDelete8 >= 1 && indexToDelete8 <= selectedPatient.doctorVisits.length) {
+        selectedPatient.doctorVisits.splice(indexToDelete8 - 1, 1);
+        deleteDoctorVisits('');
+      }
+    }
+    if (additionalVaccinations.trim() !== '') {
+      selectedPatient.vaccinations.push(additionalVaccinations);
+      addAdditionalVaccinations('');
+    }
+
+    if (deleteVaccinationsIndex.trim() !== '') {
+      const indexToDelete9 = parseInt(deleteVaccinationsIndex);
+      if (!isNaN(indexToDelete9) && indexToDelete9 >= 1 && indexToDelete9 <= selectedPatient.vaccinations.length) {
+        selectedPatient.vaccinations.splice(indexToDelete9 - 1, 1);
+        deleteVaccinations('');
+      }
+    }
 
   }
 
-  //Page 4
+  //Page 5
 
   const handleManageLabReport = () => {
     if (newLabReport.report.trim() !== '' && newLabReport.photo.trim() !== '' && newLabReport.radiologyVideo.trim() !== '' && newLabReport.mriTracingImages.trim() !== '') {
@@ -595,7 +639,7 @@ function PatientPages({ selectedPatient }) {
           <h1>Lab Reports</h1>
           <button onClick={prevPage}>Previous Page</button>
           <button onClick={nextPage}>Next Page</button>
-          <ul>
+          <ol>
             {selectedPatient.labReports.map((report, index) => (
               <li key={index}>
                 <p>Lab Report:</p>
@@ -616,7 +660,7 @@ function PatientPages({ selectedPatient }) {
                 </div>
               </li>
             ))}
-          </ul>
+          </ol>
           <form onSubmit={(e) => {
             e.preventDefault(); // Prevent default form submission
             handleManageLabReport(); // Call handleChange function
@@ -701,7 +745,60 @@ function PatientPages({ selectedPatient }) {
               <li key={index}>{condition}</li>
             ))}
           </ol>
-          <p>Name: {selectedPatient.name}</p>
+          <form onSubmit={(e) => {
+            e.preventDefault(); // Prevent default form submission
+            handleChange(); // Call handleChange function
+          }}>
+            <div className="input-text">
+              <input
+                type="text"
+                value={additionalXray}
+                onChange={(e) => addAdditionalXray(e.target.value)}
+                placeholder={!additionalXray ? 'Add an xray' : ''}
+              />
+            </div>
+            <div className="input-text">
+              <input
+                type="text"
+                value={deleteXrayIndex}
+                onChange={(e) => deleteXray(e.target.value)}
+                placeholder={!deleteXrayIndex ? 'Delete an xray, enter its id here' : ''}
+              />
+            </div>
+            <div className="input-text">
+              <input
+                type="text"
+                value={additionalDoctorVisits}
+                onChange={(e) => addAdditionalDoctorVisits(e.target.value)}
+                placeholder={!additionalDoctorVisits ? 'Add a doctor visit' : ''}
+              />
+            </div>
+            <div className="input-text">
+              <input
+                type="text"
+                value={deleteDoctorVisitsIndex}
+                onChange={(e) => deleteDoctorVisits(e.target.value)}
+                placeholder={!deleteDoctorVisitsIndex ? 'Delete a doctor visit, enter its id here' : ''}
+              />
+            </div>
+            <div className="input-text">
+              <input
+                type="text"
+                value={additionalVaccinations}
+                onChange={(e) => addAdditionalVaccinations(e.target.value)}
+                placeholder={!additionalVaccinations ? 'Add a vaccination' : ''}
+              />
+            </div>
+            <div className="input-text">
+              <input
+                type="text"
+                value={deleteVaccinationsIndex}
+                onChange={(e) => deleteVaccinations(e.target.value)}
+                placeholder={!deleteVaccinationsIndex ? 'Delete a vaccination, enter its id here' : ''}
+              />
+            </div>
+            <button type="submit">Update All</button>
+          </form>
           <button onClick={prevPage}>Previous Page</button>
         </div>
       )}
