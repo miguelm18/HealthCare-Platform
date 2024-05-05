@@ -43,24 +43,8 @@ function MainDashboard() {
       {/* Add your dashboard content here */}
       <h1>Dashboard</h1>
       <p>Welcome to the Health Care Platform</p>
-      <div className="search-bar-container">
-        {/* Render the searching bar */}
-        <SearchingBar parentTable={parentTable} />
-      </div>
-      {/* Render Notifications */}
-      <h2>Notifications</h2>
-      <ul>
-        {notifications.map((notification, index) => (
-          <li key={index}>
-            {notification.description}: {notification.whatHappened}
-          </li>
-        ))}
-      </ul>
-      <button onClick={deleteAllNotifications}>Clear Notifications</button>
-      {/* Placeholder for calendar */}
-      <p>Implement the calendar thingy somewhere on this page</p>
-      <br />
-      <br />
+      {/* Conditional rendering of "Patient Search" heading */}
+      {filteredPatients.length > 0 && <h2>Patient Search</h2>}
       {/* Render filtered patient table */}
       {filteredPatients.length > 0 && (
         <table>
@@ -80,9 +64,26 @@ function MainDashboard() {
           </tbody>
         </table>
       )}
-
       {/* Render patient information pages */}
       {showPatient1 && <PatientPages selectedPatient={selectedPatient} />}
+      <div className="search-bar-container">
+        {/* Render the searching bar */}
+        <SearchingBar parentTable={parentTable} />
+      </div>
+      {/* Render Notifications */}
+      <h2>Notifications</h2>
+      <ul>
+        {notifications.map((notification, index) => (
+          <li key={index}>
+            {notification.description}: {notification.whatHappened}
+          </li>
+        ))}
+      </ul>
+      <button onClick={deleteAllNotifications}>Clear Notifications</button>
+      {/* Placeholder for calendar */}
+      <p>Implement the calendar thingy somewhere on this page</p>
+      <br />
+      <br />
     </div>
   );
 }
