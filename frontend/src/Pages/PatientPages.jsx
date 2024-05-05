@@ -50,6 +50,8 @@ function PatientPages({ selectedPatient }) {
   const [deleteLabReportIndex, deleteLabReport] = useState('');
 
   //Page 6
+  const [addAppointment, setAddAppointment] = useState('');
+  const [deleteAppointmentIndex, deleteAppointment] = useState('');
   const [additionalXray, addAdditionalXray] = useState('');
   const [deleteXrayIndex, deleteXray] = useState('');
   const [additionalDoctorVisits, addAdditionalDoctorVisits] = useState('');
@@ -214,6 +216,17 @@ function PatientPages({ selectedPatient }) {
     }
 
     //Page 6
+    if (addAppointment.trim() !== '') {
+      selectedPatient.appointmentTimes.push(addAppointment);
+      setAddAppointment('');
+    }
+    if (deleteAppointmentIndex.trim() !== '') {
+      const indexToDelete10 = parseInt(deleteAppointmentIndex);
+      if (!isNaN(indexToDelete10) && indexToDelete10 >= 1 && indexToDelete10 <= selectedPatient.appointmentTimes.length) {
+        selectedPatient.appointmentTimes.splice(indexToDelete10 - 1, 1);
+        deleteAppointment('');
+      }
+    }
     if (additionalXray.trim() !== '') {
       selectedPatient.xRays.push(additionalXray);
       addAdditionalXray('');
@@ -749,6 +762,22 @@ function PatientPages({ selectedPatient }) {
             e.preventDefault(); // Prevent default form submission
             handleChange(); // Call handleChange function
           }}>
+            <div className="input-text">
+              <input
+                type="text"
+                value={addAppointment}
+                onChange={(e) => setAddAppointment(e.target.value)}
+                placeholder={!addAppointment ? 'Add an appointment' : ''}
+              />
+            </div>
+            <div className="input-text">
+              <input
+                type="text"
+                value={deleteAppointmentIndex}
+                onChange={(e) => deleteAppointment(e.target.value)}
+                placeholder={!deleteAppointmentIndex ? 'Delete an appointment, enter its id here' : ''}
+              />
+            </div>
             <div className="input-text">
               <input
                 type="text"
