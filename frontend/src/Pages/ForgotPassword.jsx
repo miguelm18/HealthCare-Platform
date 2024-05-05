@@ -14,7 +14,7 @@ import healthcare_icon from '../Assets/HealthCareLogo1.jpg'
 
 const ForgotPassword = () => {
 
-  const [choice, setChoice] = useState("Forgot Password")
+  //const [choice, setChoice] = useState("Forgot Password")
   const [email, setEmail] = useState("");
 
 
@@ -34,7 +34,7 @@ const ForgotPassword = () => {
       <img src={healthcare_icon} height={200} width={200} alt="" />
     </div><div className='container'>
         <div className="header">
-          <div className="text">{choice}</div>
+          <div className="text">{"Forgot Password"}</div>
           <div className="underline"></div>
         </div>
         <div className="inputs">

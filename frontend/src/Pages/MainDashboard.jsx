@@ -47,7 +47,7 @@ function MainDashboard() {
         {/* Render the searching bar */}
         <SearchingBar parentTable={parentTable} />
       </div>
-      {/* Placeholder for notifications */}
+      {/* Render Notifications */}
       <h2>Notifications</h2>
       <ul>
         {notifications.map((notification, index) => (
