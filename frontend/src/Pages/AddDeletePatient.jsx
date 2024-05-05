@@ -5,13 +5,19 @@ import '../Style/MainDashboard.css';
 import '../Style/AddPatient.css';
 import patients from '../MockData'; // Import the patients array from MockData.js
 
+/**
+ * Component for adding and deleting patients.
+ */
 function AddDeletePatient() {
+  // State variables for input fields and error message
   const [addName, setAddName] = useState('');
   const [deleteName, setDeleteName] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
+  // Function to handle form submission for adding a patient
   const handleAddSubmit = (e) => {
     e.preventDefault();
+    // Create a new patient object with provided name
     const newPatient = {
       name: addName,
       firstName: '',
@@ -46,11 +52,13 @@ function AddDeletePatient() {
     alert('Patient added successfully');
   };
 
+  // Function to handle form submission for deleting a patient
   const handleDeleteSubmit = (e) => {
     e.preventDefault();
+    // Find the index of the patient with provided name
     const index = patients.findIndex((patient) => patient.name === deleteName);
     if (index !== -1) {
-      patients.splice(index, 1);
+      patients.splice(index, 1); // Remove patient from the array
       alert('Patient deleted successfully');
     } else {
       setErrorMessage('Patient not found');
@@ -60,11 +68,15 @@ function AddDeletePatient() {
     setErrorMessage('');
   };
 
+  // JSX for rendering the component
   return (
     <div className="main-dashboard">
+      {/* Render the header component */}
       <Header />
+      {/* Render the sidebar component */}
       <Sidebar />
       <h1>Add a Patient</h1>
+      {/* Form for adding a patient */}
       <form onSubmit={handleAddSubmit}>
         {/* Input field for adding patient's name */}
         <input
@@ -79,6 +91,7 @@ function AddDeletePatient() {
         <button type="submit">Add Patient</button>
       </form>
       <h1>Delete a Patient</h1>
+      {/* Form for deleting a patient */}
       <form onSubmit={handleDeleteSubmit}>
         {/* Input field for deleting patient's name */}
         <input
@@ -91,6 +104,7 @@ function AddDeletePatient() {
         />
         {/* Submit button for deleting patient */}
         <button type="submit">Delete Patient</button>
+        {/* Display error message if patient not found */}
         {errorMessage && <p>{errorMessage}</p>}
       </form>
     </div>
