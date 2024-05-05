@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../Style/PatientPages.css';
+import notifications from '../MockNotifications';
 
 function PatientPages({ selectedPatient }) {
   //All Pages
@@ -294,6 +295,16 @@ function PatientPages({ selectedPatient }) {
 
   function prevPage() {
     setCurrentPage(currentPage - 1);
+  }
+
+  //Send Notification
+  function sendNotification(appointment, patientName) {
+    alert("Appointment Created");
+    const newNotification = {
+      description: `Appointment for ${patientName} at`,
+      whatHappened: appointment
+    };
+    notifications.push(newNotification);
   }
 
   return (
@@ -761,12 +772,15 @@ function PatientPages({ selectedPatient }) {
           <form onSubmit={(e) => {
             e.preventDefault(); // Prevent default form submission
             handleChange(); // Call handleChange function
+            sendNotification(addAppointment, "yoinks");
           }}>
             <div className="input-text">
               <input
                 type="text"
                 value={addAppointment}
-                onChange={(e) => setAddAppointment(e.target.value)}
+                onChange={(e) => {
+                  setAddAppointment(e.target.value);
+                }}
                 placeholder={!addAppointment ? 'Add an appointment' : ''}
               />
             </div>
