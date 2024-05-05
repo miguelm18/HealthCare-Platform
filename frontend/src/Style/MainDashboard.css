@@ -68,3 +68,38 @@ color: rgb(65, 105, 225);
 .patient-page-left-margin {
   margin-left: 0px;
 }
+
+.dashboard-box {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-right: 20px; /* Adjust the value as needed */
+}
+
+.dashboard-box h2 {
+  margin-top: 0;
+}
+
+.dashboard-box ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.dashboard-box ul li {
+  margin-bottom: 10px;
+}
+
+.dashboard-box button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dashboard-box button:hover {
+  background-color: #0056b3;
+}

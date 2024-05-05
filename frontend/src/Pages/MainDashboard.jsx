@@ -71,15 +71,17 @@ function MainDashboard() {
         <SearchingBar parentTable={parentTable} />
       </div>
       {/* Render Notifications */}
-      <h2>Notifications</h2>
-      <ul>
-        {notifications.map((notification, index) => (
-          <li key={index}>
-            {notification.description}: {notification.whatHappened}
-          </li>
-        ))}
-      </ul>
-      <button onClick={deleteAllNotifications}>Clear Notifications</button>
+      <div className='dashboard-box'>
+        <h2>Notifications</h2>
+        <ul>
+          {notifications.map((notification, index) => (
+            <li key={index}>
+              {notification.description}: {notification.whatHappened}
+            </li>
+          ))}
+        </ul>
+        <button onClick={deleteAllNotifications}>Clear Notifications</button>
+      </div>
       {/* Placeholder for calendar */}
       <p>Implement the calendar thingy somewhere on this page</p>
       <br />
