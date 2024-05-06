@@ -1,12 +1,13 @@
-// src/layouts/Header.js
 import React from 'react';
-import { Link } from 'react-router-dom';
 
+/**
+ * Component representing the header of the application.
+ */
 function Header() {
     return (
         <div className="header">
-            <h1>My App</h1>
-            <Link to="/settings">Settings</Link>
+            {/* Title of the application */}
+            <h1>Health Care Platform</h1>
         </div>
     );
 }

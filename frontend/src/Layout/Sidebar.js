@@ -6,13 +6,19 @@ import '../Style/App.css';
 // Import the logo image you uploaded
 import logo from '../Assets/HealthCareLogo1.jpg'; // Adjust the path if necessary
 
+/**
+ * Component representing the sidebar navigation.
+ */
 function Sidebar() {
+    // Array containing links and their paths
     const links = [
-        { path: '/', title: 'Dashboard' },
-        { path: '/patients', title: 'Patients' },
+        { path: '/dashboard', title: 'Dashboard' },
+        { path: '/AddDeletePatient', title: 'Add/Delete Patient' },
+        { path: '/settings', title: 'Settings' },
         // ... you can add more links here
     ];
 
+    // JSX for rendering the sidebar
     return (
         <div className="sidebar">
             {/* Insert the logo image at the top of the sidebar */}
