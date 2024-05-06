@@ -1,6 +1,8 @@
 package com.examplehealthcare.healthcareplatform.model;
 
-import java.sql.Date;
+
+import java.util.Date;
+
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -11,7 +13,7 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
-//navigates appointments with an id key, doctor(an or nurse), patient , time, and date
+//navigates appointments with an id key, doctor(and or nurse), patient , time, and date
 
 @Entity
 @Table(name = "Appointments")
@@ -81,7 +83,7 @@ public class Appointment {
         this.patient = patient;
     }
 
-
+    
     public Date getDoa() {
         return doa;
     }
