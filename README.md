@@ -23,7 +23,7 @@ Make sure you have the most up to date project
 5.  Activate the production prfile to run the app - to acutally run
     "export SPRING_PROFILES_ACTIVE=prod" copy and paste exactly to terminal no quotations
 
-    if you are testing stuff activate the dev profile - for testing
+    if you are testing stuff activate the dev profile - for testing 
 
          export SPRING_PROFILES_ACTIVE=prod
 
