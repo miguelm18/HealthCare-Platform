@@ -7,3 +7,4 @@ import com.examplehealthcare.healthcareplatform.model.Nurse;
 public interface NurseRepository extends JpaRepository<Nurse, Long>{
     
 }
+ 

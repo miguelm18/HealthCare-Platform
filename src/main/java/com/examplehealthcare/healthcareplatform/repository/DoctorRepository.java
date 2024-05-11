@@ -9,3 +9,4 @@ import com.examplehealthcare.healthcareplatform.model.Doctor;
 public interface DoctorRepository extends JpaRepository<Doctor, Long> {
     
 }
+ 

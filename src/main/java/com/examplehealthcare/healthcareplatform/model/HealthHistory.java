@@ -11,7 +11,7 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "HealthHistory")
-
+ 
 public class HealthHistory {
 
     @Id
@@ -25,8 +25,24 @@ public class HealthHistory {
     @Column(name = "Blood Group")
     private String bloodGroup;
 
+    public String getBloodGroup() {
+        return bloodGroup;
+    }
+
+    public void setBloodGroup(String bloodGroup) {
+        this.bloodGroup = bloodGroup;
+    }
+
     @Column(name = "RH Factor")
     private String rhFactor;
+
+    public String getRhFactor() {
+        return rhFactor;
+    }
+
+    public void setRhFactor(String rhFactor) {
+        this.rhFactor = rhFactor;
+    }
 
     @Column(nullable = false)
     private String familyHistory;
@@ -37,6 +53,7 @@ public class HealthHistory {
     @Column(nullable = false)
     private String description;
     
+
     public HealthHistory()
     {
 
@@ -83,11 +100,11 @@ public class HealthHistory {
         this.illness = illness;
     }
 
-    public String getDecription() {
+    public String getDescription() {
         return description;
     }
 
-    public void setDecription(String decription) {
+    public void setDescription(String decription) {
         this.description = decription;
     }
 

@@ -1,21 +1,19 @@
 package com.examplehealthcare.healthcareplatform.service.impl;
+
+import java.util.List;
+import org.springframework.stereotype.Service;
+import com.examplehealthcare.healthcareplatform.model.HealthHistory;
+import com.examplehealthcare.healthcareplatform.repository.HealthHistoryRepository;
 import com.examplehealthcare.healthcareplatform.service.HealthHistoryService;
 
 import jakarta.transaction.Transactional;
-
-import java.util.List;
-
-import com.examplehealthcare.healthcareplatform.model.HealthHistory;
-import com.examplehealthcare.healthcareplatform.repository.HealthHistoryRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 @Service
 public class HealthHistoryServiceImpl implements HealthHistoryService {
 
     private final HealthHistoryRepository healthHistoryRepository;
 
-    @Autowired
+    
     public HealthHistoryServiceImpl(HealthHistoryRepository healthHistoryRepository) {
         this.healthHistoryRepository = healthHistoryRepository;
     }
@@ -29,7 +27,7 @@ public class HealthHistoryServiceImpl implements HealthHistoryService {
     @Override
     @Transactional
     public HealthHistory findHealthHistoryById(Long id) {
-        return healthHistoryRepository.findById(id).orElse(null);
+        return healthHistoryRepository.findById(id).orElseThrow(() -> new RuntimeException("Health History not found with ID: " + id));
     }
 
     @Override

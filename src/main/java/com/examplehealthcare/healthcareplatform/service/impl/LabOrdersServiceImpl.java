@@ -1,11 +1,9 @@
 package com.examplehealthcare.healthcareplatform.service.impl;
 
 import java.util.List;
-
+import org.springframework.stereotype.Service;
 import com.examplehealthcare.healthcareplatform.model.LabOrders;
 import com.examplehealthcare.healthcareplatform.repository.LabOrdersRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import com.examplehealthcare.healthcareplatform.service.LabOrdersService;
 
 import jakarta.transaction.Transactional;
@@ -15,7 +13,6 @@ public class LabOrdersServiceImpl implements LabOrdersService {
 
     private final LabOrdersRepository labOrdersRepository;
 
-    @Autowired
     public LabOrdersServiceImpl(LabOrdersRepository labOrdersRepository) {
         this.labOrdersRepository = labOrdersRepository;
     }
@@ -29,7 +26,7 @@ public class LabOrdersServiceImpl implements LabOrdersService {
     @Override
     @Transactional
     public LabOrders findLabOrderById(Long id) {
-        return labOrdersRepository.findById(id).orElse(null);
+        return labOrdersRepository.findById(id).orElseThrow(() -> new RuntimeException("Lab Order not found with ID: " + id));
     }
 
     @Override

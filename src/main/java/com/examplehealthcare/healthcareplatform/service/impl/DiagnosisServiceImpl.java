@@ -1,22 +1,19 @@
 package com.examplehealthcare.healthcareplatform.service.impl;
 
-import com.examplehealthcare.healthcareplatform.service.DiagnosisService;
-
-import jakarta.transaction.Transactional;
-
 import java.util.List;
-
+import org.springframework.stereotype.Service;
 import com.examplehealthcare.healthcareplatform.model.Diagnosis;
 import com.examplehealthcare.healthcareplatform.repository.DiagnosisRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import com.examplehealthcare.healthcareplatform.service.DiagnosisService;
+
+import jakarta.persistence.EntityNotFoundException;
+import jakarta.transaction.Transactional;
 
 @Service
 public class DiagnosisServiceImpl implements DiagnosisService {
 
     private final DiagnosisRepository diagnosisRepository;
 
-    @Autowired
     public DiagnosisServiceImpl(DiagnosisRepository diagnosisRepository) {
         this.diagnosisRepository = diagnosisRepository;
     }
@@ -24,14 +21,13 @@ public class DiagnosisServiceImpl implements DiagnosisService {
     @Override
     @Transactional
     public List<Diagnosis> findAllDiagnoses() {
-
-        return diagnosisRepository.findAll(); //replace with repository method
+        return diagnosisRepository.findAll();
     }
 
     @Override
     @Transactional
     public Diagnosis findDiagnosisById(Long id) {
-        return diagnosisRepository.findById(id).orElse(null);
+        return diagnosisRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("Diagnosis not found with ID: " + id));
     }
 
     @Override

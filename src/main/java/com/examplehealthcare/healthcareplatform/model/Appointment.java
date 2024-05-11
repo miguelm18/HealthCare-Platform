@@ -29,7 +29,7 @@ public class Appointment {
     @ManyToOne
     @JoinColumn(name = "patient_id", nullable = false)
     private Patient patient;
-
+ 
     @ManyToOne
     @JoinColumn(name = "nurse_id")
     private Nurse nurse;
@@ -83,6 +83,12 @@ public class Appointment {
         this.patient = patient;
     }
 
+    public Nurse getNurse() {
+        return nurse;
+    }
+    public void setNurse(Nurse nurse) {
+        this.nurse = nurse;
+    }
     
     public Date getDoa() {
         return doa;

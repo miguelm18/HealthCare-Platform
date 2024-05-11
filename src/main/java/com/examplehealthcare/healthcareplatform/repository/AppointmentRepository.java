@@ -9,3 +9,4 @@ public interface AppointmentRepository extends JpaRepository<Appointment, Long> 
     List<Appointment> findByDoctorIdAndDoaAndAppointmentTime(Long doctor, Date doa, String appointmentTime);
 }
 
+ 

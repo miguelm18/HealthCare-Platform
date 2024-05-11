@@ -7,3 +7,4 @@ import com.examplehealthcare.healthcareplatform.model.HealthHistory;
 public interface HealthHistoryRepository extends JpaRepository<HealthHistory, Long> {
     
 }
+ 

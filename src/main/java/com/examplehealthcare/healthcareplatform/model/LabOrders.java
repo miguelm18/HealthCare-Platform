@@ -14,7 +14,7 @@ public class LabOrders {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+ 
     @Column(name = "patient_id")
     private Long patientId;
 

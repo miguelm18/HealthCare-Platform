@@ -72,7 +72,7 @@ public class Doctor {
         this.email = email;
         this.activeStatus = activeStatus;
     }
-
+ 
     public Long getId() {
         return id;
     }

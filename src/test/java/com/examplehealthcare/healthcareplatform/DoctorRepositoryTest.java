@@ -20,7 +20,7 @@ class DoctorRepositoryTest {
         Doctor savedDoctor = doctorRepository.save(doctor);
         assertThat(savedDoctor).isNotNull();
         assertThat(savedDoctor.getId()).isNotNull();
-
+ 
 
     }
 

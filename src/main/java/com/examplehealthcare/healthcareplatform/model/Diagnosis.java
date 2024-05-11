@@ -77,7 +77,7 @@ import jakarta.persistence.TemporalType;
     public void setDiagnosisCode(String diagnosisCode) {
         this.diagnosisCode = diagnosisCode;
     }
-
+ 
     public String getDescription() {
         return description;
     }

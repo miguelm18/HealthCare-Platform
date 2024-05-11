@@ -1,22 +1,17 @@
 package com.examplehealthcare.healthcareplatform.service.impl;
 
-import com.examplehealthcare.healthcareplatform.service.DoctorService;
-
-import jakarta.transaction.Transactional;
-
 import java.util.List;
-
+import org.springframework.stereotype.Service;
 import com.examplehealthcare.healthcareplatform.model.Doctor;
 import com.examplehealthcare.healthcareplatform.repository.DoctorRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import com.examplehealthcare.healthcareplatform.service.DoctorService;
+import jakarta.transaction.Transactional;
 
 @Service
 public class DoctorServiceImpl implements DoctorService {
 
     private final DoctorRepository doctorRepository;
 
-    @Autowired
     public DoctorServiceImpl(DoctorRepository doctorRepository) {
         this.doctorRepository = doctorRepository;
     }
@@ -30,7 +25,7 @@ public class DoctorServiceImpl implements DoctorService {
     @Override
     @Transactional
     public Doctor findDoctorById(Long id) {
-        return doctorRepository.findById(id).orElse(null);
+        return doctorRepository.findById(id).orElseThrow(() -> new RuntimeException("Doctor not found with ID: " + id));
     }
 
     @Override

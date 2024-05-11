@@ -1,22 +1,17 @@
 package com.examplehealthcare.healthcareplatform.service.impl;
 
 import java.util.List;
-
-import com.examplehealthcare.healthcareplatform.model.Nurse;
-import com.examplehealthcare.healthcareplatform.service.NurseService;
-
-import jakarta.transaction.Transactional;
-
-import com.examplehealthcare.healthcareplatform.repository.NurseRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import com.examplehealthcare.healthcareplatform.model.Nurse;
+import com.examplehealthcare.healthcareplatform.repository.NurseRepository;
+import com.examplehealthcare.healthcareplatform.service.NurseService;
+import jakarta.transaction.Transactional;
 
 @Service
 public class NurseServiceImpl implements NurseService {
 
     private final NurseRepository nurseRepository;
 
-    @Autowired
     public NurseServiceImpl(NurseRepository nurseRepository) {
         this.nurseRepository = nurseRepository;
     }
@@ -30,7 +25,7 @@ public class NurseServiceImpl implements NurseService {
     @Override
     @Transactional
     public Nurse findNurseById(Long id) {
-        return nurseRepository.findById(id).orElse(null);
+        return nurseRepository.findById(id).orElseThrow(() -> new RuntimeException("Nurse not found with ID: " + id));
     }
 
     @Override
@@ -40,7 +35,7 @@ public class NurseServiceImpl implements NurseService {
     }
 
     @Override
-    @Transactional 
+    @Transactional
     public void deleteNurse(Long id) {
         nurseRepository.deleteById(id);
     }

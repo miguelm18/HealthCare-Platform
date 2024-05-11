@@ -7,3 +7,4 @@ import com.examplehealthcare.healthcareplatform.model.LabOrders;
 public interface LabOrdersRepository extends JpaRepository<LabOrders, Long>{
     
 }
+ 

@@ -1,7 +1,6 @@
 package com.examplehealthcare.healthcareplatform.service;
 
 import java.util.List;
-
 import com.examplehealthcare.healthcareplatform.model.Prescriptions;
 
 public interface PrescriptionsService {
@@ -10,4 +9,3 @@ public interface PrescriptionsService {
     Prescriptions savePrescription(Prescriptions prescription);
     void deletePrescription(Long id);
 }
-
