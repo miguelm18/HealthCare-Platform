@@ -34,11 +34,11 @@ public class Appointment {
     @JoinColumn(name = "nurse_id")
     private Nurse nurse;
 
-    @Column(nullable = false)
+    @Column(name = "date_of_appointment", nullable = false)
     private Date doa;
-    @Column(nullable = false)
+    @Column(name = "appointment_time", nullable = false)
     private String appointmentTime;
-    @Column(nullable = false)
+    @Column(name = "active_status", nullable = false)
     private Boolean status;
 
 

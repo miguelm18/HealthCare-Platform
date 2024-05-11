@@ -16,6 +16,15 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 
 @Entity
 @Table(name = "Doctors")
@@ -30,7 +39,7 @@ public class Doctor {
     private String imageUrl; 
     @Column(name = "name", nullable = false)
     private String name;
-    @Column(nullable = false)
+    @Column(name = "gender", nullable = false)
     private String gender;
     @Column(name = "specialty", nullable = false)
     private String specialty;
@@ -58,11 +67,6 @@ public class Doctor {
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
 
-    public Doctor()
-    {
-
-    }
-
     public Doctor(String name, String gender, String specialty, String phone, String email, Boolean activeStatus)
     {
         this.name = name;
@@ -73,100 +77,7 @@ public class Doctor {
         this.activeStatus = activeStatus;
     }
  
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-    public String getImageUrl() {
-        return imageUrl;
-    }
-
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public String getSpecialty() {
-        return specialty;
-    }
-
-    public void setSpecialty(String specialty) {
-        this.specialty = specialty;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public Boolean getActiveStatus() {
-        return activeStatus;
-    }
-
-    public void setActiveStatus(Boolean activeStatus) {
-        this.activeStatus = activeStatus;
-    }
-
-
-    public List<Appointment> getAppointments() {
-        return appointments;
-    }
-
-    public void setAppointments(List<Appointment> appointments) {
-        this.appointments = appointments;
-    }
-
-    public LocalDateTime getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(LocalDateTime createdAt) {
-        this.createdAt = createdAt;
-    }
-
-    public LocalDateTime getUpdatedAt() {
-        return updatedAt;
-    }
-   
-    public void setUpdatedAt(LocalDateTime updatedAt) {
-        this.updatedAt = updatedAt;
-    }
     
-    @Override
-    public String toString() {
-        return "Doctor [id=" + id + ", name=" + name + ", specialty=" + specialty + ", phone=" + phone + ", email="
-                + email + ", activeStatus=" + activeStatus + "]";
-    }
-
 
     }
 

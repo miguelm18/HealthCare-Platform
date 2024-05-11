@@ -26,9 +26,6 @@ import jakarta.persistence.TemporalType;
     @JoinColumn(name = "patient_id", nullable = false)
     private Patient patient;
 
-    @Column(name = "patient_id,  insertable = false, updatable = false")
-    private Long patientId; // Consider using @ManyToOne for direct entity mapping
-
     @Column(name = "diagnosis_code")
     private String diagnosisCode;
 
@@ -43,7 +40,7 @@ import jakarta.persistence.TemporalType;
     private String severity;
 
     @Column(name = "is_current")
-    private boolean isCurrent;
+    private Boolean isCurrent;
 
     public Long getId() {
         return id;
@@ -51,14 +48,6 @@ import jakarta.persistence.TemporalType;
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public Long getPatientId() {
-        return patientId;
-    }
-
-    public void setPatientId(Long patientId) {
-        this.patientId = patientId;
     }
 
     public Patient getPatient() {

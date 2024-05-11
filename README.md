@@ -48,17 +48,21 @@ CREATE USER 'user'@'localhost' IDENTIFIED BY 'password';
 GRANT ALL PRIVILEGES ON your_db.* TO 'user'@'localhost';
 FLUSH PRIVILEGES;
 
-Navigate to src/main/resources/ and update the application.properties file with your database connection details:
+Navigate to src/main/resources/ and update the application.properties file with your database connection details. Copy and paste this and put it into your application.properties file and replace user and password with your own from above.
 
-spring.datasource.url=jdbc:mysql://localhost:3306/your_db
+spring.application.name=healthcare-platform
+
+spring.datasource.url=jdbc:mysql://localhost:3306/newHDB
 spring.datasource.username=user
 spring.datasource.password=password
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 
-Make Sure to add this in order to automatically recieve the schema on your platform in the application.properties file 
+spring.jpa.show-sql=true
+spring.jpa.generate-ddl=true
+spring.jpa.hibernate.ddl-auto=create-drop (after you run the application change 'create-drop' to 'update')
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
 
-# Hibernate DDL auto (create, create-drop, validate, update)
-spring.jpa.hibernate.ddl-auto=create-drop
-
+once you run for the first time using create-drop, refresh the database
 
 3. Run the application
     You can start the application using Maven:

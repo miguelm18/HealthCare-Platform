@@ -8,6 +8,16 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 
 @Entity
 @Table(name = "HealthHistory")
@@ -22,42 +32,21 @@ public class HealthHistory {
     @JoinColumn(name = "patient_id", nullable = false)
     private Patient patient;
 
-    @Column(name = "Blood Group")
+    @Column(name = "blood_group")
     private String bloodGroup;
 
-    public String getBloodGroup() {
-        return bloodGroup;
-    }
-
-    public void setBloodGroup(String bloodGroup) {
-        this.bloodGroup = bloodGroup;
-    }
-
-    @Column(name = "RH Factor")
+    @Column(name = "rh_factor")
     private String rhFactor;
 
-    public String getRhFactor() {
-        return rhFactor;
-    }
-
-    public void setRhFactor(String rhFactor) {
-        this.rhFactor = rhFactor;
-    }
-
-    @Column(nullable = false)
+    @Column(name = "family_history", nullable = false)
     private String familyHistory;
 
-    @Column(nullable = false)
+    @Column(name = "illness", nullable = false)
     private String illness;
 
-    @Column(nullable = false)
+    @Column(name = "description", nullable = false)
     private String description;
     
-
-    public HealthHistory()
-    {
-
-    }
 
     public HealthHistory(Patient patient, String bloodGroup, String rhFactor, String familyHistory, String illness, String decription) {
         this.patient = patient;
@@ -67,47 +56,6 @@ public class HealthHistory {
         this.illness = illness;
         this.description = decription;
     }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Patient getPatient() {
-        return patient;
-    }
-
-    public void setPatient(Patient patient) {
-        this.patient = patient;
-    }
-
-    public String getFamilyHistory() {
-        return familyHistory;
-    }
-
-    public void setFamilyHistory(String familyHistory) {
-        this.familyHistory = familyHistory;
-    }
-
-    public String getIllness() {
-        return illness;
-    }
-
-    public void setIllness(String illness) {
-        this.illness = illness;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String decription) {
-        this.description = decription;
-    }
-
     
 }
 
