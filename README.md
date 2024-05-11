@@ -57,7 +57,7 @@ spring.datasource.password=password
 Make Sure to add this in order to automatically recieve the schema on your platform in the application.properties file 
 
 # Hibernate DDL auto (create, create-drop, validate, update)
-spring.jpa.hibernate.ddl-auto=update
+spring.jpa.hibernate.ddl-auto=create-drop
 
 
 3. Run the application
