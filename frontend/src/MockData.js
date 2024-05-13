@@ -6,7 +6,7 @@
 
 const patients = [
   {
-    id: 'https://i.imgur.com/qPLV96G.png',
+    id: 'https://i.imgur.com/3AlDV7v.png',
     name: 'John Doe',
     firstName: 'John',
     middleName: 'Robert',
@@ -31,15 +31,15 @@ const patients = [
     labReports: [
       {
         report: 'Lab report text here',
-        photo: 'https://i.imgur.com/qPLV96G.png',
-        radiologyVideo: 'https://www.youtube.com/embed/FZOfnMW58-E?si=DoQPpWmcoNctzIaq',
-        mriTracingImages: 'https://i.imgur.com/qPLV96G.png'
+        photo: 'https://i.imgur.com/kCtVNDR.png',
+        radiologyVideo: 'https://www.youtube.com/embed/tW2SjlMGj0Q?si=ksQ6sKB0XmSz9z46',
+        mriTracingImages: 'https://i.imgur.com/Fv45Hji.png'
       },
       {
         report: 'Lab report text here',
-        photo: 'https://i.imgur.com/qPLV96G.png',
-        radiologyVideo: 'https://www.youtube.com/embed/FZOfnMW58-E?si=DoQPpWmcoNctzIaq',
-        mriTracingImages: 'https://i.imgur.com/qPLV96G.png'
+        photo: 'https://i.imgur.com/kCtVNDR.png',
+        radiologyVideo: 'https://www.youtube.com/embed/tW2SjlMGj0Q?si=ksQ6sKB0XmSz9z46',
+        mriTracingImages: 'https://i.imgur.com/Fv45Hji.png'
       }
     ],
     xRays: ['https://i.imgur.com/qPLV96G.png', 'https://i.imgur.com/qPLV96G.png'],
@@ -48,7 +48,7 @@ const patients = [
     appointmentTimes: ['2022-05-15T12:30:00Z', '2022-06-25T13:00:00Z']
   },
   {
-    id: 'https://i.imgur.com/qPLV96G.png',
+    id: 'https://i.imgur.com/3AlDV7v.png',
     name: 'Jane Smith',
     firstName: 'Jane',
     middleName: 'Emily',
@@ -73,9 +73,9 @@ const patients = [
     labReports: [
       {
         report: 'Lab report text here',
-        photo: 'https://i.imgur.com/qPLV96G.png',
-        radiologyVideo: 'https://www.youtube.com/embed/FZOfnMW58-E?si=DoQPpWmcoNctzIaq',
-        mriTracingImages: 'https://i.imgur.com/qPLV96G.png'
+        photo: 'https://i.imgur.com/kCtVNDR.png',
+        radiologyVideo: 'https://www.youtube.com/embed/tW2SjlMGj0Q?si=ksQ6sKB0XmSz9z46',
+        mriTracingImages: 'https://i.imgur.com/Fv45Hji.png'
       }
     ],
     xRays: ['https://i.imgur.com/qPLV96G.png', 'https://i.imgur.com/qPLV96G.png'],
@@ -84,7 +84,7 @@ const patients = [
     appointmentTimes: ['2022-05-20T12:30:00Z', '2022-06-30T13:00:00Z']
   },
   {
-    id: 'https://i.imgur.com/qPLV96G.png',
+    id: 'https://i.imgur.com/3AlDV7v.png',
     name: 'Michael Johnson',
     firstName: 'Michael',
     middleName: 'Christopher',
@@ -109,9 +109,9 @@ const patients = [
     labReports: [
       {
         report: 'Lab report text here',
-        photo: 'https://i.imgur.com/qPLV96G.png',
-        radiologyVideo: 'https://www.youtube.com/embed/FZOfnMW58-E?si=DoQPpWmcoNctzIaq',
-        mriTracingImages: 'https://i.imgur.com/qPLV96G.png'
+        photo: 'https://i.imgur.com/kCtVNDR.png',
+        radiologyVideo: 'https://www.youtube.com/embed/tW2SjlMGj0Q?si=ksQ6sKB0XmSz9z46',
+        mriTracingImages: 'https://i.imgur.com/Fv45Hji.png'
       }
     ],
     xRays: ['https://i.imgur.com/qPLV96G.png', 'https://i.imgur.com/qPLV96G.png'],
@@ -120,7 +120,7 @@ const patients = [
     appointmentTimes: ['2022-05-25T12:30:00Z', '2022-06-05T13:00:00Z']
   },
   {
-    id: 'https://i.imgur.com/qPLV96G.png',
+    id: 'https://i.imgur.com/3AlDV7v.png',
     name: 'Amelia Brown',
     firstName: 'Amelia',
     middleName: 'Grace',
@@ -145,9 +145,9 @@ const patients = [
     labReports: [
       {
         report: 'Lab report text here',
-        photo: 'https://i.imgur.com/qPLV96G.png',
-        radiologyVideo: 'https://www.youtube.com/embed/FZOfnMW58-E?si=DoQPpWmcoNctzIaq',
-        mriTracingImages: 'https://i.imgur.com/qPLV96G.png'
+        photo: 'https://i.imgur.com/kCtVNDR.png',
+        radiologyVideo: 'https://www.youtube.com/embed/tW2SjlMGj0Q?si=ksQ6sKB0XmSz9z46',
+        mriTracingImages: 'https://i.imgur.com/Fv45Hji.png'
       }
     ],
     xRays: ['https://i.imgur.com/qPLV96G.png', 'https://i.imgur.com/qPLV96G.png'],
@@ -156,7 +156,7 @@ const patients = [
     appointmentTimes: ['2022-05-30T12:30:00Z', '2022-06-10T13:00:00Z']
   },
   {
-    id: 'https://i.imgur.com/qPLV96G.png',
+    id: 'https://i.imgur.com/3AlDV7v.png',
     name: 'David Wilson',
     firstName: 'David',
     middleName: 'James',
@@ -181,9 +181,9 @@ const patients = [
     labReports: [
       {
         report: 'Lab report text here',
-        photo: 'https://i.imgur.com/qPLV96G.png',
-        radiologyVideo: 'https://www.youtube.com/embed/FZOfnMW58-E?si=DoQPpWmcoNctzIaq',
-        mriTracingImages: 'https://i.imgur.com/qPLV96G.png'
+        photo: 'https://i.imgur.com/kCtVNDR.png',
+        radiologyVideo: 'https://www.youtube.com/embed/tW2SjlMGj0Q?si=ksQ6sKB0XmSz9z46',
+        mriTracingImages: 'https://i.imgur.com/Fv45Hji.png'
       }
     ],
     xRays: ['https://i.imgur.com/qPLV96G.png', 'https://i.imgur.com/qPLV96G.png'],
@@ -192,7 +192,7 @@ const patients = [
     appointmentTimes: ['2022-05-05T12:30:00Z', '2022-06-15T13:00:00Z']
   },
   {
-    id: 'https://i.imgur.com/qPLV96G.png',
+    id: 'https://i.imgur.com/3AlDV7v.png',
     name: 'Sarah Davis',
     firstName: 'Sarah',
     middleName: 'Elizabeth',
@@ -217,9 +217,9 @@ const patients = [
     labReports: [
       {
         report: 'Lab report text here',
-        photo: 'https://i.imgur.com/qPLV96G.png',
-        radiologyVideo: 'https://www.youtube.com/embed/FZOfnMW58-E?si=DoQPpWmcoNctzIaq',
-        mriTracingImages: 'https://i.imgur.com/qPLV96G.png'
+        photo: 'https://i.imgur.com/kCtVNDR.png',
+        radiologyVideo: 'https://www.youtube.com/embed/tW2SjlMGj0Q?si=ksQ6sKB0XmSz9z46',
+        mriTracingImages: 'https://i.imgur.com/Fv45Hji.png'
       }
     ],
     xRays: ['https://i.imgur.com/qPLV96G.png', 'https://i.imgur.com/qPLV96G.png'],
@@ -228,7 +228,7 @@ const patients = [
     appointmentTimes: ['2022-05-10T12:30:00Z', '2022-06-20T13:00:00Z']
   },
   {
-    id: 'https://i.imgur.com/qPLV96G.png',
+    id: 'https://i.imgur.com/3AlDV7v.png',
     name: 'Olivia Martinez',
     firstName: 'Olivia',
     middleName: 'Rose',
@@ -253,9 +253,9 @@ const patients = [
     labReports: [
       {
         report: 'Lab report text here',
-        photo: 'https://i.imgur.com/qPLV96G.png',
-        radiologyVideo: 'https://www.youtube.com/embed/FZOfnMW58-E?si=DoQPpWmcoNctzIaq',
-        mriTracingImages: 'https://i.imgur.com/qPLV96G.png'
+        photo: 'https://i.imgur.com/kCtVNDR.png',
+        radiologyVideo: 'https://www.youtube.com/embed/tW2SjlMGj0Q?si=ksQ6sKB0XmSz9z46',
+        mriTracingImages: 'https://i.imgur.com/Fv45Hji.png'
       }
     ],
     xRays: ['https://i.imgur.com/qPLV96G.png', 'https://i.imgur.com/qPLV96G.png'],
@@ -264,7 +264,7 @@ const patients = [
     appointmentTimes: ['2022-05-15T12:30:00Z', '2022-06-25T13:00:00Z']
   },
   {
-    id: 'https://i.imgur.com/qPLV96G.png',
+    id: 'https://i.imgur.com/3AlDV7v.png',
     name: 'Ethan Clark',
     firstName: 'Ethan',
     middleName: 'Michael',
@@ -289,9 +289,9 @@ const patients = [
     labReports: [
       {
         report: 'Lab report text here',
-        photo: 'https://i.imgur.com/qPLV96G.png',
-        radiologyVideo: 'https://www.youtube.com/embed/FZOfnMW58-E?si=DoQPpWmcoNctzIaq',
-        mriTracingImages: 'https://i.imgur.com/qPLV96G.png'
+        photo: 'https://i.imgur.com/kCtVNDR.png',
+        radiologyVideo: 'https://www.youtube.com/embed/tW2SjlMGj0Q?si=ksQ6sKB0XmSz9z46',
+        mriTracingImages: 'https://i.imgur.com/Fv45Hji.png'
       }
     ],
     xRays: ['https://i.imgur.com/qPLV96G.png', 'https://i.imgur.com/qPLV96G.png'],
@@ -300,7 +300,7 @@ const patients = [
     appointmentTimes: ['2022-05-20T12:30:00Z', '2022-06-30T13:00:00Z']
   },
   {
-    id: 'https://i.imgur.com/qPLV96G.png',
+    id: 'https://i.imgur.com/3AlDV7v.png',
     name: 'Sophia Lee',
     firstName: 'Sophia',
     middleName: 'Ava',
@@ -325,9 +325,9 @@ const patients = [
     labReports: [
       {
         report: 'Lab report text here',
-        photo: 'https://i.imgur.com/qPLV96G.png',
-        radiologyVideo: 'https://www.youtube.com/embed/FZOfnMW58-E?si=DoQPpWmcoNctzIaq',
-        mriTracingImages: 'https://i.imgur.com/qPLV96G.png'
+        photo: 'https://i.imgur.com/kCtVNDR.png',
+        radiologyVideo: 'https://www.youtube.com/embed/tW2SjlMGj0Q?si=ksQ6sKB0XmSz9z46',
+        mriTracingImages: 'https://i.imgur.com/Fv45Hji.png'
       }
     ],
     xRays: ['https://i.imgur.com/qPLV96G.png', 'https://i.imgur.com/qPLV96G.png'],
@@ -336,7 +336,7 @@ const patients = [
     appointmentTimes: ['2022-05-25T12:30:00Z', '2022-06-05T13:00:00Z']
   },
   {
-    id: 'https://i.imgur.com/qPLV96G.png',
+    id: 'https://i.imgur.com/3AlDV7v.png',
     name: 'Aliver Taylor',
     firstName: 'Aliver',
     middleName: 'Benjamin',
@@ -361,9 +361,9 @@ const patients = [
     labReports: [
       {
         report: 'Lab report text here',
-        photo: 'https://i.imgur.com/qPLV96G.png',
-        radiologyVideo: 'https://www.youtube.com/embed/FZOfnMW58-E?si=DoQPpWmcoNctzIaq',
-        mriTracingImages: 'https://i.imgur.com/qPLV96G.png'
+        photo: 'https://i.imgur.com/kCtVNDR.png',
+        radiologyVideo: 'https://www.youtube.com/embed/tW2SjlMGj0Q?si=ksQ6sKB0XmSz9z46',
+        mriTracingImages: 'https://i.imgur.com/Fv45Hji.png'
       }
     ],
     xRays: ['https://i.imgur.com/qPLV96G.png', 'https://i.imgur.com/qPLV96G.png'],

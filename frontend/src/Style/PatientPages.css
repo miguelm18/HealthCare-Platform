@@ -5,9 +5,20 @@
 
 /* Add this class for the image container */
 .image-container {
+  margin-top: 20px;
   text-align: left; /* Center the image */
 }
 
 .large-image {
   width: 400px;
+}
+
+.contents {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-right: 20px; /* Adjust the value as needed */
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
