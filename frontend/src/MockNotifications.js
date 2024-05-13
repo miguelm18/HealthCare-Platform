@@ -1,11 +1,11 @@
 const notifications = [
   {
-    description: 'This happened',
-    whatHappened: 'example notification'
+    description: 'Appointment for Ethan Clark at',
+    whatHappened: '2022-05-15T12:30:00Z'
   },
   {
-    description: 'This 2nd thing happened',
-    whatHappened: 'example notification 2'
+    description: 'Appointment for Bob Ross at',
+    whatHappened: '2022-06-15T12:30:00Z'
   },
 ];
 

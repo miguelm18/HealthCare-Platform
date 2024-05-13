@@ -772,7 +772,7 @@ function PatientPages({ selectedPatient }) {
           <form onSubmit={(e) => {
             e.preventDefault(); // Prevent default form submission
             handleChange(); // Call handleChange function
-            sendNotification(addAppointment, "yoinks");
+            sendNotification(addAppointment, selectedPatient.name);
           }}>
             <div className="input-text">
               <input
