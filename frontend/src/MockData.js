@@ -30,13 +30,13 @@ const patients = [
     pastMedications: ['Amoxicillin', 'Paracetamol'],
     labReports: [
       {
-        report: 'Lab report text here',
+        report: 'The laboratory results revealed normal findings across various parameters. His complete blood count (CBC) displayed a hemoglobin level of 14.5 g/dL, hematocrit of 42%, white blood cell count of 7.2 x10^3/µL, red blood cell count of 5.2 x10^6/µL, and a platelet count of 250 x10^3/µL. Basic metabolic panel (BMP) readings indicated sodium at 140 mmol/L, potassium at 4.0 mmol/L, chloride at 100 mmol/L, bicarbonate at 24 mmol/L, blood urea nitrogen (BUN) at 15 mg/dL, creatinine at 1.0 mg/dL, and glucose at 90 mg/dL. Lipid panel analysis yielded total cholesterol of 180 mg/dL, HDL cholesterol of 50 mg/dL, LDL cholesterol of 120 mg/dL, and triglycerides of 100 mg/dL. Liver function tests (LFTs) showcased total protein at 7.0 g/dL, albumin at 4.0 g/dL, total bilirubin at 0.5 mg/dL, ALT (Alanine Aminotransferase) at 20 U/L, and AST (Aspartate Aminotransferase) at 25 U/L.',
         photo: 'https://i.imgur.com/kCtVNDR.png',
         radiologyVideo: 'https://www.youtube.com/embed/tW2SjlMGj0Q?si=ksQ6sKB0XmSz9z46',
         mriTracingImages: 'https://i.imgur.com/Fv45Hji.png'
       },
       {
-        report: 'Lab report text here',
+        report: 'The laboratory results revealed normal findings across various parameters. His complete blood count (CBC) displayed a hemoglobin level of 14.5 g/dL, hematocrit of 42%, white blood cell count of 7.2 x10^3/µL, red blood cell count of 5.2 x10^6/µL, and a platelet count of 250 x10^3/µL. Basic metabolic panel (BMP) readings indicated sodium at 140 mmol/L, potassium at 4.0 mmol/L, chloride at 100 mmol/L, bicarbonate at 24 mmol/L, blood urea nitrogen (BUN) at 15 mg/dL, creatinine at 1.0 mg/dL, and glucose at 90 mg/dL. Lipid panel analysis yielded total cholesterol of 180 mg/dL, HDL cholesterol of 50 mg/dL, LDL cholesterol of 120 mg/dL, and triglycerides of 100 mg/dL. Liver function tests (LFTs) showcased total protein at 7.0 g/dL, albumin at 4.0 g/dL, total bilirubin at 0.5 mg/dL, ALT (Alanine Aminotransferase) at 20 U/L, and AST (Aspartate Aminotransferase) at 25 U/L.',
         photo: 'https://i.imgur.com/kCtVNDR.png',
         radiologyVideo: 'https://www.youtube.com/embed/tW2SjlMGj0Q?si=ksQ6sKB0XmSz9z46',
         mriTracingImages: 'https://i.imgur.com/Fv45Hji.png'
@@ -72,7 +72,7 @@ const patients = [
     pastMedications: ['Aspirin', 'Antacids'],
     labReports: [
       {
-        report: 'Lab report text here',
+        report: 'The laboratory results revealed normal findings across various parameters. His complete blood count (CBC) displayed a hemoglobin level of 14.5 g/dL, hematocrit of 42%, white blood cell count of 7.2 x10^3/µL, red blood cell count of 5.2 x10^6/µL, and a platelet count of 250 x10^3/µL. Basic metabolic panel (BMP) readings indicated sodium at 140 mmol/L, potassium at 4.0 mmol/L, chloride at 100 mmol/L, bicarbonate at 24 mmol/L, blood urea nitrogen (BUN) at 15 mg/dL, creatinine at 1.0 mg/dL, and glucose at 90 mg/dL. Lipid panel analysis yielded total cholesterol of 180 mg/dL, HDL cholesterol of 50 mg/dL, LDL cholesterol of 120 mg/dL, and triglycerides of 100 mg/dL. Liver function tests (LFTs) showcased total protein at 7.0 g/dL, albumin at 4.0 g/dL, total bilirubin at 0.5 mg/dL, ALT (Alanine Aminotransferase) at 20 U/L, and AST (Aspartate Aminotransferase) at 25 U/L.',
         photo: 'https://i.imgur.com/kCtVNDR.png',
         radiologyVideo: 'https://www.youtube.com/embed/tW2SjlMGj0Q?si=ksQ6sKB0XmSz9z46',
         mriTracingImages: 'https://i.imgur.com/Fv45Hji.png'
@@ -108,7 +108,7 @@ const patients = [
     pastMedications: ['Ibuprofen', 'Chondroitin'],
     labReports: [
       {
-        report: 'Lab report text here',
+        report: 'The laboratory results revealed normal findings across various parameters. His complete blood count (CBC) displayed a hemoglobin level of 14.5 g/dL, hematocrit of 42%, white blood cell count of 7.2 x10^3/µL, red blood cell count of 5.2 x10^6/µL, and a platelet count of 250 x10^3/µL. Basic metabolic panel (BMP) readings indicated sodium at 140 mmol/L, potassium at 4.0 mmol/L, chloride at 100 mmol/L, bicarbonate at 24 mmol/L, blood urea nitrogen (BUN) at 15 mg/dL, creatinine at 1.0 mg/dL, and glucose at 90 mg/dL. Lipid panel analysis yielded total cholesterol of 180 mg/dL, HDL cholesterol of 50 mg/dL, LDL cholesterol of 120 mg/dL, and triglycerides of 100 mg/dL. Liver function tests (LFTs) showcased total protein at 7.0 g/dL, albumin at 4.0 g/dL, total bilirubin at 0.5 mg/dL, ALT (Alanine Aminotransferase) at 20 U/L, and AST (Aspartate Aminotransferase) at 25 U/L.',
         photo: 'https://i.imgur.com/kCtVNDR.png',
         radiologyVideo: 'https://www.youtube.com/embed/tW2SjlMGj0Q?si=ksQ6sKB0XmSz9z46',
         mriTracingImages: 'https://i.imgur.com/Fv45Hji.png'
@@ -144,7 +144,7 @@ const patients = [
     pastMedications: ['Topiramate', 'Meloxicam'],
     labReports: [
       {
-        report: 'Lab report text here',
+        report: 'The laboratory results revealed normal findings across various parameters. His complete blood count (CBC) displayed a hemoglobin level of 14.5 g/dL, hematocrit of 42%, white blood cell count of 7.2 x10^3/µL, red blood cell count of 5.2 x10^6/µL, and a platelet count of 250 x10^3/µL. Basic metabolic panel (BMP) readings indicated sodium at 140 mmol/L, potassium at 4.0 mmol/L, chloride at 100 mmol/L, bicarbonate at 24 mmol/L, blood urea nitrogen (BUN) at 15 mg/dL, creatinine at 1.0 mg/dL, and glucose at 90 mg/dL. Lipid panel analysis yielded total cholesterol of 180 mg/dL, HDL cholesterol of 50 mg/dL, LDL cholesterol of 120 mg/dL, and triglycerides of 100 mg/dL. Liver function tests (LFTs) showcased total protein at 7.0 g/dL, albumin at 4.0 g/dL, total bilirubin at 0.5 mg/dL, ALT (Alanine Aminotransferase) at 20 U/L, and AST (Aspartate Aminotransferase) at 25 U/L.',
         photo: 'https://i.imgur.com/kCtVNDR.png',
         radiologyVideo: 'https://www.youtube.com/embed/tW2SjlMGj0Q?si=ksQ6sKB0XmSz9z46',
         mriTracingImages: 'https://i.imgur.com/Fv45Hji.png'
@@ -180,7 +180,7 @@ const patients = [
     pastMedications: ['Diphenhydramine', 'Albuterol'],
     labReports: [
       {
-        report: 'Lab report text here',
+        report: 'The laboratory results revealed normal findings across various parameters. His complete blood count (CBC) displayed a hemoglobin level of 14.5 g/dL, hematocrit of 42%, white blood cell count of 7.2 x10^3/µL, red blood cell count of 5.2 x10^6/µL, and a platelet count of 250 x10^3/µL. Basic metabolic panel (BMP) readings indicated sodium at 140 mmol/L, potassium at 4.0 mmol/L, chloride at 100 mmol/L, bicarbonate at 24 mmol/L, blood urea nitrogen (BUN) at 15 mg/dL, creatinine at 1.0 mg/dL, and glucose at 90 mg/dL. Lipid panel analysis yielded total cholesterol of 180 mg/dL, HDL cholesterol of 50 mg/dL, LDL cholesterol of 120 mg/dL, and triglycerides of 100 mg/dL. Liver function tests (LFTs) showcased total protein at 7.0 g/dL, albumin at 4.0 g/dL, total bilirubin at 0.5 mg/dL, ALT (Alanine Aminotransferase) at 20 U/L, and AST (Aspartate Aminotransferase) at 25 U/L.',
         photo: 'https://i.imgur.com/kCtVNDR.png',
         radiologyVideo: 'https://www.youtube.com/embed/tW2SjlMGj0Q?si=ksQ6sKB0XmSz9z46',
         mriTracingImages: 'https://i.imgur.com/Fv45Hji.png'
@@ -216,7 +216,7 @@ const patients = [
     pastMedications: ['Ibuprofen', 'Methotrexate'],
     labReports: [
       {
-        report: 'Lab report text here',
+        report: 'The laboratory results revealed normal findings across various parameters. His complete blood count (CBC) displayed a hemoglobin level of 14.5 g/dL, hematocrit of 42%, white blood cell count of 7.2 x10^3/µL, red blood cell count of 5.2 x10^6/µL, and a platelet count of 250 x10^3/µL. Basic metabolic panel (BMP) readings indicated sodium at 140 mmol/L, potassium at 4.0 mmol/L, chloride at 100 mmol/L, bicarbonate at 24 mmol/L, blood urea nitrogen (BUN) at 15 mg/dL, creatinine at 1.0 mg/dL, and glucose at 90 mg/dL. Lipid panel analysis yielded total cholesterol of 180 mg/dL, HDL cholesterol of 50 mg/dL, LDL cholesterol of 120 mg/dL, and triglycerides of 100 mg/dL. Liver function tests (LFTs) showcased total protein at 7.0 g/dL, albumin at 4.0 g/dL, total bilirubin at 0.5 mg/dL, ALT (Alanine Aminotransferase) at 20 U/L, and AST (Aspartate Aminotransferase) at 25 U/L.',
         photo: 'https://i.imgur.com/kCtVNDR.png',
         radiologyVideo: 'https://www.youtube.com/embed/tW2SjlMGj0Q?si=ksQ6sKB0XmSz9z46',
         mriTracingImages: 'https://i.imgur.com/Fv45Hji.png'
@@ -252,7 +252,7 @@ const patients = [
     pastMedications: ['Citalopram', 'Escitalopram'],
     labReports: [
       {
-        report: 'Lab report text here',
+        report: 'The laboratory results revealed normal findings across various parameters. His complete blood count (CBC) displayed a hemoglobin level of 14.5 g/dL, hematocrit of 42%, white blood cell count of 7.2 x10^3/µL, red blood cell count of 5.2 x10^6/µL, and a platelet count of 250 x10^3/µL. Basic metabolic panel (BMP) readings indicated sodium at 140 mmol/L, potassium at 4.0 mmol/L, chloride at 100 mmol/L, bicarbonate at 24 mmol/L, blood urea nitrogen (BUN) at 15 mg/dL, creatinine at 1.0 mg/dL, and glucose at 90 mg/dL. Lipid panel analysis yielded total cholesterol of 180 mg/dL, HDL cholesterol of 50 mg/dL, LDL cholesterol of 120 mg/dL, and triglycerides of 100 mg/dL. Liver function tests (LFTs) showcased total protein at 7.0 g/dL, albumin at 4.0 g/dL, total bilirubin at 0.5 mg/dL, ALT (Alanine Aminotransferase) at 20 U/L, and AST (Aspartate Aminotransferase) at 25 U/L.',
         photo: 'https://i.imgur.com/kCtVNDR.png',
         radiologyVideo: 'https://www.youtube.com/embed/tW2SjlMGj0Q?si=ksQ6sKB0XmSz9z46',
         mriTracingImages: 'https://i.imgur.com/Fv45Hji.png'
@@ -288,7 +288,7 @@ const patients = [
     pastMedications: ['Amlodipine', 'Simvastatin'],
     labReports: [
       {
-        report: 'Lab report text here',
+        report: 'The laboratory results revealed normal findings across various parameters. His complete blood count (CBC) displayed a hemoglobin level of 14.5 g/dL, hematocrit of 42%, white blood cell count of 7.2 x10^3/µL, red blood cell count of 5.2 x10^6/µL, and a platelet count of 250 x10^3/µL. Basic metabolic panel (BMP) readings indicated sodium at 140 mmol/L, potassium at 4.0 mmol/L, chloride at 100 mmol/L, bicarbonate at 24 mmol/L, blood urea nitrogen (BUN) at 15 mg/dL, creatinine at 1.0 mg/dL, and glucose at 90 mg/dL. Lipid panel analysis yielded total cholesterol of 180 mg/dL, HDL cholesterol of 50 mg/dL, LDL cholesterol of 120 mg/dL, and triglycerides of 100 mg/dL. Liver function tests (LFTs) showcased total protein at 7.0 g/dL, albumin at 4.0 g/dL, total bilirubin at 0.5 mg/dL, ALT (Alanine Aminotransferase) at 20 U/L, and AST (Aspartate Aminotransferase) at 25 U/L.',
         photo: 'https://i.imgur.com/kCtVNDR.png',
         radiologyVideo: 'https://www.youtube.com/embed/tW2SjlMGj0Q?si=ksQ6sKB0XmSz9z46',
         mriTracingImages: 'https://i.imgur.com/Fv45Hji.png'
@@ -324,7 +324,7 @@ const patients = [
     pastMedications: ['Gliclazide', 'Glipizide'],
     labReports: [
       {
-        report: 'Lab report text here',
+        report: 'The laboratory results revealed normal findings across various parameters. His complete blood count (CBC) displayed a hemoglobin level of 14.5 g/dL, hematocrit of 42%, white blood cell count of 7.2 x10^3/µL, red blood cell count of 5.2 x10^6/µL, and a platelet count of 250 x10^3/µL. Basic metabolic panel (BMP) readings indicated sodium at 140 mmol/L, potassium at 4.0 mmol/L, chloride at 100 mmol/L, bicarbonate at 24 mmol/L, blood urea nitrogen (BUN) at 15 mg/dL, creatinine at 1.0 mg/dL, and glucose at 90 mg/dL. Lipid panel analysis yielded total cholesterol of 180 mg/dL, HDL cholesterol of 50 mg/dL, LDL cholesterol of 120 mg/dL, and triglycerides of 100 mg/dL. Liver function tests (LFTs) showcased total protein at 7.0 g/dL, albumin at 4.0 g/dL, total bilirubin at 0.5 mg/dL, ALT (Alanine Aminotransferase) at 20 U/L, and AST (Aspartate Aminotransferase) at 25 U/L.',
         photo: 'https://i.imgur.com/kCtVNDR.png',
         radiologyVideo: 'https://www.youtube.com/embed/tW2SjlMGj0Q?si=ksQ6sKB0XmSz9z46',
         mriTracingImages: 'https://i.imgur.com/Fv45Hji.png'
@@ -360,7 +360,7 @@ const patients = [
     pastMedications: ['Prednisone', 'Montelukast'],
     labReports: [
       {
-        report: 'Lab report text here',
+        report: 'The laboratory results revealed normal findings across various parameters. His complete blood count (CBC) displayed a hemoglobin level of 14.5 g/dL, hematocrit of 42%, white blood cell count of 7.2 x10^3/µL, red blood cell count of 5.2 x10^6/µL, and a platelet count of 250 x10^3/µL. Basic metabolic panel (BMP) readings indicated sodium at 140 mmol/L, potassium at 4.0 mmol/L, chloride at 100 mmol/L, bicarbonate at 24 mmol/L, blood urea nitrogen (BUN) at 15 mg/dL, creatinine at 1.0 mg/dL, and glucose at 90 mg/dL. Lipid panel analysis yielded total cholesterol of 180 mg/dL, HDL cholesterol of 50 mg/dL, LDL cholesterol of 120 mg/dL, and triglycerides of 100 mg/dL. Liver function tests (LFTs) showcased total protein at 7.0 g/dL, albumin at 4.0 g/dL, total bilirubin at 0.5 mg/dL, ALT (Alanine Aminotransferase) at 20 U/L, and AST (Aspartate Aminotransferase) at 25 U/L.',
         photo: 'https://i.imgur.com/kCtVNDR.png',
         radiologyVideo: 'https://www.youtube.com/embed/tW2SjlMGj0Q?si=ksQ6sKB0XmSz9z46',
         mriTracingImages: 'https://i.imgur.com/Fv45Hji.png'
@@ -370,7 +370,333 @@ const patients = [
     doctorVisits: ['2022-02-20T08:00:00Z', '2022-02-28T09:30:00Z'],
     vaccinations: ['2022-03-05T10:45:00Z', '2022-04-25T11:15:00Z'],
     appointmentTimes: ['2022-05-10T12:30:00Z', '2022-06-20T13:00:00Z']
-  }
+  },
+  {
+    id: 'https://i.imgur.com/3AlDV7v.png',
+    name: 'Emily Johnson',
+    firstName: 'Emily',
+    middleName: 'Anne',
+    lastName: 'Johnson',
+    gender: 'Female',
+    dateOfBirth: '2000-03-20',
+    bloodGroup: 'O',
+    rhFactor: '+',
+    maritalStatus: 'Single',
+    age: { years: 24, months: 2, days: 23 },
+    phoneResidence: '555-123-4567',
+    mobilePhone: '555-987-6543',
+    emailAddress: 'emily.johnson@example.com',
+    emergencyContactName: 'Michael Johnson',
+    emergencyContactPhoneNumber: '555-555-5555',
+    family: ['Michael Johnson', 'Sarah Johnson'],
+    currentIllnesses: ['Fatigue', 'Insomnia'],
+    previousIllnesses: ['Anemia', 'Thyroid Disorder'],
+    specificAllergies: ['Pollen', 'Dust Mites'],
+    currentMedications: ['Melatonin', 'Iron Supplements'],
+    pastMedications: ['Vitamin D', 'B12'],
+    labReports: [
+      {
+        report: 'The laboratory results revealed normal findings across various parameters. His complete blood count (CBC) displayed a hemoglobin level of 14.5 g/dL, hematocrit of 42%, white blood cell count of 7.2 x10^3/µL, red blood cell count of 5.2 x10^6/µL, and a platelet count of 250 x10^3/µL. Basic metabolic panel (BMP) readings indicated sodium at 140 mmol/L, potassium at 4.0 mmol/L, chloride at 100 mmol/L, bicarbonate at 24 mmol/L, blood urea nitrogen (BUN) at 15 mg/dL, creatinine at 1.0 mg/dL, and glucose at 90 mg/dL. Lipid panel analysis yielded total cholesterol of 180 mg/dL, HDL cholesterol of 50 mg/dL, LDL cholesterol of 120 mg/dL, and triglycerides of 100 mg/dL. Liver function tests (LFTs) showcased total protein at 7.0 g/dL, albumin at 4.0 g/dL, total bilirubin at 0.5 mg/dL, ALT (Alanine Aminotransferase) at 20 U/L, and AST (Aspartate Aminotransferase) at 25 U/L.',
+        photo: 'https://i.imgur.com/kCtVNDR.png',
+        radiologyVideo: 'https://www.youtube.com/embed/tW2SjlMGj0Q?si=ksQ6sKB0XmSz9z46',
+        mriTracingImages: 'https://i.imgur.com/Fv45Hji.png'
+      }
+    ],
+    xRays: ['https://i.imgur.com/onW1Xuv.png', 'https://i.imgur.com/KcsHQbA.png'],
+    doctorVisits: ['2022-03-01T08:00:00Z', '2022-03-15T09:30:00Z'],
+    vaccinations: ['2022-04-01T10:45:00Z', '2022-04-20T11:15:00Z'],
+    appointmentTimes: ['2022-05-01T12:30:00Z', '2022-06-15T13:00:00Z']
+  },
+  {
+    id: 'https://i.imgur.com/3AlDV7v.png',
+    name: 'William Turner',
+    firstName: 'William',
+    middleName: 'Henry',
+    lastName: 'Turner',
+    gender: 'Male',
+    dateOfBirth: '1996-09-15',
+    bloodGroup: 'A',
+    rhFactor: '-',
+    maritalStatus: 'Married',
+    age: { years: 28, months: 8, days: 10 },
+    phoneResidence: '555-321-7890',
+    mobilePhone: '555-987-6543',
+    emailAddress: 'william.turner@example.com',
+    emergencyContactName: 'Sophia Turner',
+    emergencyContactPhoneNumber: '555-555-5555',
+    family: ['Sophia Turner', 'Olivia Turner'],
+    currentIllnesses: ['Stomach Pain', 'Indigestion'],
+    previousIllnesses: ['Gastritis', 'GERD'],
+    specificAllergies: ['Shellfish', 'Peanuts'],
+    currentMedications: ['Antacids', 'Proton Pump Inhibitors'],
+    pastMedications: ['H2 Blockers', 'Sucralfate'],
+    labReports: [
+      {
+        report: 'The laboratory results revealed normal findings across various parameters. His complete blood count (CBC) displayed a hemoglobin level of 14.5 g/dL, hematocrit of 42%, white blood cell count of 7.2 x10^3/µL, red blood cell count of 5.2 x10^6/µL, and a platelet count of 250 x10^3/µL. Basic metabolic panel (BMP) readings indicated sodium at 140 mmol/L, potassium at 4.0 mmol/L, chloride at 100 mmol/L, bicarbonate at 24 mmol/L, blood urea nitrogen (BUN) at 15 mg/dL, creatinine at 1.0 mg/dL, and glucose at 90 mg/dL. Lipid panel analysis yielded total cholesterol of 180 mg/dL, HDL cholesterol of 50 mg/dL, LDL cholesterol of 120 mg/dL, and triglycerides of 100 mg/dL. Liver function tests (LFTs) showcased total protein at 7.0 g/dL, albumin at 4.0 g/dL, total bilirubin at 0.5 mg/dL, ALT (Alanine Aminotransferase) at 20 U/L, and AST (Aspartate Aminotransferase) at 25 U/L.',
+        photo: 'https://i.imgur.com/kCtVNDR.png',
+        radiologyVideo: 'https://www.youtube.com/embed/tW2SjlMGj0Q?si=ksQ6sKB0XmSz9z46',
+        mriTracingImages: 'https://i.imgur.com/Fv45Hji.png'
+      }
+    ],
+    xRays: ['https://i.imgur.com/onW1Xuv.png', 'https://i.imgur.com/KcsHQbA.png'],
+    doctorVisits: ['2022-03-05T08:00:00Z', '2022-03-20T09:30:00Z'],
+    vaccinations: ['2022-04-10T10:45:00Z', '2022-04-30T11:15:00Z'],
+    appointmentTimes: ['2022-05-05T12:30:00Z', '2022-06-25T13:00:00Z']
+  },
+  {
+    id: 'https://i.imgur.com/3AlDV7v.png',
+    name: 'Ava Moore',
+    firstName: 'Ava',
+    middleName: 'Isabella',
+    lastName: 'Moore',
+    gender: 'Female',
+    dateOfBirth: '1988-07-07',
+    bloodGroup: 'AB',
+    rhFactor: '+',
+    maritalStatus: 'Single',
+    age: { years: 33, months: 10, days: 5 },
+    phoneResidence: '555-789-1234',
+    mobilePhone: '555-456-7890',
+    emailAddress: 'ava.moore@example.com',
+    emergencyContactName: 'Daniel Moore',
+    emergencyContactPhoneNumber: '555-555-5555',
+    family: ['Daniel Moore', 'Olivia Moore'],
+    currentIllnesses: ['Depression', 'Anxiety'],
+    previousIllnesses: ['Panic Attacks', 'Bipolar Disorder'],
+    specificAllergies: ['Pollen', 'Dust Mites'],
+    currentMedications: ['SSRIs', 'Benzodiazepines'],
+    pastMedications: ['SNRIs', 'Tricyclic Antidepressants'],
+    labReports: [
+      {
+        report: 'The laboratory results revealed normal findings across various parameters. His complete blood count (CBC) displayed a hemoglobin level of 14.5 g/dL, hematocrit of 42%, white blood cell count of 7.2 x10^3/µL, red blood cell count of 5.2 x10^6/µL, and a platelet count of 250 x10^3/µL. Basic metabolic panel (BMP) readings indicated sodium at 140 mmol/L, potassium at 4.0 mmol/L, chloride at 100 mmol/L, bicarbonate at 24 mmol/L, blood urea nitrogen (BUN) at 15 mg/dL, creatinine at 1.0 mg/dL, and glucose at 90 mg/dL. Lipid panel analysis yielded total cholesterol of 180 mg/dL, HDL cholesterol of 50 mg/dL, LDL cholesterol of 120 mg/dL, and triglycerides of 100 mg/dL. Liver function tests (LFTs) showcased total protein at 7.0 g/dL, albumin at 4.0 g/dL, total bilirubin at 0.5 mg/dL, ALT (Alanine Aminotransferase) at 20 U/L, and AST (Aspartate Aminotransferase) at 25 U/L.',
+        photo: 'https://i.imgur.com/kCtVNDR.png',
+        radiologyVideo: 'https://www.youtube.com/embed/tW2SjlMGj0Q?si=ksQ6sKB0XmSz9z46',
+        mriTracingImages: 'https://i.imgur.com/Fv45Hji.png'
+      }
+    ],
+    xRays: ['https://i.imgur.com/onW1Xuv.png', 'https://i.imgur.com/KcsHQbA.png'],
+    doctorVisits: ['2022-03-10T08:00:00Z', '2022-03-25T09:30:00Z'],
+    vaccinations: ['2022-04-15T10:45:00Z', '2022-05-05T11:15:00Z'],
+    appointmentTimes: ['2022-05-10T12:30:00Z', '2022-06-30T13:00:00Z']
+  },
+  {
+    id: 'https://i.imgur.com/3AlDV7v.png',
+    name: 'Liam White',
+    firstName: 'Liam',
+    middleName: 'Joseph',
+    lastName: 'White',
+    gender: 'Male',
+    dateOfBirth: '1975-12-03',
+    bloodGroup: 'A',
+    rhFactor: '-',
+    maritalStatus: 'Married',
+    age: { years: 48, months: 4, days: 10 },
+    phoneResidence: '555-123-4567',
+    mobilePhone: '555-789-1234',
+    emailAddress: 'liam.white@example.com',
+    emergencyContactName: 'Sophia White',
+    emergencyContactPhoneNumber: '555-555-5555',
+    family: ['Sophia White', 'Ella White'],
+    currentIllnesses: ['Diabetes', 'High Blood Pressure', 'Obesity'],
+    previousIllnesses: ['Heart Disease', 'Chronic Kidney Disease'],
+    specificAllergies: ['Penicillin', 'Soy'],
+    currentMedications: ['Insulin', 'Metformin'],
+    pastMedications: ['ACE Inhibitors', 'Statins'],
+    labReports: [
+      {
+        report: 'The laboratory results revealed normal findings across various parameters. His complete blood count (CBC) displayed a hemoglobin level of 14.5 g/dL, hematocrit of 42%, white blood cell count of 7.2 x10^3/µL, red blood cell count of 5.2 x10^6/µL, and a platelet count of 250 x10^3/µL. Basic metabolic panel (BMP) readings indicated sodium at 140 mmol/L, potassium at 4.0 mmol/L, chloride at 100 mmol/L, bicarbonate at 24 mmol/L, blood urea nitrogen (BUN) at 15 mg/dL, creatinine at 1.0 mg/dL, and glucose at 90 mg/dL. Lipid panel analysis yielded total cholesterol of 180 mg/dL, HDL cholesterol of 50 mg/dL, LDL cholesterol of 120 mg/dL, and triglycerides of 100 mg/dL. Liver function tests (LFTs) showcased total protein at 7.0 g/dL, albumin at 4.0 g/dL, total bilirubin at 0.5 mg/dL, ALT (Alanine Aminotransferase) at 20 U/L, and AST (Aspartate Aminotransferase) at 25 U/L.',
+        photo: 'https://i.imgur.com/kCtVNDR.png',
+        radiologyVideo: 'https://www.youtube.com/embed/tW2SjlMGj0Q?si=ksQ6sKB0XmSz9z46',
+        mriTracingImages: 'https://i.imgur.com/Fv45Hji.png'
+      }
+    ],
+    xRays: ['https://i.imgur.com/onW1Xuv.png', 'https://i.imgur.com/KcsHQbA.png'],
+    doctorVisits: ['2022-03-15T08:00:00Z', '2022-03-30T09:30:00Z'],
+    vaccinations: ['2022-04-20T10:45:00Z', '2022-05-10T11:15:00Z'],
+    appointmentTimes: ['2022-05-15T12:30:00Z', '2022-06-05T13:00:00Z']
+  },
+  {
+    id: 'https://i.imgur.com/3AlDV7v.png',
+    name: 'Ella Garcia',
+    firstName: 'Ella',
+    middleName: 'Maria',
+    lastName: 'Garcia',
+    gender: 'Female',
+    dateOfBirth: '1983-05-14',
+    bloodGroup: 'AB',
+    rhFactor: '+',
+    maritalStatus: 'Single',
+    age: { years: 41, months: 11, days: 18 },
+    phoneResidence: '555-987-6543',
+    mobilePhone: '555-321-7890',
+    emailAddress: 'ella.garcia@example.com',
+    emergencyContactName: 'David Garcia',
+    emergencyContactPhoneNumber: '555-555-5555',
+    family: ['David Garcia', 'Sophia Garcia'],
+    currentIllnesses: ['Anemia', 'Fatigue', 'Shortness of Breath'],
+    previousIllnesses: ['Iron Deficiency', 'Hypothyroidism'],
+    specificAllergies: ['Shellfish', 'Peanuts'],
+    currentMedications: ['Iron Supplements', 'Vitamin B12'],
+    pastMedications: ['Folic Acid', 'Thyroxine'],
+    labReports: [
+      {
+        report: 'The laboratory results revealed normal findings across various parameters. His complete blood count (CBC) displayed a hemoglobin level of 14.5 g/dL, hematocrit of 42%, white blood cell count of 7.2 x10^3/µL, red blood cell count of 5.2 x10^6/µL, and a platelet count of 250 x10^3/µL. Basic metabolic panel (BMP) readings indicated sodium at 140 mmol/L, potassium at 4.0 mmol/L, chloride at 100 mmol/L, bicarbonate at 24 mmol/L, blood urea nitrogen (BUN) at 15 mg/dL, creatinine at 1.0 mg/dL, and glucose at 90 mg/dL. Lipid panel analysis yielded total cholesterol of 180 mg/dL, HDL cholesterol of 50 mg/dL, LDL cholesterol of 120 mg/dL, and triglycerides of 100 mg/dL. Liver function tests (LFTs) showcased total protein at 7.0 g/dL, albumin at 4.0 g/dL, total bilirubin at 0.5 mg/dL, ALT (Alanine Aminotransferase) at 20 U/L, and AST (Aspartate Aminotransferase) at 25 U/L.',
+        photo: 'https://i.imgur.com/kCtVNDR.png',
+        radiologyVideo: 'https://www.youtube.com/embed/tW2SjlMGj0Q?si=ksQ6sKB0XmSz9z46',
+        mriTracingImages: 'https://i.imgur.com/Fv45Hji.png'
+      }
+    ],
+    xRays: ['https://i.imgur.com/onW1Xuv.png', 'https://i.imgur.com/KcsHQbA.png'],
+    doctorVisits: ['2022-03-20T08:00:00Z', '2022-04-05T09:30:00Z'],
+    vaccinations: ['2022-04-10T10:45:00Z', '2022-05-25T11:15:00Z'],
+    appointmentTimes: ['2022-06-05T12:30:00Z', '2022-07-15T13:00:00Z']
+  },
+  {
+    id: 'https://i.imgur.com/3AlDV7v.png',
+    name: 'Oliver Hernandez',
+    firstName: 'Oliver',
+    middleName: 'Daniel',
+    lastName: 'Hernandez',
+    gender: 'Male',
+    dateOfBirth: '1990-11-28',
+    bloodGroup: 'A',
+    rhFactor: '-',
+    maritalStatus: 'Married',
+    age: { years: 33, months: 6, days: 5 },
+    phoneResidence: '555-789-1234',
+    mobilePhone: '555-456-7890',
+    emailAddress: 'oliver.hernandez@example.com',
+    emergencyContactName: 'Emma Hernandez',
+    emergencyContactPhoneNumber: '555-555-5555',
+    family: ['Emma Hernandez', 'Sophia Hernandez'],
+    currentIllnesses: ['Acid Reflux', 'Heartburn'],
+    previousIllnesses: ['Gastritis', 'Peptic Ulcer Disease'],
+    specificAllergies: ['Shellfish', 'Gluten'],
+    currentMedications: ['Proton Pump Inhibitors', 'H2 Blockers'],
+    pastMedications: ['Antacids', 'Sucralfate'],
+    labReports: [
+      {
+        report: 'The laboratory results revealed normal findings across various parameters. His complete blood count (CBC) displayed a hemoglobin level of 14.5 g/dL, hematocrit of 42%, white blood cell count of 7.2 x10^3/µL, red blood cell count of 5.2 x10^6/µL, and a platelet count of 250 x10^3/µL. Basic metabolic panel (BMP) readings indicated sodium at 140 mmol/L, potassium at 4.0 mmol/L, chloride at 100 mmol/L, bicarbonate at 24 mmol/L, blood urea nitrogen (BUN) at 15 mg/dL, creatinine at 1.0 mg/dL, and glucose at 90 mg/dL. Lipid panel analysis yielded total cholesterol of 180 mg/dL, HDL cholesterol of 50 mg/dL, LDL cholesterol of 120 mg/dL, and triglycerides of 100 mg/dL. Liver function tests (LFTs) showcased total protein at 7.0 g/dL, albumin at 4.0 g/dL, total bilirubin at 0.5 mg/dL, ALT (Alanine Aminotransferase) at 20 U/L, and AST (Aspartate Aminotransferase) at 25 U/L.',
+        photo: 'https://i.imgur.com/kCtVNDR.png',
+        radiologyVideo: 'https://www.youtube.com/embed/tW2SjlMGj0Q?si=ksQ6sKB0XmSz9z46',
+        mriTracingImages: 'https://i.imgur.com/Fv45Hji.png'
+      }
+    ],
+    xRays: ['https://i.imgur.com/onW1Xuv.png', 'https://i.imgur.com/KcsHQbA.png'],
+    doctorVisits: ['2022-03-25T08:00:00Z', '2022-04-10T09:30:00Z'],
+    vaccinations: ['2022-04-15T10:45:00Z', '2022-05-30T11:15:00Z'],
+    appointmentTimes: ['2022-06-05T12:30:00Z', '2022-07-20T13:00:00Z']
+  },
+  {
+    id: 'https://i.imgur.com/3AlDV7v.png',
+    name: 'Sophie Nguyen',
+    firstName: 'Sophie',
+    middleName: 'Linh',
+    lastName: 'Nguyen',
+    gender: 'Female',
+    dateOfBirth: '1992-02-10',
+    bloodGroup: 'B',
+    rhFactor: '+',
+    maritalStatus: 'Single',
+    age: { years: 32, months: 3, days: 23 },
+    phoneResidence: '555-321-7890',
+    mobilePhone: '555-987-6543',
+    emailAddress
+    : 'sophie.nguyen@example.com',
+    emergencyContactName: 'Michael Nguyen',
+    emergencyContactPhoneNumber: '555-555-5555',
+    family: ['Michael Nguyen', 'Isabella Nguyen'],
+    currentIllnesses: ['Anxiety', 'Depression', 'Insomnia'],
+    previousIllnesses: ['Panic Disorder', 'PTSD'],
+    specificAllergies: ['Peanuts', 'Soy'],
+    currentMedications: ['Selective Serotonin Reuptake Inhibitors', 'Benzodiazepines'],
+    pastMedications: ['Tricyclic Antidepressants', 'Antipsychotics'],
+    labReports: [
+    {
+    report: 'The laboratory results revealed normal findings across various parameters. His complete blood count (CBC) displayed a hemoglobin level of 14.5 g/dL, hematocrit of 42%, white blood cell count of 7.2 x10^3/µL, red blood cell count of 5.2 x10^6/µL, and a platelet count of 250 x10^3/µL. Basic metabolic panel (BMP) readings indicated sodium at 140 mmol/L, potassium at 4.0 mmol/L, chloride at 100 mmol/L, bicarbonate at 24 mmol/L, blood urea nitrogen (BUN) at 15 mg/dL, creatinine at 1.0 mg/dL, and glucose at 90 mg/dL. Lipid panel analysis yielded total cholesterol of 180 mg/dL, HDL cholesterol of 50 mg/dL, LDL cholesterol of 120 mg/dL, and triglycerides of 100 mg/dL. Liver function tests (LFTs) showcased total protein at 7.0 g/dL, albumin at 4.0 g/dL, total bilirubin at 0.5 mg/dL, ALT (Alanine Aminotransferase) at 20 U/L, and AST (Aspartate Aminotransferase) at 25 U/L.',
+    photo: 'https://i.imgur.com/kCtVNDR.png',
+    radiologyVideo: 'https://www.youtube.com/embed/tW2SjlMGj0Q?si=ksQ6sKB0XmSz9z46',
+    mriTracingImages: 'https://i.imgur.com/Fv45Hji.png'
+    }
+    ],
+    xRays: ['https://i.imgur.com/onW1Xuv.png', 'https://i.imgur.com/KcsHQbA.png'],
+    doctorVisits: ['2022-04-05T08:00:00Z', '2022-04-15T09:30:00Z'],
+    vaccinations: ['2022-04-20T10:45:00Z', '2022-05-05T11:15:00Z'],
+    appointmentTimes: ['2022-06-10T12:30:00Z', '2022-07-25T13:00:00Z']
+    },
+    {
+    id: 'https://i.imgur.com/3AlDV7v.png',
+    name: 'Isabella Cooper',
+    firstName: 'Isabella',
+    middleName: 'Grace',
+    lastName: 'Cooper',
+    gender: 'Female',
+    dateOfBirth: '1987-09-15',
+    bloodGroup: 'A',
+    rhFactor: '-',
+    maritalStatus: 'Married',
+    age: { years: 36, months: 8, days: 5 },
+    phoneResidence: '555-987-6543',
+    mobilePhone: '555-321-7890',
+    emailAddress: 'isabella.cooper@example.com',
+    emergencyContactName: 'James Cooper',
+    emergencyContactPhoneNumber: '555-555-5555',
+    family: ['James Cooper', 'Olivia Cooper'],
+    currentIllnesses: ['Hypertension', 'High Cholesterol', 'Type 2 Diabetes'],
+    previousIllnesses: ['Gestational Diabetes', 'Insulin Resistance'],
+    specificAllergies: ['Peanuts', 'Shellfish'],
+    currentMedications: ['Metformin', 'Atorvastatin'],
+    pastMedications: ['Insulin', 'ACE Inhibitors'],
+    labReports: [
+    {
+    report: 'The laboratory results revealed normal findings across various parameters. His complete blood count (CBC) displayed a hemoglobin level of 14.5 g/dL, hematocrit of 42%, white blood cell count of 7.2 x10^3/µL, red blood cell count of 5.2 x10^6/µL, and a platelet count of 250 x10^3/µL. Basic metabolic panel (BMP) readings indicated sodium at 140 mmol/L, potassium at 4.0 mmol/L, chloride at 100 mmol/L, bicarbonate at 24 mmol/L, blood urea nitrogen (BUN) at 15 mg/dL, creatinine at 1.0 mg/dL, and glucose at 90 mg/dL. Lipid panel analysis yielded total cholesterol of 180 mg/dL, HDL cholesterol of 50 mg/dL, LDL cholesterol of 120 mg/dL, and triglycerides of 100 mg/dL. Liver function tests (LFTs) showcased total protein at 7.0 g/dL, albumin at 4.0 g/dL, total bilirubin at 0.5 mg/dL, ALT (Alanine Aminotransferase) at 20 U/L, and AST (Aspartate Aminotransferase) at 25 U/L.',
+    photo: 'https://i.imgur.com/kCtVNDR.png',
+    radiologyVideo: 'https://www.youtube.com/embed/tW2SjlMGj0Q?si=ksQ6sKB0XmSz9z46',
+    mriTracingImages: 'https://i.imgur.com/Fv45Hji.png'
+    }
+    ],
+    xRays: ['https://i.imgur.com/onW1Xuv.png', 'https://i.imgur.com/KcsHQbA.png'],
+    doctorVisits: ['2022-04-10T08:00:00Z', '2022-04-20T09:30:00Z'],
+    vaccinations: ['2022-04-25T10:45:00Z', '2022-05-10T11:15:00Z'],
+    appointmentTimes: ['2022-06-15T12:30:00Z', '2022-07-30T13:00:00Z']
+    },
+    {
+    id: 'https://i.imgur.com/3AlDV7v.png',
+    name: 'Aiden Robinson',
+    firstName: 'Aiden',
+    middleName: 'Alexander',
+    lastName: 'Robinson',
+    gender: 'Male',
+    dateOfBirth: '1995-06-20',
+    bloodGroup: 'O',
+    rhFactor: '+',
+    maritalStatus: 'Single',
+    age: { years: 28, months: 11, days: 25 },
+    phoneResidence: '555-321-7890',
+    mobilePhone: '555-789-1234',
+    emailAddress: 'aiden.robinson@example.com',
+    emergencyContactName: 'Emily Robinson',
+    emergencyContactPhoneNumber: '555-555-5555',
+    family: ['Emily Robinson', 'Mia Robinson'],
+    currentIllnesses: ['Asthma', 'Allergies', 'Bronchitis'],
+    previousIllnesses: ['Pneumonia', 'Sinusitis'],
+    specificAllergies: ['Dust', 'Pollen'],
+    currentMedications: ['Albuterol', 'Corticosteroids'],
+    pastMedications: ['Antihistamines', 'Mucolytics'],
+    labReports: [
+    {
+    report: 'The laboratory results revealed normal findings across various parameters. His complete blood count (CBC) displayed a hemoglobin level of 14.5 g/dL, hematocrit of 42%, white blood cell count of 7.2 x10^3/µL, red blood cell count of 5.2 x10^6/µL, and a platelet count of 250 x10^3/µL. Basic metabolic panel (BMP) readings indicated sodium at 140 mmol/L, potassium at 4.0 mmol/L, chloride at 100 mmol/L, bicarbonate at 24 mmol/L, blood urea nitrogen (BUN) at 15 mg/dL, creatinine at 1.0 mg/dL, and glucose at 90 mg/dL. Lipid panel analysis yielded total cholesterol of 180 mg/dL, HDL cholesterol of 50 mg/dL, LDL cholesterol of 120 mg/dL, and triglycerides of 100 mg/dL. Liver function tests (LFTs) showcased total protein at 7.0 g/dL, albumin at 4.0 g/dL, total bilirubin at 0.5 mg/dL, ALT (Alanine Aminotransferase) at 20 U/L, and AST (Aspartate Aminotransferase) at 25 U/L.',
+    photo: 'https://i.imgur.com/kCtVNDR.png',
+    radiologyVideo: 'https://www.youtube.com/embed/tW2SjlMGj0Q?si=ksQ6sKB0XmSz9z46',
+    mriTracingImages: 'https://i.imgur.com/Fv45Hji.png'
+    }
+    ],
+    xRays: ['https://i.imgur.com/onW1Xuv.png', 'https://i.imgur.com/KcsHQbA.png'],
+    doctorVisits: ['2022-04-15T08:00:00Z', '2022-04-25T09:30:00Z'],
+    vaccinations: ['2022-05-30T10:45:00Z', '2022-06-05T11:15:00Z'],
+    appointmentTimes: ['2022-06-10T12:30:00Z', '2022-07-25T13:00:00Z']
+    }
+  
 ];
 
 export default patients;
