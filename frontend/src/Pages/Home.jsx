@@ -17,13 +17,14 @@ function Home() {
                     communities of Africa and around the world. The lack of access to medical services and care has
                     reached unprecedented levels.</p>
                 <br />
-                <p>The Health Care Platform helps medical professionals manage their patient's data. On the left, there is a side bar that allows the user
+                <p>The Health Care Platform helps medical professionals manage their patients' data. On the left, there is a side bar that allows the user
                     to navigate through the Health Care Platform's pages. "Dashboard" takes the user to an interface where they can view appointment 
                     notifications and search for patients. Through the search engine, patient data can be viewed and changed. To change an image, you must 
                     upload it to imgur.com, copy the image's direct link, and paste it into a data change form. The forms are located underneath a patient's data. To 
-                    change a video, upload the video to youtube, copy the video's embedded url, then paste it into a data change form. "Add/Delete Patient" 
+                    change a video, upload the video to YouTube, copy the video's embedded url (only the link portion, 
+                    ex: https://www.youtube.com/embed/tW2SjlMGj0Q?si=ksQ6sKB0XmSz9z46), then paste it into a data change form. "Add/Delete Patient" 
                     allows the user to create a new patient profile with empty data, or completely delete an existing patient. "Home" takes the 
-                    user back to the homepage.
+                    user back to the homepage. A new notification will automatically appear when an appointment is created for its respective patient.
                 </p>
             </div>
         </div>
