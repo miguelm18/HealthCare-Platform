@@ -307,6 +307,10 @@ function PatientPages({ selectedPatient }) {
     notifications.push(newNotification);
   }
 
+  function updateSuccessful() {
+    alert("Information Submitted");
+  }
+
   return (
     <div className="patient-page-left-margin">
       {currentPage === 1 && (
@@ -350,6 +354,7 @@ function PatientPages({ selectedPatient }) {
               <form onSubmit={(e) => {
                 e.preventDefault(); // Prevent default form submission
                 handleChange(); // Call handleChange function
+                updateSuccessful();
               }}>
                 <div className="input-text">
                   <input
@@ -538,6 +543,7 @@ function PatientPages({ selectedPatient }) {
           <form onSubmit={(e) => {
             e.preventDefault(); // Prevent default form submission
             handleChange(); // Call handleChange function
+            updateSuccessful();
           }}>
             <div className="input-text">
               <input
@@ -615,6 +621,7 @@ function PatientPages({ selectedPatient }) {
           <form onSubmit={(e) => {
             e.preventDefault(); // Prevent default form submission
             handleChange(); // Call handleChange function
+            updateSuccessful();
           }}>
             <div className="input-text">
               <input
@@ -695,6 +702,7 @@ function PatientPages({ selectedPatient }) {
           <form onSubmit={(e) => {
             e.preventDefault(); // Prevent default form submission
             handleManageLabReport(); // Call handleChange function
+            updateSuccessful();
           }}>
             <div className="input-text">
               <input
@@ -782,6 +790,7 @@ function PatientPages({ selectedPatient }) {
             e.preventDefault(); // Prevent default form submission
             handleChange(); // Call handleChange function
             sendNotification(addAppointment, selectedPatient.name);
+            updateSuccessful();
           }}>
             <div className="input-text">
               <input
