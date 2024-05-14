@@ -28,6 +28,8 @@ const LoginSignUp = () => {
     if (choice === "Login" && email === "user@gmail.com" && password === "password122333444455555!@#$%") {
       // If conditions are met, display alert
       navigate('/home');
+    } else if (choice === "Sign Up") {
+      alert("Contact your administrator to create an account");
     } else {
       alert("Incorrect email or password");
     }
