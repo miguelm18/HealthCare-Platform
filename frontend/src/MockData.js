@@ -42,7 +42,7 @@ const patients = [
         mriTracingImages: 'https://i.imgur.com/Fv45Hji.png'
       }
     ],
-    xRays: ['https://i.imgur.com/qPLV96G.png', 'https://i.imgur.com/qPLV96G.png'],
+    xRays: ['https://i.imgur.com/onW1Xuv.png', 'https://i.imgur.com/KcsHQbA.png'],
     doctorVisits: ['2022-01-05T08:00:00Z', '2022-02-15T09:30:00Z'],
     vaccinations: ['2022-03-20T10:45:00Z', '2022-04-10T11:15:00Z'],
     appointmentTimes: ['2022-05-15T12:30:00Z', '2022-06-25T13:00:00Z']
@@ -78,7 +78,7 @@ const patients = [
         mriTracingImages: 'https://i.imgur.com/Fv45Hji.png'
       }
     ],
-    xRays: ['https://i.imgur.com/qPLV96G.png', 'https://i.imgur.com/qPLV96G.png'],
+    xRays: ['https://i.imgur.com/onW1Xuv.png', 'https://i.imgur.com/KcsHQbA.png'],
     doctorVisits: ['2022-01-10T08:00:00Z', '2022-02-20T09:30:00Z'],
     vaccinations: ['2022-03-25T10:45:00Z', '2022-04-15T11:15:00Z'],
     appointmentTimes: ['2022-05-20T12:30:00Z', '2022-06-30T13:00:00Z']
@@ -114,7 +114,7 @@ const patients = [
         mriTracingImages: 'https://i.imgur.com/Fv45Hji.png'
       }
     ],
-    xRays: ['https://i.imgur.com/qPLV96G.png', 'https://i.imgur.com/qPLV96G.png'],
+    xRays: ['https://i.imgur.com/onW1Xuv.png', 'https://i.imgur.com/KcsHQbA.png'],
     doctorVisits: ['2022-01-15T08:00:00Z', '2022-02-25T09:30:00Z'],
     vaccinations: ['2022-03-30T10:45:00Z', '2022-04-20T11:15:00Z'],
     appointmentTimes: ['2022-05-25T12:30:00Z', '2022-06-05T13:00:00Z']
@@ -150,7 +150,7 @@ const patients = [
         mriTracingImages: 'https://i.imgur.com/Fv45Hji.png'
       }
     ],
-    xRays: ['https://i.imgur.com/qPLV96G.png', 'https://i.imgur.com/qPLV96G.png'],
+    xRays: ['https://i.imgur.com/onW1Xuv.png', 'https://i.imgur.com/KcsHQbA.png'],
     doctorVisits: ['2022-01-20T08:00:00Z', '2022-02-28T09:30:00Z'],
     vaccinations: ['2022-03-05T10:45:00Z', '2022-04-25T11:15:00Z'],
     appointmentTimes: ['2022-05-30T12:30:00Z', '2022-06-10T13:00:00Z']
@@ -186,7 +186,7 @@ const patients = [
         mriTracingImages: 'https://i.imgur.com/Fv45Hji.png'
       }
     ],
-    xRays: ['https://i.imgur.com/qPLV96G.png', 'https://i.imgur.com/qPLV96G.png'],
+    xRays: ['https://i.imgur.com/onW1Xuv.png', 'https://i.imgur.com/KcsHQbA.png'],
     doctorVisits: ['2022-01-25T08:00:00Z', '2022-02-10T09:30:00Z'],
     vaccinations: ['2022-03-10T10:45:00Z', '2022-04-30T11:15:00Z'],
     appointmentTimes: ['2022-05-05T12:30:00Z', '2022-06-15T13:00:00Z']
@@ -222,7 +222,7 @@ const patients = [
         mriTracingImages: 'https://i.imgur.com/Fv45Hji.png'
       }
     ],
-    xRays: ['https://i.imgur.com/qPLV96G.png', 'https://i.imgur.com/qPLV96G.png'],
+    xRays: ['https://i.imgur.com/onW1Xuv.png', 'https://i.imgur.com/KcsHQbA.png'],
     doctorVisits: ['2022-02-01T08:00:00Z', '2022-02-05T09:30:00Z'],
     vaccinations: ['2022-03-15T10:45:00Z', '2022-04-05T11:15:00Z'],
     appointmentTimes: ['2022-05-10T12:30:00Z', '2022-06-20T13:00:00Z']
@@ -258,7 +258,7 @@ const patients = [
         mriTracingImages: 'https://i.imgur.com/Fv45Hji.png'
       }
     ],
-    xRays: ['https://i.imgur.com/qPLV96G.png', 'https://i.imgur.com/qPLV96G.png'],
+    xRays: ['https://i.imgur.com/onW1Xuv.png', 'https://i.imgur.com/KcsHQbA.png'],
     doctorVisits: ['2022-02-05T08:00:00Z', '2022-02-15T09:30:00Z'],
     vaccinations: ['2022-03-20T10:45:00Z', '2022-04-10T11:15:00Z'],
     appointmentTimes: ['2022-05-15T12:30:00Z', '2022-06-25T13:00:00Z']
@@ -294,7 +294,7 @@ const patients = [
         mriTracingImages: 'https://i.imgur.com/Fv45Hji.png'
       }
     ],
-    xRays: ['https://i.imgur.com/qPLV96G.png', 'https://i.imgur.com/qPLV96G.png'],
+    xRays: ['https://i.imgur.com/onW1Xuv.png', 'https://i.imgur.com/KcsHQbA.png'],
     doctorVisits: ['2022-02-10T08:00:00Z', '2022-02-20T09:30:00Z'],
     vaccinations: ['2022-03-25T10:45:00Z', '2022-04-15T11:15:00Z'],
     appointmentTimes: ['2022-05-20T12:30:00Z', '2022-06-30T13:00:00Z']
@@ -330,7 +330,7 @@ const patients = [
         mriTracingImages: 'https://i.imgur.com/Fv45Hji.png'
       }
     ],
-    xRays: ['https://i.imgur.com/qPLV96G.png', 'https://i.imgur.com/qPLV96G.png'],
+    xRays: ['https://i.imgur.com/onW1Xuv.png', 'https://i.imgur.com/KcsHQbA.png'],
     doctorVisits: ['2022-02-15T08:00:00Z', '2022-02-25T09:30:00Z'],
     vaccinations: ['2022-03-30T10:45:00Z', '2022-04-20T11:15:00Z'],
     appointmentTimes: ['2022-05-25T12:30:00Z', '2022-06-05T13:00:00Z']
@@ -366,7 +366,7 @@ const patients = [
         mriTracingImages: 'https://i.imgur.com/Fv45Hji.png'
       }
     ],
-    xRays: ['https://i.imgur.com/qPLV96G.png', 'https://i.imgur.com/qPLV96G.png'],
+    xRays: ['https://i.imgur.com/onW1Xuv.png', 'https://i.imgur.com/KcsHQbA.png'],
     doctorVisits: ['2022-02-20T08:00:00Z', '2022-02-28T09:30:00Z'],
     vaccinations: ['2022-03-05T10:45:00Z', '2022-04-25T11:15:00Z'],
     appointmentTimes: ['2022-05-10T12:30:00Z', '2022-06-20T13:00:00Z']

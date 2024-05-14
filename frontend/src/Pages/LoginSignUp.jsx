@@ -27,7 +27,7 @@ const LoginSignUp = () => {
     // Check if the current choice is "Login", email is "user@gmail.com", and password is "password122333444455555!@#$%"
     if (choice === "Login" && email === "user@gmail.com" && password === "password122333444455555!@#$%") {
       // If conditions are met, display alert
-      navigate('/dashboard');
+      navigate('/home');
     } else {
       alert("Incorrect email or password");
     }

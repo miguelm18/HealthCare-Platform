@@ -544,7 +544,7 @@ function PatientPages({ selectedPatient }) {
                 type="text"
                 value={additionalCondition}
                 onChange={(e) => setAdditionalCondition(e.target.value)}
-                placeholder={!additionalCondition ? 'Add a new current illness, enter its value here' : ''}
+                placeholder={!additionalCondition ? 'Add a new current illness' : ''}
               />
             </div>
             <div className="input-text">
@@ -560,7 +560,7 @@ function PatientPages({ selectedPatient }) {
                 type="text"
                 value={additionalPreviousIllness}
                 onChange={(e) => addAdditionalPreviousIllness(e.target.value)}
-                placeholder={!additionalPreviousIllness ? 'Add a new previous illness, enter its value here' : ''}
+                placeholder={!additionalPreviousIllness ? 'Add a new previous illness' : ''}
               />
             </div>
             <div className="input-text">
@@ -576,7 +576,7 @@ function PatientPages({ selectedPatient }) {
                 type="text"
                 value={additionalSpecificAllergies}
                 onChange={(e) => addAdditionalSpecificAllergies(e.target.value)}
-                placeholder={!additionalSpecificAllergies ? 'Add a new allergy, enter its value here' : ''}
+                placeholder={!additionalSpecificAllergies ? 'Add a new allergy' : ''}
               />
             </div>
             <div className="input-text">
