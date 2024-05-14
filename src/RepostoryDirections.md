@@ -71,9 +71,10 @@ You should have the project downloaded onto your computer now
    You should already be at the src directory  
    Type "cd frontend" to navigate into the frontend folder in the src directory
 
-5. install the packages needed to make the fronend work  
+5. install the packages needed to make the front end work  
    You should still be at the frontend directory  
-   Type "npm install react-router-dom" into the terminal
+   Type "npm install react-router-dom" into the terminal  
+   Type "npm install react-scripts" into the terminal  
 
 Starting the project in React after the first 5 steps are completed:
 
@@ -82,6 +83,8 @@ Starting the project in React after the first 5 steps are completed:
    Type "npm start" into the terminal
 
 2. Your project should appear in your web browser now
+
+3. To log into the website, enter "user@gmail.com" as the email, and "password122333444455555!@#$%" as the password  
 
 How to stop the project:
 
