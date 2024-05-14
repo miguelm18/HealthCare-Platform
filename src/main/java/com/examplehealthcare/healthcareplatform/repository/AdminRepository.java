@@ -8,6 +8,6 @@ import com.examplehealthcare.healthcareplatform.model.Admin;
 
 public interface AdminRepository extends JpaRepository< Admin, Long > {
     void deleteByName(String name);
-
     List<Admin> findByName(String name);
 }
+ 

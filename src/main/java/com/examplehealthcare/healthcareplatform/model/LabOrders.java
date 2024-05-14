@@ -25,7 +25,7 @@ public class LabOrders {
     private Long id;
  
     @Column(name = "patient_id")
-    private Long patientId;
+    private Patient patientId;
 
     @Column(name = "test_type")
     private String testType;

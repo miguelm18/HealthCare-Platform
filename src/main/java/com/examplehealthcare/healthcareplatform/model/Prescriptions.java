@@ -10,8 +10,11 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
+import lombok.Getter;
+import lombok.Setter;
 
- 
+ @Getter
+ @Setter
 @Entity
 @Table(name = "Prescriptions")
 public class Prescriptions {
@@ -20,7 +23,7 @@ public class Prescriptions {
     private Long id;
 
     @Column(name = "patient_id")
-    private Long patientId;
+    private Patient patientId;
 
     @Column(name = "medication_name")
     private String medicationName;
@@ -50,11 +53,11 @@ public class Prescriptions {
         this.id = id;
     }
 
-    public Long getPatientId() {
+    public Patient getPatientId() {
         return patientId;
     }
 
-    public void setPatientId(Long patientId) {
+    public void setPatientId(Patient patientId) {
         this.patientId = patientId;
     }
 

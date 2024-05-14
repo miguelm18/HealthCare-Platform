@@ -48,7 +48,7 @@ public Admin(String name, String gender, String email, String password, String t
     setPassword(password);
     this.title = title;
 }
-
+ 
 
 public String getPassword() {
     return password;

@@ -29,7 +29,7 @@ import lombok.NoArgsConstructor;
 public class Nurse {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long nurseid;
 
     @Column(name = "image_url", nullable = true)
     private String imageUrl; 
