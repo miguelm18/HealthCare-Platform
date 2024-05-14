@@ -12,9 +12,10 @@ import logo from '../Assets/HealthCareLogo1.jpg'; // Adjust the path if necessar
 function Sidebar() {
     // Array containing links and their paths
     const links = [
+        { path: '/home', title: 'Home' },
         { path: '/dashboard', title: 'Dashboard' },
         { path: '/AddDeletePatient', title: 'Add/Delete Patient' },
-        { path: '/settings', title: 'Settings' },
+        {/* path: '/settings', title: 'Settings' */},
         // ... you can add more links here
     ];
 

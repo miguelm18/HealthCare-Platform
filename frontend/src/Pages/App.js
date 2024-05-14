@@ -4,6 +4,7 @@ import MainDashboard from './MainDashboard'; // Importing the component for the 
 import Settings from './Settings'; // Importing the component for settings
 import ForgotPassword from './ForgotPassword'; // Importing the component for forgot password
 import AddDeletePatient from './AddDeletePatient'; // Importing the component for adding/deleting patients
+import Home from './Home';
 
 // App component containing the routing setup
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path="/settings" element={<Settings />} />
         {/* Route for adding/deleting patients page */}
         <Route path="/AddDeletePatient" element={<AddDeletePatient />} />
+        <Route path="/home" element={<Home />} />
       </Routes>
     </BrowserRouter>
   );

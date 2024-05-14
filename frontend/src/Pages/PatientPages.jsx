@@ -307,47 +307,54 @@ function PatientPages({ selectedPatient }) {
     notifications.push(newNotification);
   }
 
+  function updateSuccessful() {
+    alert("Information Submitted");
+  }
+
   return (
     <div className="patient-page-left-margin">
       {currentPage === 1 && (
         <div>
           <h1>General Patient Information</h1>
           <button onClick={nextPage}>Next Page</button>
-          <div className="image-container">
-            <img
-              src={selectedPatient.id}
-              alt="Patient"
-              className="small-image"
-            />
+          <div className="contents">
+            <div className="image-container">
+              <img
+                src={selectedPatient.id}
+                alt="Patient"
+                className="small-image"
+              />
+            </div>
+            <p>First Name: {selectedPatient.firstName}</p>
+            <p>Middle Name: {selectedPatient.middleName}</p>
+            <p>Last Name: {selectedPatient.lastName}</p>
+            <p>Date of Birth: {selectedPatient.dateOfBirth}</p>
+            <p>Blood Group: {selectedPatient.bloodGroup}</p>
+            <p>RH Factor: {selectedPatient.rhFactor}</p>
+            <p>Marital Status: {selectedPatient.maritalStatus}</p>
+            <p>Age: {selectedPatient.age.years} years, {selectedPatient.age.months} months, {selectedPatient.age.days} days</p>
+            <p>Gender: {selectedPatient.gender}</p>
+            <p>Contact Info</p>
+            <p>Phone Residence: {selectedPatient.phoneResidence}</p>
+            <p>Mobile Phone: {selectedPatient.mobilePhone}</p>
+            <p>Email Address: {selectedPatient.emailAddress}</p>
+            <p>Emergency Contact</p>
+            <p>Emergency Contact Name: {selectedPatient.emergencyContactName}</p>
+            <p>Emergency Contact Phone Number: {selectedPatient.emergencyContactPhoneNumber}</p>
+            <p>Family:</p>
+            <ol>
+              {selectedPatient.family.map((family, index) => (
+                <li key={index}>{family}</li>
+              ))}
+            </ol>
           </div>
-          <p>First Name: {selectedPatient.firstName}</p>
-          <p>Middle Name: {selectedPatient.middleName}</p>
-          <p>Last Name: {selectedPatient.lastName}</p>
-          <p>Date of Birth: {selectedPatient.dateOfBirth}</p>
-          <p>Blood Group: {selectedPatient.bloodGroup}</p>
-          <p>RH Factor: {selectedPatient.rhFactor}</p>
-          <p>Marital Status: {selectedPatient.maritalStatus}</p>
-          <p>Age: {selectedPatient.age.years} years, {selectedPatient.age.months} months, {selectedPatient.age.days} days</p>
-          <p>Gender: {selectedPatient.gender}</p>
-          <p>Contact Info</p>
-          <p>Phone Residence: {selectedPatient.phoneResidence}</p>
-          <p>Mobile Phone: {selectedPatient.mobilePhone}</p>
-          <p>Email Address: {selectedPatient.emailAddress}</p>
-          <p>Emergency Contact</p>
-          <p>Emergency Contact Name: {selectedPatient.emergencyContactName}</p>
-          <p>Emergency Contact Phone Number: {selectedPatient.emergencyContactPhoneNumber}</p>
-          <p>Family:</p>
-          <ol>
-            {selectedPatient.family.map((family, index) => (
-              <li key={index}>{family}</li>
-            ))}
-          </ol>
           <div>
             <div>
               {/* Form for changing patient's values for page 1 */}
               <form onSubmit={(e) => {
                 e.preventDefault(); // Prevent default form submission
                 handleChange(); // Call handleChange function
+                updateSuccessful();
               }}>
                 <div className="input-text">
                   <input
@@ -513,34 +520,37 @@ function PatientPages({ selectedPatient }) {
           <h1>Health Conditions</h1>
           <button onClick={prevPage}>Previous Page</button>
           <button onClick={nextPage}>Next Page</button>
-          <p>Current Illnesses:</p>
-          <ol>
-            {selectedPatient.currentIllnesses.map((condition, index) => (
-              <li key={index}>{condition}</li>
-            ))}
-          </ol>
-          <p>Previous Illnesses:</p>
-          <ol>
-            {selectedPatient.previousIllnesses.map((condition, index) => (
-              <li key={index}>{condition}</li>
-            ))}
-          </ol>
-          <p>Specific Allergies:</p>
-          <ol>
-            {selectedPatient.specificAllergies.map((condition, index) => (
-              <li key={index}>{condition}</li>
-            ))}
-          </ol>
+          <div className="contents">
+            <p>Current Illnesses:</p>
+            <ol>
+              {selectedPatient.currentIllnesses.map((condition, index) => (
+                <li key={index}>{condition}</li>
+              ))}
+            </ol>
+            <p>Previous Illnesses:</p>
+            <ol>
+              {selectedPatient.previousIllnesses.map((condition, index) => (
+                <li key={index}>{condition}</li>
+              ))}
+            </ol>
+            <p>Specific Allergies:</p>
+            <ol>
+              {selectedPatient.specificAllergies.map((condition, index) => (
+                <li key={index}>{condition}</li>
+              ))}
+            </ol>
+          </div>
           <form onSubmit={(e) => {
             e.preventDefault(); // Prevent default form submission
             handleChange(); // Call handleChange function
+            updateSuccessful();
           }}>
             <div className="input-text">
               <input
                 type="text"
                 value={additionalCondition}
                 onChange={(e) => setAdditionalCondition(e.target.value)}
-                placeholder={!additionalCondition ? 'Add a new current illness, enter its value here' : ''}
+                placeholder={!additionalCondition ? 'Add a new current illness' : ''}
               />
             </div>
             <div className="input-text">
@@ -556,7 +566,7 @@ function PatientPages({ selectedPatient }) {
                 type="text"
                 value={additionalPreviousIllness}
                 onChange={(e) => addAdditionalPreviousIllness(e.target.value)}
-                placeholder={!additionalPreviousIllness ? 'Add a new previous illness, enter its value here' : ''}
+                placeholder={!additionalPreviousIllness ? 'Add a new previous illness' : ''}
               />
             </div>
             <div className="input-text">
@@ -572,7 +582,7 @@ function PatientPages({ selectedPatient }) {
                 type="text"
                 value={additionalSpecificAllergies}
                 onChange={(e) => addAdditionalSpecificAllergies(e.target.value)}
-                placeholder={!additionalSpecificAllergies ? 'Add a new allergy, enter its value here' : ''}
+                placeholder={!additionalSpecificAllergies ? 'Add a new allergy' : ''}
               />
             </div>
             <div className="input-text">
@@ -594,21 +604,24 @@ function PatientPages({ selectedPatient }) {
           <h1>Medications</h1>
           <button onClick={prevPage}>Previous Page</button>
           <button onClick={nextPage}>Next Page</button>
-          <p>Current Medications:</p>
-          <ol>
-            {selectedPatient.currentMedications.map((condition, index) => (
-              <li key={index}>{condition}</li>
-            ))}
-          </ol>
-          <p>Past Medications:</p>
-          <ol>
-            {selectedPatient.pastMedications.map((condition, index) => (
-              <li key={index}>{condition}</li>
-            ))}
-          </ol>
+          <div className="contents">
+            <p>Current Medications:</p>
+            <ol>
+              {selectedPatient.currentMedications.map((condition, index) => (
+                <li key={index}>{condition}</li>
+              ))}
+            </ol>
+            <p>Past Medications:</p>
+            <ol>
+              {selectedPatient.pastMedications.map((condition, index) => (
+                <li key={index}>{condition}</li>
+              ))}
+            </ol>
+          </div>
           <form onSubmit={(e) => {
             e.preventDefault(); // Prevent default form submission
             handleChange(); // Call handleChange function
+            updateSuccessful();
           }}>
             <div className="input-text">
               <input
@@ -648,46 +661,48 @@ function PatientPages({ selectedPatient }) {
           <button onClick={nextPage}>Next Page</button>
         </div>
       )}
-      {currentPage === 4 && (
+      {/*currentPage === 4 && (
         <div>
           <h1>Patient Page 4 Empty For Now</h1>
           <button onClick={prevPage}>Previous Page</button>
           <button onClick={nextPage}>Next Page</button>
-          {/*enter code here*/}
           <button onClick={prevPage}>Previous Page</button>
           <button onClick={nextPage}>Next Page</button>
         </div>
-      )}
-      {currentPage === 5 && (
+      )*/}
+      {currentPage === 4 && (
         <div>
           <h1>Lab Reports</h1>
           <button onClick={prevPage}>Previous Page</button>
           <button onClick={nextPage}>Next Page</button>
-          <ol>
-            {selectedPatient.labReports.map((report, index) => (
-              <li key={index}>
-                <p>Lab Report:</p>
-                <p>{report.report}</p> {/* Render the report text */}
-                <p>Lab Report Photos:</p>
-                <div className="image-container"> {/* Render photo */}
-                  <img src={report.photo} alt="Lab Report" className="large-image" />
-                </div>
-                <p>Radiology Videos:</p>
-                <div> {/* Render radiology video */}
-                  <iframe width="560" height="315"
-                    src={report.radiologyVideo} title="radiology video">
-                  </iframe>
-                </div>
-                <p>MRI Tracing Images:</p>
-                <div className="image-container"> {/* Render MRI tracing images */}
-                  <img src={report.mriTracingImages} alt="MRI Tracing Images" className="large-image" />
-                </div>
-              </li>
-            ))}
-          </ol>
+          <div className="contents">
+            <ol>
+              {selectedPatient.labReports.map((report, index) => (
+                <li key={index}>
+                  <p>Lab Report:</p>
+                  <p>{report.report}</p> {/* Render the report text */}
+                  <p>Lab Report Photos:</p>
+                  <div className="image-container"> {/* Render photo */}
+                    <img src={report.photo} alt="Lab Report" className="large-image" />
+                  </div>
+                  <p>Radiology Videos:</p>
+                  <div> {/* Render radiology video */}
+                    <iframe width="560" height="315"
+                      src={report.radiologyVideo} title="radiology video">
+                    </iframe>
+                  </div>
+                  <p>MRI Tracing Images:</p>
+                  <div className="image-container"> {/* Render MRI tracing images */}
+                    <img src={report.mriTracingImages} alt="MRI Tracing Images" className="large-image" />
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
           <form onSubmit={(e) => {
             e.preventDefault(); // Prevent default form submission
             handleManageLabReport(); // Call handleChange function
+            updateSuccessful();
           }}>
             <div className="input-text">
               <input
@@ -739,40 +754,43 @@ function PatientPages({ selectedPatient }) {
           <button onClick={nextPage}>Next Page</button>
         </div>
       )}
-      {currentPage === 6 && (
+      {currentPage === 5 && (
         <div>
           <h1>Appointments</h1>
           <button onClick={prevPage}>Previous Page</button>
-          <p>Appointment Times:</p>
-          <ol>
-            {selectedPatient.appointmentTimes.map((condition, index) => (
-              <li key={index}>{condition}</li>
-            ))}
-          </ol>
-          <p>Doctor Visits:</p>
-          <ol>
-            {selectedPatient.doctorVisits.map((condition, index) => (
-              <li key={index}>{condition}</li>
-            ))}
-          </ol>
-          <p>X-Rays:</p>
-          <div>
-            {selectedPatient.xRays.map((xRay, index) => (
-              <div key={index} className="image-container">
-                <img src={xRay} alt={`X-Ray ${index}`} className="large-image" />
-              </div>
-            ))}
+          <div className="contents">
+            <p>Appointment Times:</p>
+            <ol>
+              {selectedPatient.appointmentTimes.map((condition, index) => (
+                <li key={index}>{condition}</li>
+              ))}
+            </ol>
+            <p>Doctor Visits:</p>
+            <ol>
+              {selectedPatient.doctorVisits.map((condition, index) => (
+                <li key={index}>{condition}</li>
+              ))}
+            </ol>
+            <p>X-Rays:</p>
+            <div>
+              {selectedPatient.xRays.map((xRay, index) => (
+                <div key={index} className="image-container">
+                  <img src={xRay} alt={`X-Ray ${index}`} className="large-image" />
+                </div>
+              ))}
+            </div>
+            <p>Vaccinations:</p>
+            <ol>
+              {selectedPatient.vaccinations.map((condition, index) => (
+                <li key={index}>{condition}</li>
+              ))}
+            </ol>
           </div>
-          <p>Vaccinations:</p>
-          <ol>
-            {selectedPatient.vaccinations.map((condition, index) => (
-              <li key={index}>{condition}</li>
-            ))}
-          </ol>
           <form onSubmit={(e) => {
             e.preventDefault(); // Prevent default form submission
             handleChange(); // Call handleChange function
-            sendNotification(addAppointment, "yoinks");
+            sendNotification(addAppointment, selectedPatient.name);
+            updateSuccessful();
           }}>
             <div className="input-text">
               <input

@@ -42,7 +42,7 @@ function MainDashboard() {
       <Sidebar />
       {/* Add your dashboard content here */}
       <h1>Dashboard</h1>
-      <p>Welcome to the Health Care Platform</p>
+      <p>Welcome to the Health Care Platform!</p>
       {/* Conditional rendering of "Patient Search" heading */}
       {filteredPatients.length > 0 && <h2>Patient Search</h2>}
       {/* Render filtered patient table */}
@@ -82,8 +82,6 @@ function MainDashboard() {
         </ul>
         <button onClick={deleteAllNotifications}>Clear Notifications</button>
       </div>
-      {/* Placeholder for calendar */}
-      <p>Implement the calendar thingy somewhere on this page</p>
       <br />
       <br />
     </div>
