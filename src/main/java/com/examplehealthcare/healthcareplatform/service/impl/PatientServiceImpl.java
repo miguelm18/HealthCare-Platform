@@ -51,6 +51,9 @@ public class PatientServiceImpl implements PatientService {
         existingPatient.setAppointment(updatedPatient.getAppointment());
         existingPatient.setHealthHistory(updatedPatient.getHealthHistory());
         existingPatient.setDiagnoses(updatedPatient.getDiagnoses());
+        existingPatient.setPrescriptions(updatedPatient.getPrescriptions());
+        existingPatient.setLabOrders(updatedPatient.getLabOrders());
+
         return patientRepository.save(existingPatient);
     }
 

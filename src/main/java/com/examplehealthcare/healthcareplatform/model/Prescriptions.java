@@ -7,11 +7,16 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
+import lombok.Getter;
+import lombok.Setter;
 
- 
+ @Getter
+ @Setter
 @Entity
 @Table(name = "Prescriptions")
 public class Prescriptions {
@@ -19,8 +24,9 @@ public class Prescriptions {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "patient_id")
-    private Long patientId;
+    @ManyToOne
+    @JoinColumn(name = "patient_id")
+    private Patient patient;
 
     @Column(name = "medication_name")
     private String medicationName;
@@ -50,12 +56,12 @@ public class Prescriptions {
         this.id = id;
     }
 
-    public Long getPatientId() {
-        return patientId;
+    public Patient getPatientId() {
+        return patient;
     }
 
-    public void setPatientId(Long patientId) {
-        this.patientId = patientId;
+    public void setPatientId(Patient patientId) {
+        this.patient = patientId;
     }
 
     public String getMedicationName() {
