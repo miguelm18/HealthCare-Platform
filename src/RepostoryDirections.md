@@ -56,25 +56,29 @@ How to run the project's frontend with React
 
 Setting up the project in React for the first time:
 
-1. NAVIGATE TO YOUR TERMINAL  
+1. Install Node.js  
+   Search for the Node.js download on google, and download the version that is compatible with your device
+
+2. NAVIGATE TO YOUR TERMINAL  
    Type "git --version" to see if you have git installed no quotations
 
-2. Navigate To my repository and copy the clone url  
+3. Navigate To my repository and copy the clone url  
    Go to terminal and type "git clone https://github.com/miguelm18/HealthCare-Platform.git" no quotations
    then type "git init" no quotations
 
-3. Add The Extensions From The Picture
+4. Add The Extensions From The Picture
 
 You should have the project downloaded onto your computer now
 
-4. Navigate to the frontend folder of your project in your terminal  
+5. Navigate to the frontend folder of your project in your terminal  
    You should already be at the src directory  
    Type "cd frontend" to navigate into the frontend folder in the src directory
 
-5. install the packages needed to make the front end work  
+6. install the packages needed to make the front end work  
    You should still be at the frontend directory  
    Type "npm install react-router-dom" into the terminal  
    Type "npm install react-scripts" into the terminal  
+   Type "npm install react-icons" into the terminal  
 
 Starting the project in React after the first 5 steps are completed:
 
@@ -82,9 +86,11 @@ Starting the project in React after the first 5 steps are completed:
    Navigate to the frontend folder of your project in your terminal, type "cd frontend" if you aren't at the frontend folder yet  
    Type "npm start" into the terminal
 
-2. Your project should appear in your web browser now
+2. Your project should appear in your web browser now  
+   If you see an error related to web vital reporting, ignore it  
 
 3. To log into the website, enter "user@gmail.com" as the email, and "password122333444455555!@#$%" as the password  
+   This login information is used for testing  
 
 How to stop the project:
 
